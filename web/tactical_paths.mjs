@@ -13,12 +13,44 @@ export function tacticalPaths(proofs,traces,fullRound=false){
  return paths;
 }
 
-// Use the observed end of HOLD, not the later confirmation timestamp.
+function observedPoint(p){
+ return p.alive&&p.valid&&p.region&&p.region!=='UNKNOWN'&&Number.isFinite(p.x)&&Number.isFinite(p.y);
+}
+
+export function hasVisibleMovement(points){
+ if(points.length<2)return false;
+ const [x,y]=points[0];
+ return points.some(([px,py])=>Math.hypot(px-x,py-y)>=2);
+}
+
+// Keep visible HOLD paths. For a stationary hold, show the continuous approach
+// when it was observed within six seconds of the first sample in the hold.
 export function holdPaths(proofs,traces){
- const windows=proofs.flatMap(proof=>(proof.events||[])
-  .filter(event=>event.action==='HOLD'&&event.region&&Number.isFinite(event.seconds)&&Number.isFinite(event.end_seconds))
-  .map(event=>({sequence_id:proof.sequence_id,start:event.seconds,end:event.end_seconds,region:event.region})));
- return tacticalPaths(windows,traces);
+ const paths=[];
+ for(const proof of proofs){
+  const track=traces.get(proof.sequence_id).track;
+  for(const event of proof.events||[]){
+   const {seconds:start,end_seconds:end,region}=event;
+   if(event.action!=='HOLD'||!region||!Number.isFinite(start)||!Number.isFinite(end))continue;
+   const chunks=tacticalPaths([{sequence_id:proof.sequence_id,start,end,region}],traces);
+   if(!chunks.length)continue;
+   if(!chunks.some(hasVisibleMovement)){
+    const anchor=track.findIndex(p=>p.t>=start&&p.t<=end&&p.region===region&&observedPoint(p));
+    if(anchor>=0&&track[anchor].t-start<=.75){
+     let first=anchor;
+     while(first>0){
+      const p=track[first-1];
+      if(p.t<start-6||p.t>=start||!observedPoint(p)||track[first].t-p.t>.75)break;
+      first--;
+     }
+     const approach=track.slice(first,anchor+1).map(p=>[p.x,p.y]);
+     if(hasVisibleMovement(approach))paths.push(approach);
+    }
+   }
+   paths.push(...chunks);
+  }
+ }
+ return paths;
 }
 
 // Mark each named area once, using a sample that is part of the drawn track.

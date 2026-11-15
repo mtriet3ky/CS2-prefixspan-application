@@ -1,5 +1,5 @@
 import {enableWheelZoom,enableDragPan} from './wheel_zoom.mjs?v=2';
-import {holdPaths,locationMarkers,tacticalPaths} from './tactical_paths.mjs?v=location-markers-1';
+import {hasVisibleMovement,holdPaths,locationMarkers,tacticalPaths} from './tactical_paths.mjs?v=hold-approach-fallback-1';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=n=>(n*100).toFixed(2)+'%',fmt=n=>Number(n).toFixed(1)+'s',pretty=s=>currentMap==='de_mirage'&&s==='MOVE_TRUCK'?'VAN':s.replace(/^MOVE_/,'').replaceAll('_',' ');
 let mode='profile',catalog,data,shown=8,revision=0,proofRevision=0,currentMap='',items=[],selected=-1;let regionGeometry=null,activeView=null,locationSelection=null,panX=0,panY=0;const traceCache=new Map();
@@ -127,10 +127,13 @@ function showRegionLegend(selection){
 
 function drawEvidence(proofs,traces,hold,side){
  const paths=hold?holdPaths(proofs,traces):tacticalPaths(proofs,traces,true);
- drawPaths(paths,side);
+ const visiblePaths=hold?paths.filter(hasVisibleMovement):paths;
+ drawPaths(visiblePaths,side);
  const aliases={...regionGeometry.aliases};
  if(currentMap==='de_mirage'){aliases.TRUCK=['VAN'];aliases.VAN=['TRUCK'];}
- const markers=locationMarkers(selectionKeys(locationSelection),aliases,proofs,traces,paths);
+ const keys=selectionKeys(locationSelection);
+ const markers=locationMarkers(keys,aliases,proofs,traces,visiblePaths);
+ if(hold&&!markers.length)markers.push(...locationMarkers(keys,aliases,proofs,traces,paths));
  $('#location-markers').innerHTML=markers.map(({key,x,y})=>`<circle cx="${x}" cy="${y}" r="6" fill="#f04452" stroke="#181c23" stroke-width="2" vector-effect="non-scaling-stroke" data-region="${esc(key)}"/>`).join('');
 }
 function drawPaths(paths,side){const color=side==='CT'?'#65d5ff':'#ffb361';$('#paths').innerHTML=paths.map(points=>points.length===1?`<circle cx="${points[0][0]}" cy="${points[0][1]}" r="8" fill="${color}" opacity=".12"/>`:points.slice(1).map((p,i)=>`<path d="M${points[i][0]} ${points[i][1]}L${p[0]} ${p[1]}" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round" opacity="${.12+.3*(i+1)/points.length}"/>`).join('')).join('')}
