@@ -10,6 +10,18 @@ from .learning import ROOT, GAP, bounded_prefixspan, mining_actions, valid_windo
 from . import tactical_analysis as analysis
 
 
+# Confirmed by the Mirage roster and donk's 4-16 K/D at IEM Rio 2026.
+# https://www.hltv.org/stats/matches/mapstatsid/226560/spirit-vs-falcons
+PROFILE_IDENTITIES = {
+    ('cs2_2393226-de_mirage', '76561198018303780'): '76561198386265483',
+}
+
+
+def profile_identity(sequence):
+    raw = sequence['player_id']
+    return PROFILE_IDENTITIES.get((sequence['demo_id'], raw), raw)
+
+
 @lru_cache(maxsize=1)
 def roster_context():
     data = analysis.dataset()
@@ -25,7 +37,7 @@ def roster_context():
         meta = metadata[sequence['round_id']]
         team = team_key(meta[sequence['side'].lower()+'_team'])
         memberships[sequence['round_id'], sequence['player_id']] = team
-        player = players.setdefault(sequence['player_id'], dict(names=Counter(), groups={}))
+        player = players.setdefault(profile_identity(sequence), dict(names=Counter(), groups={}))
         name = str(sequence['player_name'] or sequence['player_id']).strip()
         player['names'][name] += 1
         key = (team, sequence['map'], sequence['side'], sequence['weapon_group'])
@@ -40,24 +52,23 @@ def catalog():
     original = analysis.catalog()
     teams, _, observed = roster_context()
     players = []
-    for original_player in original['players']:
-        player = observed[original_player['id']]
+    for player_id, player in observed.items():
         contexts = [dict(team_id=team, map=mapname, side=side, weapon=weapon,
                          rounds=counts['rounds'], demo_ids=sorted(counts['demos']))
                     for (team, mapname, side, weapon), counts in player['groups'].items()]
-        players.append(dict(original_player, name=player['names'].most_common(1)[0][0],
+        players.append(dict(id=player_id, name=player['names'].most_common(1)[0][0],
+                            rounds=sum(context['rounds'] for context in contexts),
+                            maps=sorted({context['map'] for context in contexts}),
                             aliases=sorted(player['names']), contexts=contexts,
                             team_ids=sorted({context['team_id'] for context in contexts})))
-    return dict(original, players=players, teams=[dict(id=key, name=name)
+    return dict(original, players=sorted(players, key=lambda p: -p['rounds']), teams=[dict(id=key, name=name)
                                                   for key, name in sorted(teams.items(), key=lambda item: item[1])])
 
 
 @lru_cache(maxsize=24)
 def profile(player, mapname, side, weapon='all', split='all', bp=200, team='all'):
     teams, memberships, _ = roster_context()
-    if team == 'all':
-        return analysis.profile(player, mapname, side, weapon, split, bp)
-    if team not in teams:
+    if team != 'all' and team not in teams:
         raise ValueError('Đội tuyển không hợp lệ')
     if mapname not in analysis.MAPS or side not in ('CT', 'T') or split not in ('all', 'train', 'validation', 'test'):
         raise ValueError('Bộ lọc không hợp lệ')
@@ -65,8 +76,8 @@ def profile(player, mapname, side, weapon='all', split='all', bp=200, team='all'
         raise ValueError('Bộ lọc không hợp lệ')
     data = analysis.dataset()
     sequences = [s for s in data['sequences']
-                 if s['player_id'] == player and s['map'] == mapname and s['side'] == side
-                 and memberships[s['round_id'], player] == team
+                 if profile_identity(s) == player and s['map'] == mapname and s['side'] == side
+                 and (team == 'all' or memberships[s['round_id'], s['player_id']] == team)
                  and (weapon == 'all' or s['weapon_group'] == weapon)
                  and (split == 'all' or s['split'] == split)]
     total = len(sequences)
@@ -88,7 +99,7 @@ def profile(player, mapname, side, weapon='all', split='all', bp=200, team='all'
             assert count == len(proofs)
             patterns.append(dict(actions=actions, support_count=count, total_sequences=total,
                                  support=count/total, matches=len({row['demo_id'] for row in proofs}), evidence=proofs))
-    return dict(player_id=player, team_id=team, team_name=teams[team], map=mapname, side=side,
+    return dict(player_id=player, team_id=team, team_name=teams.get(team), map=mapname, side=side,
                 weapon=weapon, split=split, sequences=total,
                 matches=len({s['demo_id'] for s in sequences}), min_sup=bp/100,
                 patterns=patterns, roles=analysis.location_roles(sequences, data['detections'], mapname, side),

@@ -1,221 +1,79 @@
 {
-  "status": "READY",
-  "algorithm": "PrefixSpan",
-  "min_sup": 2,
-  "demos": 226,
-  "rounds": 4806,
-  "sequences": 48060,
-  "patterns": 1294,
-  "model_dictionary": 240,
-  "active_model": "D_state_site_compact",
-  "data_fingerprint": "227958c0057617b1c65d7c28a9afa123d27d06beac752c7aecf11ffe89da6ed9",
-  "utility_coverage": {
-    "verified": [
-      {
-        "demo_id": "cs2_2393086-de_inferno",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393088-de_inferno",
-        "rounds": 23,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393088-de_mirage",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393224-de_inferno",
-        "rounds": 29,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393228-de_dust2",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393228-de_mirage",
-        "rounds": 16,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393230-de_dust2",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393230-de_mirage",
-        "rounds": 21,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393236-de_dust2",
-        "rounds": 19,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393236-de_mirage",
-        "rounds": 23,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393238-de_dust2",
-        "rounds": 22,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393238-de_mirage",
-        "rounds": 18,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393239-de_dust2",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393239-de_inferno",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393241-de_dust2",
-        "rounds": 19,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393244-de_dust2",
-        "rounds": 24,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393244-de_mirage",
-        "rounds": 24,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2393023-de_mirage",
-        "rounds": 17,
-        "source": "sha256_equal_previous_utility"
-      },
-      {
-        "demo_id": "cs2_2388124-de_mirage",
-        "rounds": 18,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2375775-de_mirage",
-        "rounds": 30,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2372740-de_mirage",
-        "rounds": 18,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2372742-de_mirage",
-        "rounds": 19,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2368525-de_mirage",
-        "rounds": 24,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2368527-de_inferno",
-        "rounds": 18,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2376883-de_mirage",
-        "rounds": 21,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2367842-de_mirage",
-        "rounds": 24,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2367848-de_mirage",
-        "rounds": 20,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2371546-de_inferno",
-        "rounds": 4,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2385323-de_dust2",
-        "rounds": 19,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2385323-de_mirage",
-        "rounds": 23,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2387412-de_inferno",
-        "rounds": 11,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2383842-de_mirage",
-        "rounds": 3,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2372346-de_dust2",
-        "rounds": 14,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2378905-de_inferno",
-        "rounds": 11,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2389660-de_inferno",
-        "rounds": 27,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2393241-de_mirage",
-        "rounds": 5,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2367244-de_inferno",
-        "rounds": 17,
-        "source": "retained_raw_utility"
-      },
-      {
-        "demo_id": "cs2_2367244-de_mirage",
-        "rounds": 29,
-        "source": "retained_raw_utility"
+  "status": "PASS",
+  "data_fingerprint": "7cd889ad56ed80ab75436ecd02880f962e108b98bdee5fda1d09d8703ead8103",
+  "demos": 248,
+  "rounds": 5284,
+  "sequences": 52840,
+  "splits": {
+    "train": {
+      "matches": 107,
+      "demos": 173,
+      "rounds": 3658,
+      "maps": {
+        "de_inferno": 1010,
+        "de_mirage": 1506,
+        "de_dust2": 1142
       }
-    ],
-    "total_demos": 226,
-    "available_demos": 38,
-    "available_rounds": 712,
-    "missing_demos": 188
+    },
+    "validation": {
+      "matches": 22,
+      "demos": 37,
+      "rounds": 813,
+      "maps": {
+        "de_dust2": 227,
+        "de_inferno": 286,
+        "de_mirage": 300
+      }
+    },
+    "test": {
+      "matches": 22,
+      "demos": 38,
+      "rounds": 813,
+      "maps": {
+        "de_dust2": 240,
+        "de_inferno": 228,
+        "de_mirage": 345
+      }
+    }
   },
-  "web_verified": true,
-  "verified_views": [
-    "Round Replay",
-    "Player profiles",
-    "Team plays",
-    "Three maps",
-    "Map paths",
-    "Presentation"
-  ],
-  "model_version": "cs2_lr_v4_site_coord",
-  "model_experiment": "site_compact_v1"
+  "policy": {
+    "unit": "match_id",
+    "seed": "cs2-expanded-313",
+    "method": "Deterministic hash, approximately 70/15/15 by match",
+    "pinned_previous_pilot_matches": [
+      "2393023",
+      "2393086",
+      "2393088",
+      "2393224",
+      "2393228",
+      "2393230",
+      "2393236",
+      "2393238",
+      "2393239",
+      "2393241",
+      "2393244"
+    ],
+    "previous_pilot_kept_in_train": true,
+    "temporal_split": false,
+    "test_used_for_selection": false,
+    "holdout_status": "Validation and test contain match IDs absent from the previous pilot; split fixed before mining",
+    "spirit_match_split": {
+      "2393242": "validation",
+      "2394977": "validation",
+      "2394888": "test",
+      "2394126": "test",
+      "2394900": "train",
+      "2393240": "train",
+      "2394156": "train",
+      "2394153": "train",
+      "2395001": "train",
+      "2394138": "train",
+      "2394879": "train",
+      "2394986": "train",
+      "2393226": "train",
+      "2394998": "train",
+      "2393245": "train"
+    },
+    "previous_splits_preserved": true
+  }
 }

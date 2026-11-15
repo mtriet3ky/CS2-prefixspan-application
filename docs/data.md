@@ -19,3 +19,5 @@ Thông báo giấy phép tài nguyên hiện có nằm trong `web/assets/`. Xem 
 
 
 Ảnh ở bộ chọn chiến thuật được tham chiếu từ danh mục [tuyển thủ BLAST.tv](https://blast.tv/cs/player) và [đội BLAST.tv](https://blast.tv/cs/team). Ảnh tuyển thủ được ghép theo SteamID. Logo dùng đội đang chọn trong bộ lọc demo. Khi nguồn thiếu ảnh hoặc CDN không tải được, giao diện hiển thị tên viết tắt.
+
+Hồ sơ donk gộp định danh thay thế chỉ trong demo `cs2_2393226-de_mirage` sau khi đối chiếu đội hình và K/D với [thống kê Mirage tại IEM Rio 2026](https://www.hltv.org/stats/matches/mapstatsid/226560/spirit-vs-falcons). SteamID và ID chuỗi gốc vẫn dùng khi đọc đường đi từ replay.

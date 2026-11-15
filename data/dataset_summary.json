@@ -1,0 +1,77 @@
+{
+  "demos": 248,
+  "rounds": 5284,
+  "sequences": 52840,
+  "splits": {
+    "train": {
+      "matches": 107,
+      "demos": 173,
+      "rounds": 3658,
+      "maps": {
+        "de_inferno": 1010,
+        "de_mirage": 1506,
+        "de_dust2": 1142
+      }
+    },
+    "validation": {
+      "matches": 22,
+      "demos": 37,
+      "rounds": 813,
+      "maps": {
+        "de_dust2": 227,
+        "de_inferno": 286,
+        "de_mirage": 300
+      }
+    },
+    "test": {
+      "matches": 22,
+      "demos": 38,
+      "rounds": 813,
+      "maps": {
+        "de_dust2": 240,
+        "de_inferno": 228,
+        "de_mirage": 345
+      }
+    }
+  },
+  "policy": {
+    "unit": "match_id",
+    "seed": "cs2-expanded-313",
+    "method": "Deterministic hash, approximately 70/15/15 by match",
+    "pinned_previous_pilot_matches": [
+      "2393023",
+      "2393086",
+      "2393088",
+      "2393224",
+      "2393228",
+      "2393230",
+      "2393236",
+      "2393238",
+      "2393239",
+      "2393241",
+      "2393244"
+    ],
+    "previous_pilot_kept_in_train": true,
+    "temporal_split": false,
+    "test_used_for_selection": false,
+    "holdout_status": "Validation and test contain match IDs absent from the previous pilot; split fixed before mining",
+    "spirit_match_split": {
+      "2393242": "validation",
+      "2394977": "validation",
+      "2394888": "test",
+      "2394126": "test",
+      "2394900": "train",
+      "2393240": "train",
+      "2394156": "train",
+      "2394153": "train",
+      "2395001": "train",
+      "2394138": "train",
+      "2394879": "train",
+      "2394986": "train",
+      "2393226": "train",
+      "2394998": "train",
+      "2393245": "train"
+    },
+    "previous_splits_preserved": true
+  }
+}

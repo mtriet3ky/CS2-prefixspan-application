@@ -1,21 +1,7 @@
 {
   "status": "PASS",
-  "snapshots": 442578,
-  "features": 32,
-  "real_snapshots_checked": 3,
-  "causal_cutoff": true,
-  "distinct_player_counts": true,
-  "serialized_predictions": true,
-  "validation_selection": true,
-  "data_fingerprint": "227958c0057617b1c65d7c28a9afa123d27d06beac752c7aecf11ffe89da6ed9",
-  "compact_serialization": true,
-  "baseline_preserved": true,
-  "selected_model": "D_state_site_compact",
-  "web_verified": true,
-  "verified_views": [
-    "Replay: all three maps",
-    "Probability chart",
-    "Presentation",
-    "Tactical profiles"
-  ]
+  "model_id": "A_state",
+  "rounds": 5284,
+  "predictions": 486660,
+  "validation_selected": true
 }

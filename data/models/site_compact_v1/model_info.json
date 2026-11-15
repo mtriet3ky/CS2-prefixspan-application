@@ -1,193 +1,193 @@
 {
   "version": "cs2_lr_v4_site_coord",
   "mapping_version": "cs2_spatial_v2",
-  "data_fingerprint": "227958c0057617b1c65d7c28a9afa123d27d06beac752c7aecf11ffe89da6ed9",
-  "chosen_family": "D_state_site_compact",
+  "data_fingerprint": "7cd889ad56ed80ab75436ecd02880f962e108b98bdee5fda1d09d8703ead8103",
+  "chosen_family": "A_state",
   "decision_threshold": 0.5,
   "evaluation": {
     "train": {
-      "rounds": 3279,
-      "snapshots": 67774,
-      "accuracy": 0.7690707350901526,
-      "accuracy_at_0_5": 0.7690707350901526,
-      "precision": 0.8442020777371436,
-      "recall": 0.7064893559395482,
-      "f1": 0.7692307692307693,
-      "roc_auc": 0.8755621601593031,
-      "log_loss": 0.4301945946722964,
-      "brier_score": 0.1441098041274637,
+      "rounds": 3658,
+      "snapshots": 75449,
+      "accuracy": 0.769049291574441,
+      "accuracy_at_0_5": 0.769049291574441,
+      "precision": 0.8428575621496287,
+      "recall": 0.704055114249289,
+      "f1": 0.7672290572943801,
+      "roc_auc": 0.8754223842890199,
+      "log_loss": 0.4300312494737893,
+      "brier_score": 0.14414210192200236,
       "confusion_matrix": [
         [
-          26038,
-          4814
+          29307,
+          5354
         ],
         [
-          10837,
-          26085
+          12071,
+          28717
         ]
       ],
       "calibration": {
         "predicted": [
-          0.05184275419782005,
-          0.1767771739868375,
-          0.3271899369696639,
-          0.4270950541497667,
-          0.5214469998520049,
-          0.6994463297119993,
-          0.8964829695381541,
-          0.9808027277351172
+          0.04893066591053598,
+          0.17122002387157037,
+          0.3215765877875265,
+          0.42344907221535666,
+          0.5169669737760361,
+          0.6948137305258792,
+          0.8959816701609886,
+          0.9814449850416759
         ],
         "observed": [
-          0.03364022662889518,
-          0.18767705382436262,
-          0.38437020422618345,
-          0.488314447592068,
-          0.5651558073654391,
-          0.7414709007201039,
-          0.9577431539187913,
-          0.9998819641170916
+          0.031912637828668364,
+          0.1797264341003075,
+          0.3858551585197752,
+          0.47821015798960875,
+          0.5594316615417241,
+          0.7348107305693988,
+          0.9553599830346728,
+          0.9995758668221821
         ]
       },
       "by_seconds": {
         "15": {
-          "n": 3279,
-          "brier_score": 0.20517640840485804
+          "n": 3658,
+          "brier_score": 0.20475024550317586
         },
         "30": {
-          "n": 3228,
-          "brier_score": 0.180273320767202
+          "n": 3603,
+          "brier_score": 0.180046219510628
         },
         "45": {
-          "n": 3086,
-          "brier_score": 0.1620078263073021
+          "n": 3440,
+          "brier_score": 0.16069921307623714
         },
         "60": {
-          "n": 2775,
-          "brier_score": 0.1455372840809695
+          "n": 3097,
+          "brier_score": 0.14580878973716538
         }
       }
     },
     "validation": {
-      "rounds": 754,
-      "snapshots": 15494,
-      "accuracy": 0.7603588485865497,
-      "accuracy_at_0_5": 0.7603588485865497,
-      "precision": 0.8188603416104493,
-      "recall": 0.6994850416871016,
-      "f1": 0.754479931230576,
-      "roc_auc": 0.8657878075537379,
-      "log_loss": 0.4385223347407123,
-      "brier_score": 0.14785077032820818,
+      "rounds": 813,
+      "snapshots": 16733,
+      "accuracy": 0.7614892726946751,
+      "accuracy_at_0_5": 0.7614892726946751,
+      "precision": 0.8104322305229456,
+      "recall": 0.7027183342972817,
+      "f1": 0.7527414658323524,
+      "roc_auc": 0.8659773363447423,
+      "log_loss": 0.4379537752609078,
+      "brier_score": 0.14768442274829705,
       "confusion_matrix": [
         [
-          6076,
-          1262
+          6667,
+          1421
         ],
         [
-          2451,
-          5705
+          2570,
+          6075
         ]
       ],
       "calibration": {
         "predicted": [
-          0.054098505593384597,
-          0.185656288684511,
-          0.3262357378681602,
-          0.4223717988273436,
-          0.5151916298739675,
-          0.6848099442521342,
-          0.8846606203912821,
-          0.9771735996800616
+          0.05111428780473576,
+          0.17783947551492132,
+          0.3165671818105268,
+          0.4177871740554917,
+          0.511831209865455,
+          0.6762011589035176,
+          0.880865103999636,
+          0.9777495691189121
         ],
         "observed": [
-          0.017036654620547237,
-          0.19308208569953536,
-          0.4034090909090909,
-          0.45844088797108934,
-          0.5240061951471348,
-          0.6647727272727273,
-          0.9514713474445018,
-          0.9989674754775426
+          0.014818355640535373,
+          0.18833652007648183,
+          0.37254901960784315,
+          0.45841300191204587,
+          0.5088474414155906,
+          0.6510516252390057,
+          0.9402199904351984,
+          0.9990439770554493
         ]
       },
       "by_seconds": {
         "15": {
-          "n": 754,
-          "brier_score": 0.2079883724218179
+          "n": 813,
+          "brier_score": 0.20498185263595575
         },
         "30": {
-          "n": 734,
-          "brier_score": 0.18919702142731884
+          "n": 792,
+          "brier_score": 0.18576328324901645
         },
         "45": {
-          "n": 695,
-          "brier_score": 0.1675870611033171
+          "n": 748,
+          "brier_score": 0.16689240962094246
         },
         "60": {
-          "n": 637,
-          "brier_score": 0.1469905957897285
+          "n": 689,
+          "brier_score": 0.146147934029782
         }
       }
     },
     "test": {
-      "rounds": 773,
-      "snapshots": 15786,
-      "accuracy": 0.7526922589636387,
-      "accuracy_at_0_5": 0.7526922589636387,
-      "precision": 0.8153825822650984,
-      "recall": 0.7110752564250317,
-      "f1": 0.7596651071164737,
-      "roc_auc": 0.8563944115043072,
-      "log_loss": 0.45611071520409346,
-      "brier_score": 0.1535357361445836,
+      "rounds": 813,
+      "snapshots": 16656,
+      "accuracy": 0.7525816522574448,
+      "accuracy_at_0_5": 0.7525816522574448,
+      "precision": 0.8214196762141968,
+      "recall": 0.7105461596466659,
+      "f1": 0.7619707734072663,
+      "roc_auc": 0.8564700003399882,
+      "log_loss": 0.4565927110806216,
+      "brier_score": 0.15381506686823282,
       "confusion_matrix": [
         [
-          5712,
-          1397
+          5939,
+          1434
         ],
         [
-          2507,
-          6170
+          2687,
+          6596
         ]
       ],
       "calibration": {
         "predicted": [
-          0.05657564358556954,
-          0.2005883324047112,
-          0.34346050396103356,
-          0.4393291263141976,
-          0.5436005932168498,
-          0.7122107597385464,
-          0.8914877497765802,
-          0.9786020922211506
+          0.05416415920889538,
+          0.19787459321029174,
+          0.34195748461495484,
+          0.4406905748019132,
+          0.5465912750679024,
+          0.7194616867523624,
+          0.8978339251337276,
+          0.9803084526683478
         ],
         "observed": [
-          0.05268490374873354,
-          0.2483527622909275,
-          0.3928028383172833,
-          0.49163710086163204,
-          0.5281297516472377,
-          0.7622909275215408,
-          0.9249873289406995,
-          0.9964539007092199
+          0.05859750240153699,
+          0.2564841498559078,
+          0.4034582132564842,
+          0.49759846301633043,
+          0.5403458213256485,
+          0.7742555235350624,
+          0.9313160422670509,
+          0.9966378482228626
         ]
       },
       "by_seconds": {
         "15": {
-          "n": 772,
-          "brier_score": 0.20747240108158965
+          "n": 812,
+          "brier_score": 0.20953323988137934
         },
         "30": {
-          "n": 764,
-          "brier_score": 0.18786735137045235
+          "n": 803,
+          "brier_score": 0.18908210438373496
         },
         "45": {
-          "n": 719,
-          "brier_score": 0.17202137116635233
+          "n": 757,
+          "brier_score": 0.1753560211157206
         },
         "60": {
-          "n": 657,
-          "brier_score": 0.15496915738705824
+          "n": 692,
+          "brier_score": 0.15540101056868608
         }
       }
     }
@@ -195,1893 +195,1733 @@
   "coefficients": [
     {
       "feature": "T_armor",
-      "coefficient": 0.407848450784915,
+      "coefficient": 0.41731458723637116,
       "pattern": false
     },
     {
       "feature": "CT_armor",
-      "coefficient": -0.3222525115373722,
+      "coefficient": -0.3363479353893317,
       "pattern": false
     },
     {
       "feature": "bomb_elapsed_seconds",
-      "coefficient": 0.3146821760355068,
-      "pattern": false
-    },
-    {
-      "feature": "T_weapon_Pistols",
-      "coefficient": 0.3139468532714992,
+      "coefficient": 0.3252834585710023,
       "pattern": false
     },
     {
       "feature": "T_alive",
-      "coefficient": 0.3118773724748146,
+      "coefficient": 0.3153608100607303,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_Pistols",
+      "coefficient": 0.31492632525052716,
       "pattern": false
     },
     {
       "feature": "CT_weapon_Rifle",
-      "coefficient": -0.27347818179570627,
+      "coefficient": -0.2823905701278119,
       "pattern": false
     },
     {
       "feature": "T_weapon_Rifle",
-      "coefficient": 0.2641239547066172,
+      "coefficient": 0.2715360618243323,
       "pattern": false
     },
     {
       "feature": "T_hp",
-      "coefficient": 0.24726790053347686,
+      "coefficient": 0.2675848543420856,
       "pattern": false
     },
     {
       "feature": "CT_alive",
-      "coefficient": -0.24643360490076344,
+      "coefficient": -0.2552805615983882,
       "pattern": false
     },
     {
       "feature": "CT_weapon_Pistols",
-      "coefficient": -0.24407747063602322,
+      "coefficient": -0.254210834815504,
       "pattern": false
     },
     {
       "feature": "CT_hp",
-      "coefficient": -0.2417928824784793,
-      "pattern": false
-    },
-    {
-      "feature": "bomb_planted",
-      "coefficient": 0.17370525581967636,
-      "pattern": false
-    },
-    {
-      "feature": "bomb_timer_length",
-      "coefficient": 0.17370525581965124,
+      "coefficient": -0.2519612480901826,
       "pattern": false
     },
     {
       "feature": "CT_defusing",
-      "coefficient": -0.1717906957194343,
+      "coefficient": -0.1810898488481254,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_planted",
+      "coefficient": 0.17416283403483365,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_timer_length",
+      "coefficient": 0.17416283403482002,
       "pattern": false
     },
     {
       "feature": "T_region_B_SITE",
-      "coefficient": 0.15242364475870113,
+      "coefficient": 0.17199179711233964,
       "pattern": false
     },
     {
       "feature": "CT_weapon_SMG",
-      "coefficient": -0.13847601562012324,
+      "coefficient": -0.13607962466954016,
       "pattern": false
     },
     {
       "feature": "T_weapon_Sniper",
-      "coefficient": 0.11744100257001935,
+      "coefficient": 0.13552397548127915,
       "pattern": false
     },
     {
       "feature": "bomb_site_A",
-      "coefficient": 0.1157080620167628,
-      "pattern": false
-    },
-    {
-      "feature": "bomb_site_B",
-      "coefficient": 0.11359511924077154,
+      "coefficient": 0.12040546121969875,
       "pattern": false
     },
     {
       "feature": "T_region_A_SITE",
-      "coefficient": 0.11315246009267156,
+      "coefficient": 0.11393564296205141,
       "pattern": false
     },
     {
       "feature": "CT_kits",
-      "coefficient": -0.1044587375346258,
+      "coefficient": -0.11200318870467586,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_site_B",
+      "coefficient": 0.10940387388631394,
       "pattern": false
     },
     {
       "feature": "CT_smoke",
-      "coefficient": -0.10254492776718914,
-      "pattern": false
-    },
-    {
-      "feature": "T_smoke",
-      "coefficient": 0.09131514213824964,
-      "pattern": false
-    },
-    {
-      "feature": "CT_weapon_Sniper",
-      "coefficient": -0.09088584225542427,
-      "pattern": false
-    },
-    {
-      "feature": "CT_he",
-      "coefficient": -0.08571453855969635,
+      "coefficient": -0.1086122869309731,
       "pattern": false
     },
     {
       "feature": "bomb_seconds_remaining",
-      "coefficient": -0.0840910543093763,
+      "coefficient": -0.09656890151933856,
       "pattern": false
     },
     {
       "feature": "T_region_CT_SPAWN",
-      "coefficient": 0.08251257045675067,
+      "coefficient": 0.08479283190476435,
       "pattern": false
     },
     {
-      "feature": "T_molotov",
-      "coefficient": 0.07375149159351378,
+      "feature": "T_smoke",
+      "coefficient": 0.08449944879222282,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_Sniper",
+      "coefficient": -0.08331070282166873,
       "pattern": false
     },
     {
       "feature": "T_he",
-      "coefficient": 0.06970195445080705,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CT_SPAWN",
-      "coefficient": -0.06909806362882188,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CT",
-      "coefficient": -0.06831204606058373,
+      "coefficient": 0.08069327938617438,
       "pattern": false
     },
     {
       "feature": "T_utility30_SMOKE",
-      "coefficient": 0.0640836682541795,
+      "coefficient": 0.06902135557373898,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_B_alive_recent15",
-      "coefficient": 0.05768737483964997,
-      "pattern": true
+      "feature": "T_molotov",
+      "coefficient": 0.06817803614401498,
+      "pattern": false
     },
     {
-      "feature": "T_region_LONG_DOORS",
-      "coefficient": 0.05728824083781078,
+      "feature": "CT_region_CT_SPAWN",
+      "coefficient": -0.0670330503578406,
+      "pattern": false
+    },
+    {
+      "feature": "CT_he",
+      "coefficient": -0.06547472914847514,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT",
+      "coefficient": -0.06544392138901864,
       "pattern": false
     },
     {
       "feature": "T_region_PIT",
-      "coefficient": 0.05596439315769209,
+      "coefficient": 0.06448527995870638,
       "pattern": false
     },
     {
-      "feature": "T_region_CT",
-      "coefficient": 0.05563428115713663,
+      "feature": "T_region_LONG_DOORS",
+      "coefficient": 0.0638873041818561,
       "pattern": false
-    },
-    {
-      "feature": "T_region_BANANA",
-      "coefficient": 0.05317441793653714,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CEMETERY",
-      "coefficient": 0.05238738186487364,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CATWALK",
-      "coefficient": -0.051623168429757754,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_A_alive_recent15",
-      "coefficient": 0.051299377248170755,
-      "pattern": true
     },
     {
       "feature": "CT_region_A_SITE",
-      "coefficient": -0.04999263784406968,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_UNDERPASS",
-      "coefficient": -0.047774165378582215,
-      "pattern": false
-    },
-    {
-      "feature": "T_utility30_HE",
-      "coefficient": 0.047592869849044296,
-      "pattern": false
-    },
-    {
-      "feature": "CT_utility30_SMOKE",
-      "coefficient": -0.04413312153571332,
+      "coefficient": -0.059780227805672034,
       "pattern": false
     },
     {
       "feature": "CT_region_B_SITE",
-      "coefficient": -0.04407986832028377,
+      "coefficient": -0.05490821430318559,
       "pattern": false
     },
     {
-      "feature": "CT_region_A_PLATFORM",
-      "coefficient": -0.044063736427319346,
+      "feature": "CT_region_CATWALK",
+      "coefficient": -0.05460599759345144,
       "pattern": false
     },
     {
-      "feature": "T_region_CONNECTOR",
-      "coefficient": 0.04293957356144778,
+      "feature": "CT_utility30_SMOKE",
+      "coefficient": -0.0534622029774516,
       "pattern": false
     },
     {
-      "feature": "CT_utility30_HE",
-      "coefficient": -0.0425108716844713,
+      "feature": "T_region_CEMETERY",
+      "coefficient": 0.05156191012037566,
       "pattern": false
     },
     {
-      "feature": "T_region_A_LONG",
-      "coefficient": 0.04238707454037249,
+      "feature": "T_region_BANANA",
+      "coefficient": 0.05071641692019508,
       "pattern": false
     },
     {
-      "feature": "CT_region_MIDDLE",
-      "coefficient": -0.042256616946876865,
-      "pattern": false
-    },
-    {
-      "feature": "CT_flash",
-      "coefficient": 0.03885433023089579,
+      "feature": "T_region_CT",
+      "coefficient": 0.048308640994794184,
       "pattern": false
     },
     {
       "feature": "map=de_mirage",
-      "coefficient": -0.038564156311500515,
+      "coefficient": -0.04755194712065812,
       "pattern": false
-    },
-    {
-      "feature": "CT_region_SHADOWS",
-      "coefficient": -0.03745584083659903,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_A_RAMP",
-      "coefficient": -0.036136716849079244,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_B_SHORT",
-      "coefficient": 0.03542581899524683,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BACK_SITE_A",
-      "coefficient": 0.03521502064300376,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_DEFAULT",
-      "coefficient": -0.034653969390790774,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CT_MID",
-      "coefficient": -0.034527350134859205,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_alive_recent15",
-      "coefficient": -0.0343847680618426,
-      "pattern": true
     },
     {
       "feature": "T_region_B_PLAT",
-      "coefficient": 0.034273648658472544,
+      "coefficient": 0.04728424972569145,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CONNECTOR",
+      "coefficient": 0.04672355782887779,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UNDERPASS",
+      "coefficient": -0.04628664978887733,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_HE",
+      "coefficient": 0.044372058584653165,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MIDDLE",
+      "coefficient": -0.042817703442247564,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_HE",
+      "coefficient": -0.04109580368845681,
       "pattern": false
     },
     {
       "feature": "T_region_CONSTRUCTION",
-      "coefficient": 0.03392498268225822,
+      "coefficient": 0.040390432290656954,
       "pattern": false
     },
     {
-      "feature": "CT_region_BANANA",
-      "coefficient": -0.033735528305886386,
+      "feature": "CT_region_A_PLATFORM",
+      "coefficient": -0.03941477465175943,
       "pattern": false
     },
     {
-      "feature": "T_region_A_SHORT",
-      "coefficient": 0.03355762069250587,
+      "feature": "T_region_A_LONG",
+      "coefficient": 0.03631719418702447,
       "pattern": false
     },
     {
       "feature": "CT_region_A_LONG",
-      "coefficient": -0.033548264887455284,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BLUE",
-      "coefficient": 0.033398657160564615,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_DOUBLE_STACK",
-      "coefficient": -0.03210445009903855,
-      "pattern": false
-    },
-    {
-      "feature": "T_utility30_MOLOTOV",
-      "coefficient": 0.031321982101038724,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_A_SHORT",
-      "coefficient": -0.031205617081736282,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_pair_together5",
-      "coefficient": 0.0309161399513087,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_A_DEFAULT_PLANT",
-      "coefficient": -0.030342411195798193,
-      "pattern": false
-    },
-    {
-      "feature": "map=de_dust2",
-      "coefficient": 0.03011740673305026,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CT_MID",
-      "coefficient": 0.03011731405314579,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_LOGS",
-      "coefficient": 0.02911245782105699,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_A_PLATFORM",
-      "coefficient": 0.02905590580033272,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_B_APARTMENTS",
-      "coefficient": 0.02854358114409851,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_TRUCK",
-      "coefficient": 0.028468246397146534,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CATWALK",
-      "coefficient": 0.027955514701611024,
+      "coefficient": -0.036203452101197554,
       "pattern": false
     },
     {
       "feature": "CT_region_B_PLAT",
-      "coefficient": -0.027559321658679407,
+      "coefficient": -0.036045359025218354,
       "pattern": false
     },
     {
-      "feature": "CT_region_CLOSE_LEFT",
-      "coefficient": -0.02755394403943299,
+      "feature": "CT_region_A_RAMP",
+      "coefficient": -0.035931107102648956,
       "pattern": false
     },
     {
-      "feature": "T_region_TETRIS",
-      "coefficient": 0.027016828900755498,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SECOND_MID",
-      "coefficient": -0.02701483484773112,
-      "pattern": false
-    },
-    {
-      "feature": "CT_weapon_Heavy",
-      "coefficient": -0.02690255978120174,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_MARKET",
-      "coefficient": 0.02687705559428966,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_A_CAR",
-      "coefficient": 0.026748565588249958,
+      "feature": "T_region_BACK_SITE_A",
+      "coefficient": 0.035584692317451025,
       "pattern": false
     },
     {
       "feature": "T_region_B_CLOSET",
-      "coefficient": 0.026606916863346534,
+      "coefficient": 0.03479778881719371,
       "pattern": false
     },
     {
-      "feature": "T_region_DOSIA",
-      "coefficient": 0.026549948260338768,
+      "feature": "T_region_B_SHORT",
+      "coefficient": 0.033407149272035884,
       "pattern": false
     },
     {
-      "feature": "CT_region_HOLE",
-      "coefficient": -0.026537455592343193,
+      "feature": "CT_region_DEFAULT",
+      "coefficient": -0.03318150670017688,
       "pattern": false
     },
     {
-      "feature": "CT_region_PIT",
-      "coefficient": -0.0264428454004471,
+      "feature": "T_region_CT_MID",
+      "coefficient": 0.03311936281108598,
       "pattern": false
     },
     {
-      "feature": "CT_region_1ST",
-      "coefficient": -0.02626164313993288,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_B_SHORT",
-      "coefficient": -0.026224934767818557,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_PALACE",
-      "coefficient": 0.026084407394386794,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_B_DOORS",
-      "coefficient": 0.02603155907285783,
-      "pattern": false
-    },
-    {
-      "feature": "elapsed_seconds",
-      "coefficient": 0.025716737961148806,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_UNDER_A",
-      "coefficient": 0.025614566770300627,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_A_alive_at_site",
-      "coefficient": -0.025369354892330206,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_PALACE_INTERIOR",
-      "coefficient": -0.025293262558249964,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_B_postplant_alive_at_site",
-      "coefficient": -0.02510866099240204,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_CAR",
-      "coefficient": -0.024880358283331804,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_A_DEFAULT_PLANT",
-      "coefficient": 0.0248468007781685,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_DEFAULT",
-      "coefficient": 0.02443534892726848,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BACK_ALLEY",
-      "coefficient": 0.024377568281287187,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_STAIRS",
-      "coefficient": -0.024333542439887064,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_A_CROSS",
-      "coefficient": 0.024314468168010427,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CONNECTOR",
-      "coefficient": -0.024102778711291798,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_A_CAR",
-      "coefficient": 0.024038596712594347,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_UPSTAIRS",
-      "coefficient": 0.023850531545608167,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_B_CAR",
-      "coefficient": -0.023839299457313733,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SIDE_PIT",
-      "coefficient": -0.023726620150664755,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_UPPER_TUNNEL",
-      "coefficient": 0.023417151471446525,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_B_DOORS",
-      "coefficient": -0.02327216720260789,
+      "feature": "CT_region_SHADOWS",
+      "coefficient": -0.03278441520914889,
       "pattern": false
     },
     {
       "feature": "T_region_UPPER_TUNNEL",
-      "coefficient": 0.023068582932690967,
+      "coefficient": 0.03269264925291561,
       "pattern": false
     },
     {
-      "feature": "T_region_ARCHES",
-      "coefficient": 0.02305201049110223,
+      "feature": "T_region_A_PLATFORM",
+      "coefficient": 0.03256973839392275,
       "pattern": false
     },
     {
-      "feature": "CT_region_DOSIA",
-      "coefficient": -0.022612406594205055,
+      "feature": "T_region_A_DEFAULT_PLANT",
+      "coefficient": 0.031939148226275624,
       "pattern": false
     },
     {
-      "feature": "T_region_DECK",
-      "coefficient": -0.022495480178637183,
+      "feature": "CT_region_DOUBLE_STACK",
+      "coefficient": -0.031915683803572494,
       "pattern": false
     },
     {
-      "feature": "CT_region_MID_DOORS",
-      "coefficient": -0.021267269301698224,
+      "feature": "T_region_TETRIS",
+      "coefficient": 0.031866027036021934,
       "pattern": false
     },
     {
-      "feature": "T_flash",
-      "coefficient": 0.021070305307950562,
+      "feature": "CT_region_STAIRS",
+      "coefficient": -0.0314764912020655,
       "pattern": false
     },
     {
-      "feature": "T_region_1ST",
-      "coefficient": 0.02101953258385366,
+      "feature": "CT_region_A_SHORT",
+      "coefficient": -0.03114055400220341,
       "pattern": false
     },
     {
-      "feature": "CT_region_LONG_A",
-      "coefficient": -0.020958248670145358,
+      "feature": "CT_flash",
+      "coefficient": 0.03100665736679934,
       "pattern": false
     },
     {
-      "feature": "T_region_TOP_OF_MID",
-      "coefficient": 0.020802942324824828,
+      "feature": "CT_region_CT_MID",
+      "coefficient": -0.030834033428959223,
       "pattern": false
     },
     {
-      "feature": "T_region_BACK_PLAT",
-      "coefficient": 0.020625285845519876,
+      "feature": "T_region_A_CROSS",
+      "coefficient": 0.03016732355229231,
       "pattern": false
     },
     {
-      "feature": "CT_region_SNIPERS_NEST",
-      "coefficient": -0.02053605768695157,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CART",
-      "coefficient": 0.020443126231417544,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CLOSE",
-      "coefficient": 0.0203340629719272,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SHOP",
-      "coefficient": 0.020187584294654195,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_B_together5",
-      "coefficient": 0.019811658889624814,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_LADDER",
-      "coefficient": -0.01932223124462551,
+      "feature": "CT_region_BANANA",
+      "coefficient": -0.030066427021804076,
       "pattern": false
     },
     {
       "feature": "CT_region_UNDER_A",
-      "coefficient": -0.019208975209162548,
+      "coefficient": -0.029955217779217728,
       "pattern": false
     },
     {
-      "feature": "CT_region_ARCHES",
-      "coefficient": -0.019201768837512515,
+      "feature": "map=de_dust2",
+      "coefficient": 0.029781427755470855,
       "pattern": false
     },
     {
-      "feature": "T_region_UNDERPASS",
-      "coefficient": 0.018901386999646476,
+      "feature": "CT_region_A_DEFAULT_PLANT",
+      "coefficient": -0.02946007904545756,
       "pattern": false
     },
     {
-      "feature": "CT_region_APPS_RAMP",
-      "coefficient": 0.01875415182106639,
+      "feature": "CT_region_UPPER_TUNNEL",
+      "coefficient": 0.029232335404169564,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_A_preplant_pair_together5",
-      "coefficient": 0.01870825185665073,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_LADDER_ROOM",
-      "coefficient": 0.018477654130959236,
+      "feature": "T_region_BLUE",
+      "coefficient": 0.028732743097256177,
       "pattern": false
     },
     {
-      "feature": "T_region_GARDEN",
-      "coefficient": 0.018449362491443667,
+      "feature": "CT_region_PIT",
+      "coefficient": -0.028716402017999538,
       "pattern": false
     },
     {
-      "feature": "CT_region_TOP_OF_MID",
-      "coefficient": -0.017861917769207092,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_A_alive_at_site",
-      "coefficient": -0.017767561894597175,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_DOUBLE_STACK",
-      "coefficient": 0.017682085379430786,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_RUINS",
-      "coefficient": -0.01729004692455042,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_ELEVATOR",
-      "coefficient": 0.017227152031661513,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_RUINS",
-      "coefficient": 0.017224776587066105,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SNIPER_S_NEST",
-      "coefficient": -0.017165706534190948,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_A_alive_recent15",
-      "coefficient": -0.016798021665183998,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_PILLARS",
-      "coefficient": 0.016749559777574516,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_OUTSIDE_LONG",
-      "coefficient": 0.016579064942239125,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_LONG_CORNER",
-      "coefficient": -0.016484446893980265,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CONSTRUCTION",
-      "coefficient": 0.016453720648543033,
-      "pattern": false
-    },
-    {
-      "feature": "CT_molotov",
-      "coefficient": -0.016280385490182465,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_PALM",
-      "coefficient": 0.01619907093184596,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_T_RAMP",
-      "coefficient": 0.016180600398626174,
-      "pattern": false
-    },
-    {
-      "feature": "clock_seconds",
-      "coefficient": -0.015982947536004488,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_B_BACK_SITE",
-      "coefficient": 0.015959052379545525,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_A_CROSS",
-      "coefficient": -0.015889171600874902,
-      "pattern": false
-    },
-    {
-      "feature": "T_utility30_FLASH",
-      "coefficient": -0.01585121994143994,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_T_PLAT",
-      "coefficient": 0.015610482379275684,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_A_pair_together5",
-      "coefficient": 0.015585446458950759,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_FENCE",
-      "coefficient": 0.015387357917667172,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_PIT_PLAT",
-      "coefficient": -0.01533596843661283,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_EXTENDED_A",
-      "coefficient": 0.015080916006636023,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CLOSE_LEFT",
-      "coefficient": 0.015068274770453374,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SHORT_BOOST",
-      "coefficient": 0.015043394439243279,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CHAIR",
-      "coefficient": -0.015032744543241118,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_TREE",
-      "coefficient": 0.015015758564489074,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_PALACE",
-      "coefficient": 0.014947281932751556,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BALCONY",
-      "coefficient": 0.014930405645516643,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_B_recent15",
-      "coefficient": 0.014752165403836906,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_MARKET",
-      "coefficient": -0.014642347280365791,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_ARCH",
-      "coefficient": -0.014514536118666018,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_JUNGLE",
-      "coefficient": 0.014433448663967301,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_LONG_A",
-      "coefficient": 0.014334930824342292,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_OUTSIDE_TUNNELS",
-      "coefficient": 0.014201507296718083,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_GRILL",
-      "coefficient": 0.014200674201787628,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_GRILL",
-      "coefficient": -0.014156023729162494,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_VAN",
-      "coefficient": 0.014137798126348555,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_LOWER_MID",
-      "coefficient": 0.013945877510362487,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_PALACE_INTERIOR",
-      "coefficient": 0.013765457247351896,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_living_pair_at_site",
-      "coefficient": -0.013753971126158417,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_CEMETERY",
-      "coefficient": 0.013628157990738929,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_A_postplant_alive_at_site",
-      "coefficient": -0.013539483232994027,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_LIBRARY",
-      "coefficient": 0.013501548550112681,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_LOGS",
-      "coefficient": -0.01333929409729028,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_B_APARTMENTS",
-      "coefficient": -0.013337695885346303,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SCAFFOLDING",
-      "coefficient": 0.013189473897519222,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_B_WINDOW",
-      "coefficient": -0.013114963028829911,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_TRIPLE_BOX",
-      "coefficient": -0.01304247149943147,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SHORT_CORNER",
-      "coefficient": 0.0129526219899065,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_GRAVEYARD",
-      "coefficient": 0.012876451774652908,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_T_ROOF",
-      "coefficient": -0.01287068054230588,
+      "feature": "CT_region_HOLE",
+      "coefficient": -0.027968130145881294,
       "pattern": false
     },
     {
       "feature": "CT_region_EXTENDED_A",
-      "coefficient": -0.012758494225310509,
+      "coefficient": -0.02788998772261845,
       "pattern": false
     },
     {
-      "feature": "CT_region_LOWER_B_TUNNELS",
-      "coefficient": 0.012587214086727003,
+      "feature": "T_region_B_DOORS",
+      "coefficient": 0.027612060545045305,
       "pattern": false
     },
     {
-      "feature": "sitecoord__CT_A_recent15",
-      "coefficient": 0.01230780438985418,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_TREE",
-      "coefficient": -0.012126350274381074,
+      "feature": "T_region_LOGS",
+      "coefficient": 0.027109554119106576,
       "pattern": false
     },
     {
-      "feature": "CT_region_LIVING_ROOM",
-      "coefficient": 0.01208426472898919,
+      "feature": "T_utility30_MOLOTOV",
+      "coefficient": 0.02705849584928198,
       "pattern": false
     },
     {
-      "feature": "T_region_LADDER",
-      "coefficient": 0.011986887462028258,
+      "feature": "CT_region_B_SHORT",
+      "coefficient": -0.02703055941540557,
       "pattern": false
     },
     {
-      "feature": "T_region_BOTTOM_MID",
-      "coefficient": -0.01193789799298779,
+      "feature": "T_region_1ST",
+      "coefficient": 0.026837600626107818,
       "pattern": false
     },
     {
-      "feature": "CT_region_ELEVATOR",
-      "coefficient": -0.011787502694368294,
+      "feature": "CT_weapon_Heavy",
+      "coefficient": -0.026509601575091732,
       "pattern": false
     },
     {
-      "feature": "T_region_CAR",
-      "coefficient": 0.011736262007507567,
+      "feature": "CT_region_SECOND_MID",
+      "coefficient": -0.025958242788015645,
       "pattern": false
     },
     {
-      "feature": "CT_region_SHORT_CORNER",
-      "coefficient": -0.011582473949994539,
+      "feature": "CT_region_CLOSE_LEFT",
+      "coefficient": -0.025955877477086366,
       "pattern": false
     },
     {
-      "feature": "CT_region_VAN",
-      "coefficient": -0.01149336644178034,
+      "feature": "T_region_B_APARTMENTS",
+      "coefficient": 0.025870564327553677,
       "pattern": false
     },
     {
-      "feature": "T_region_LOWER_TUNNEL",
-      "coefficient": -0.011425746755278451,
+      "feature": "T_region_DOSIA",
+      "coefficient": 0.02574752512900742,
       "pattern": false
     },
     {
-      "feature": "CT_region_GARDEN",
-      "coefficient": 0.011424265650773164,
+      "feature": "elapsed_seconds",
+      "coefficient": 0.025316864116581433,
       "pattern": false
     },
     {
-      "feature": "T_region_A_NINJA",
-      "coefficient": 0.011355042543502327,
+      "feature": "CT_region_1ST",
+      "coefficient": -0.025188381434196574,
       "pattern": false
     },
     {
-      "feature": "CT_region_SNEAKY",
-      "coefficient": -0.011354634861450325,
+      "feature": "T_region_DEFAULT",
+      "coefficient": 0.025107307323579527,
       "pattern": false
     },
     {
-      "feature": "T_region_DARK",
-      "coefficient": -0.011302941652828892,
+      "feature": "CT_region_B_CAR",
+      "coefficient": -0.02484890329401685,
       "pattern": false
     },
     {
-      "feature": "T_region_CT_APARTMENTS",
-      "coefficient": -0.01127750014825073,
+      "feature": "T_region_TRUCK",
+      "coefficient": 0.024720368664767327,
       "pattern": false
     },
     {
-      "feature": "CT_region_SECOND_MID_STAIRS",
-      "coefficient": -0.011182282760074996,
+      "feature": "CT_molotov",
+      "coefficient": -0.02468319066605535,
       "pattern": false
     },
     {
-      "feature": "CT_region_B_CLOSET",
-      "coefficient": -0.011074172233210333,
+      "feature": "T_region_GRILL",
+      "coefficient": 0.02453284015037397,
       "pattern": false
     },
     {
-      "feature": "T_region_BENCH",
-      "coefficient": 0.010954645015661657,
+      "feature": "T_region_GARDEN",
+      "coefficient": 0.024431431174575337,
       "pattern": false
     },
     {
-      "feature": "CT_region_OUTSIDE_LONG",
-      "coefficient": 0.010792164696373426,
+      "feature": "CT_region_PALACE",
+      "coefficient": 0.02421150254597583,
       "pattern": false
     },
     {
-      "feature": "T_region_STAIRS",
-      "coefficient": 0.010632584450882438,
+      "feature": "T_region_MARKET",
+      "coefficient": 0.0241095249629861,
       "pattern": false
     },
     {
-      "feature": "CT_region_B_BOXES",
-      "coefficient": -0.01056174976511876,
+      "feature": "T_region_EXTENDED_A",
+      "coefficient": 0.024096978338474333,
       "pattern": false
     },
     {
-      "feature": "T_region_SUICIDE",
-      "coefficient": 0.010402347618342668,
+      "feature": "CT_region_B_DOORS",
+      "coefficient": -0.0240839174610602,
       "pattern": false
     },
     {
-      "feature": "CT_region_2ND",
-      "coefficient": -0.010330504323487732,
+      "feature": "CT_region_A_CAR",
+      "coefficient": 0.023803215073950633,
       "pattern": false
     },
     {
-      "feature": "T_region_RIGHT_SIDE_MID",
-      "coefficient": 0.010178037890924349,
+      "feature": "T_region_UPSTAIRS",
+      "coefficient": 0.02365096413626287,
       "pattern": false
     },
     {
-      "feature": "T_region_BARRELS",
-      "coefficient": 0.010149981137280755,
+      "feature": "T_flash",
+      "coefficient": 0.02351518702576968,
       "pattern": false
     },
     {
-      "feature": "T_region_PATIO",
-      "coefficient": -0.010138243680899668,
+      "feature": "T_region_ARCHES",
+      "coefficient": 0.02330953235536404,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_B_living_pair_at_site",
-      "coefficient": -0.010052820270919706,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_BOTTOM_MID",
-      "coefficient": -0.009960924443118862,
+      "feature": "T_region_A_SHORT",
+      "coefficient": 0.023254776392907798,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_A_recent15",
-      "coefficient": -0.009933863287222875,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_SCAFFOLDING",
-      "coefficient": -0.00989968743309494,
+      "feature": "CT_region_LADDER",
+      "coefficient": -0.023145859431191292,
       "pattern": false
     },
     {
-      "feature": "T_region_BOILER",
-      "coefficient": 0.009836339572302132,
+      "feature": "T_region_UNDER_A",
+      "coefficient": 0.023127268241597006,
       "pattern": false
     },
     {
-      "feature": "CT_region_PIT_PLAT",
-      "coefficient": -0.009799552468416756,
+      "feature": "CT_region_CAR",
+      "coefficient": -0.022926023242255386,
       "pattern": false
     },
     {
-      "feature": "CT_region_LEDGE",
-      "coefficient": 0.00977206406893314,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SAND_BAGS_CONSTRUCTION",
-      "coefficient": 0.00964095821583564,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_MID_DOORS",
-      "coefficient": -0.009587715999502967,
-      "pattern": false
-    },
-    {
-      "feature": "map=de_inferno",
-      "coefficient": 0.009541793859428101,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_GOOSE",
-      "coefficient": -0.00952560448791552,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_TRUCK",
-      "coefficient": -0.00942849596444911,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_B_alive_at_site",
-      "coefficient": 0.009405108566893763,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_APARTMENTS",
-      "coefficient": -0.009169944966457446,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_HOLE",
-      "coefficient": 0.009050807905247074,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_WINDOW",
-      "coefficient": -0.008800112467046635,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_LONG_DOORS",
-      "coefficient": 0.008495092043085812,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_FIREBOX",
-      "coefficient": 0.008457537374450722,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_T_ROOF",
-      "coefficient": -0.00845641004979714,
-      "pattern": false
-    },
-    {
-      "feature": "CT_utility30_FLASH",
-      "coefficient": -0.008435046286665906,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_OUTSIDE_TUNNEL",
-      "coefficient": 0.008411446255260089,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_VENT",
-      "coefficient": -0.008315875508919133,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_XBOX",
-      "coefficient": -0.00825757571113985,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__T_A_together5",
-      "coefficient": -0.00823064784755011,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_WINDOW",
-      "coefficient": 0.008175910526150784,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_PATIO",
-      "coefficient": -0.008142591528832184,
+      "feature": "CT_region_PALACE_INTERIOR",
+      "coefficient": -0.02287766861248766,
       "pattern": false
     },
     {
       "feature": "T_region_B_CAR",
-      "coefficient": 0.008134745381983433,
+      "coefficient": 0.022554639082224315,
       "pattern": false
     },
     {
-      "feature": "T_region_BOOST_BOXES",
-      "coefficient": 0.007881676738482593,
+      "feature": "T_region_CLOSE",
+      "coefficient": 0.02239477279079426,
       "pattern": false
     },
     {
-      "feature": "CT_region_B_BACK_SITE",
-      "coefficient": -0.007854240136177696,
+      "feature": "CT_region_CONNECTOR",
+      "coefficient": -0.02220084823553233,
       "pattern": false
     },
     {
-      "feature": "T_region_E_BOX",
-      "coefficient": 0.007793249168740481,
+      "feature": "T_region_A_CAR",
+      "coefficient": 0.02215689311543542,
       "pattern": false
     },
     {
-      "feature": "CT_region_TV",
-      "coefficient": 0.00770993425933942,
+      "feature": "T_region_DECK",
+      "coefficient": -0.021958616609389525,
       "pattern": false
     },
     {
-      "feature": "T_region_APPS_RAMP",
-      "coefficient": -0.007527605846575119,
+      "feature": "CT_region_DOSIA",
+      "coefficient": -0.02194331734970788,
       "pattern": false
     },
     {
-      "feature": "T_region_SANDWICH",
-      "coefficient": -0.007334122192085131,
+      "feature": "T_region_ELEVATOR",
+      "coefficient": 0.02189606978666076,
       "pattern": false
     },
     {
-      "feature": "CT_region_UPPER_B_TUNNELS",
-      "coefficient": -0.007246029347251346,
+      "feature": "map=de_inferno",
+      "coefficient": 0.02180513259453346,
       "pattern": false
     },
     {
-      "feature": "T_region_COFFINS",
-      "coefficient": 0.007115290949280694,
+      "feature": "T_region_CATWALK",
+      "coefficient": 0.021769396923654084,
       "pattern": false
     },
     {
-      "feature": "T_region_BIG_BOX",
-      "coefficient": 0.007053133807578261,
+      "feature": "T_region_RUINS",
+      "coefficient": 0.021179726782937235,
       "pattern": false
     },
     {
-      "feature": "CT_region_GRAVEYARD",
-      "coefficient": -0.006855704662726962,
+      "feature": "T_region_LADDER_ROOM",
+      "coefficient": 0.021130739322927004,
       "pattern": false
     },
     {
-      "feature": "T_region_FENCE",
-      "coefficient": 0.006835959077012284,
+      "feature": "CT_region_LONG_DOORS",
+      "coefficient": 0.020615471640663362,
       "pattern": false
     },
     {
-      "feature": "T_region_HOUSE",
-      "coefficient": 0.006817293459120485,
+      "feature": "CT_region_CONSTRUCTION",
+      "coefficient": 0.020497825870565447,
       "pattern": false
     },
     {
-      "feature": "CT_region_BENCH",
-      "coefficient": 0.0066945303534271935,
+      "feature": "CT_region_APPS_RAMP",
+      "coefficient": 0.01991566028795472,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_A_living_pair_at_site",
-      "coefficient": -0.006463150469259894,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_UPSTAIRS",
-      "coefficient": -0.006428404104338252,
+      "feature": "CT_region_TOP_OF_MID",
+      "coefficient": -0.019452713137651713,
       "pattern": false
     },
     {
-      "feature": "T_region_2ND",
-      "coefficient": -0.006265073206967835,
+      "feature": "CT_region_ARCHES",
+      "coefficient": -0.01944084047629418,
       "pattern": false
     },
     {
-      "feature": "T_region_PALM",
-      "coefficient": -0.006233863863817442,
+      "feature": "CT_region_A_CROSS",
+      "coefficient": -0.01838361298131489,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_A_pair_together5",
-      "coefficient": -0.006129663018134401,
-      "pattern": true
-    },
-    {
-      "feature": "sitecoord__CT_A_living_pair_at_site",
-      "coefficient": 0.005843441355701357,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_B_DEFAULT_PLANT",
-      "coefficient": -0.005811294231546795,
+      "feature": "CT_region_PALM",
+      "coefficient": 0.01829534077328475,
       "pattern": false
     },
     {
-      "feature": "T_region_SECOND_MID",
-      "coefficient": 0.00569135997414889,
+      "feature": "T_region_BACK_PLAT",
+      "coefficient": 0.018243106724836363,
       "pattern": false
     },
     {
-      "feature": "CT_region_SIDE",
-      "coefficient": -0.005686436621526699,
+      "feature": "CT_region_SNIPER_S_NEST",
+      "coefficient": -0.01821676054458019,
       "pattern": false
     },
     {
-      "feature": "CT_region_RIGHT_SIDE_MID",
-      "coefficient": 0.0055889945139801535,
+      "feature": "T_region_DOUBLE_STACK",
+      "coefficient": 0.01817178802339599,
       "pattern": false
     },
     {
-      "feature": "CT_region_BOILER",
-      "coefficient": -0.005586597244850082,
+      "feature": "T_region_BENCH",
+      "coefficient": 0.017726698082283294,
       "pattern": false
     },
     {
-      "feature": "sitecoord__CT_B_together5",
-      "coefficient": 0.005583600090831516,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_SPEEDWAY",
-      "coefficient": -0.005473402191432141,
+      "feature": "CT_region_LONG_A",
+      "coefficient": -0.017572363866173675,
       "pattern": false
     },
     {
-      "feature": "T_region_MID_BOXES",
-      "coefficient": 0.005453887374762797,
+      "feature": "T_region_TREE",
+      "coefficient": 0.017529703549056617,
       "pattern": false
     },
     {
-      "feature": "CT_region_BIG_BOX",
-      "coefficient": 0.005359517451358543,
+      "feature": "T_region_JUNGLE",
+      "coefficient": 0.01743402338303537,
       "pattern": false
     },
     {
-      "feature": "CT_region_SHOP",
-      "coefficient": -0.0053115894813377355,
+      "feature": "T_region_LONG_A",
+      "coefficient": 0.017115927218253512,
       "pattern": false
     },
     {
-      "feature": "CT_utility30_MOLOTOV",
-      "coefficient": -0.005266930461484569,
+      "feature": "CT_region_T_RAMP",
+      "coefficient": 0.01698922901509819,
       "pattern": false
     },
     {
-      "feature": "CT_region_BALCONY",
-      "coefficient": 0.0052356517671895845,
+      "feature": "T_region_UNDERPASS",
+      "coefficient": 0.01696805129992032,
       "pattern": false
     },
     {
-      "feature": "CT_region_CART",
-      "coefficient": 0.005200696620632583,
+      "feature": "CT_region_SNIPERS_NEST",
+      "coefficient": -0.01670601574885978,
       "pattern": false
     },
     {
-      "feature": "CT_region_LOWER_TUNNEL",
-      "coefficient": 0.005171999403817809,
+      "feature": "T_region_HOLE",
+      "coefficient": 0.01668357770229945,
       "pattern": false
     },
     {
-      "feature": "CT_region_QUAD",
-      "coefficient": 0.0051121307503151185,
+      "feature": "CT_region_T_PLAT",
+      "coefficient": 0.016654863431358843,
       "pattern": false
     },
     {
-      "feature": "T_region_SNIPERS_NEST",
-      "coefficient": 0.005099429901331817,
+      "feature": "CT_region_MARKET",
+      "coefficient": -0.01658095541651582,
       "pattern": false
     },
     {
-      "feature": "CT_region_WELL",
-      "coefficient": -0.004969338332002183,
+      "feature": "T_region_LADDER",
+      "coefficient": 0.016354737888588072,
       "pattern": false
     },
     {
-      "feature": "CT_region_TETRIS",
-      "coefficient": -0.0049533546818989,
+      "feature": "T_region_CLOSE_LEFT",
+      "coefficient": 0.01610792637798999,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BACK_ALLEY",
+      "coefficient": 0.015954567917039142,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GOOSE",
+      "coefficient": -0.015320592838419186,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MID_DOORS",
+      "coefficient": -0.015234772033444558,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CART",
+      "coefficient": 0.015197042716698889,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHORT_BOOST",
+      "coefficient": 0.015095840138208154,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_FLASH",
+      "coefficient": -0.014988318611295404,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_CLOSET",
+      "coefficient": -0.014949992396002447,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BALCONY",
+      "coefficient": 0.014716100794165268,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHORT_CORNER",
+      "coefficient": 0.0146320642797458,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CEMETERY",
+      "coefficient": 0.014494499531103511,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_B_TUNNELS",
+      "coefficient": 0.014356614951983445,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHORT_CORNER",
+      "coefficient": -0.01426615395119657,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_VAN",
+      "coefficient": 0.014180588338278037,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHOP",
+      "coefficient": 0.014061379014490784,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE_PIT",
+      "coefficient": -0.014012542378164008,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_GRAVEYARD",
+      "coefficient": 0.013785677727707455,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_ARCH",
+      "coefficient": -0.013751420006043716,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_MID",
+      "coefficient": 0.013747355006814043,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE",
+      "coefficient": 0.013647528167792857,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LIBRARY",
+      "coefficient": 0.013627580097586509,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_RUINS",
+      "coefficient": -0.013418192497673183,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GRILL",
+      "coefficient": -0.013389853225663058,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_ROOF",
+      "coefficient": -0.013248877223835083,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_TUNNELS",
+      "coefficient": 0.012976447687856309,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_LONG",
+      "coefficient": 0.012642061067638911,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BARRELS",
+      "coefficient": 0.012567164500275927,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_STAIRS",
+      "coefficient": 0.012555538505598512,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_WINDOW",
+      "coefficient": -0.012504261605763829,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOGS",
+      "coefficient": -0.01229531900655206,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOTTOM_MID",
+      "coefficient": -0.012146293884584526,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CT_APARTMENTS",
+      "coefficient": -0.012127181603434706,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LIVING_ROOM",
+      "coefficient": 0.011968632059174882,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_APARTMENTS",
+      "coefficient": -0.011845279728992717,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CAR",
+      "coefficient": 0.011841695708516113,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GARDEN",
+      "coefficient": 0.01180062114220669,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_ELEVATOR",
+      "coefficient": -0.011683617966272064,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LONG_CORNER",
+      "coefficient": -0.01153752907961215,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TRUCK",
+      "coefficient": -0.01128467688906245,
       "pattern": false
     },
     {
       "feature": "T_region_GOOSE",
-      "coefficient": 0.004876041030575961,
+      "coefficient": 0.010985905483179143,
       "pattern": false
     },
     {
-      "feature": "T_region_T_APARTMENTS",
-      "coefficient": 0.004595630841839093,
+      "feature": "CT_region_FENCE",
+      "coefficient": 0.010786576249522721,
       "pattern": false
     },
     {
-      "feature": "CT_region_SANDWICH",
-      "coefficient": -0.004474653778297578,
+      "feature": "T_region_TOP_OF_MID",
+      "coefficient": 0.010745554010585476,
       "pattern": false
     },
     {
-      "feature": "T_region_LONG_CORNER",
-      "coefficient": 0.004473331196176625,
+      "feature": "CT_region_SECOND_MID_STAIRS",
+      "coefficient": -0.01069990494945946,
       "pattern": false
     },
     {
-      "feature": "T_weapon_SMG",
-      "coefficient": 0.00431609648111715,
+      "feature": "CT_region_SAND_BAGS_CONSTRUCTION",
+      "coefficient": 0.01047786007674501,
       "pattern": false
     },
     {
-      "feature": "CT_region_DOOR",
-      "coefficient": -0.0043020505700969245,
+      "feature": "T_region_PILLARS",
+      "coefficient": 0.010473453343072366,
       "pattern": false
     },
     {
-      "feature": "T_region_SIDE",
-      "coefficient": -0.004292045207101025,
+      "feature": "CT_region_LEDGE",
+      "coefficient": 0.010439639543762463,
       "pattern": false
     },
     {
-      "feature": "T_region_T_PLAT",
-      "coefficient": -0.004283529598916357,
+      "feature": "CT_region_TRIPLE_BOX",
+      "coefficient": -0.010093797361780432,
       "pattern": false
     },
     {
-      "feature": "T_region_MIDDLE",
-      "coefficient": 0.004275096032446423,
+      "feature": "T_region_APARTMENTS",
+      "coefficient": -0.00997646520159393,
       "pattern": false
     },
     {
-      "feature": "T_region_VENT",
-      "coefficient": 0.004213096885901704,
+      "feature": "clock_seconds",
+      "coefficient": -0.009952001688709217,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_B_preplant_pair_together5",
-      "coefficient": 0.0041592285157946735,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_FIREBOX",
-      "coefficient": 0.004131313121402531,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_LEDGE",
-      "coefficient": -0.004097880049069861,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_LOWER_B_TUNNELS",
-      "coefficient": 0.004071182944177382,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_PILLARS",
-      "coefficient": -0.004070987570304081,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_TV",
-      "coefficient": 0.004032439308455155,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_DARK",
-      "coefficient": -0.004024224628046715,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SECOND_MID_STAIRS",
-      "coefficient": 0.003920403038599114,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_PALACE_ALLEY",
-      "coefficient": 0.003910698326419442,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_KITCHEN",
-      "coefficient": 0.0038954891066405616,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_MID_BOXES",
-      "coefficient": 0.0038632584757578243,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CHAIR",
-      "coefficient": 0.0038620709511271757,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SAND_BAGS_B",
-      "coefficient": 0.003855621115566047,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BRIDGE",
-      "coefficient": 0.0037799812664232866,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_LOWER_MID",
-      "coefficient": -0.0037512137957102574,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BACK_ALLEY",
-      "coefficient": -0.0036792679488404784,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SNIPER_S_NEST",
-      "coefficient": 0.003633154766518334,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_TERRACE",
-      "coefficient": 0.0036129376994606076,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CLOSE",
-      "coefficient": 0.0035555389114594327,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BOOST",
-      "coefficient": -0.0035463409734219015,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_CLOSE_APARTMENTS",
-      "coefficient": -0.003441209499558256,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_JUNGLE",
-      "coefficient": -0.0033888605915589017,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SHADOWS",
-      "coefficient": 0.0033402922372813017,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_WELL",
-      "coefficient": 0.0033217432953506956,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BLUE",
-      "coefficient": 0.0033128431423904065,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_T_APARTMENTS",
-      "coefficient": 0.0032661190897306557,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CLOSE_MID_DOORS",
-      "coefficient": 0.003169209230225242,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SAND_BAGS_CONSTRUCTION",
-      "coefficient": 0.0031577527047140265,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_alive_at_site",
-      "coefficient": -0.00308127335660225,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_OUTSIDE_TUNNELS",
-      "coefficient": -0.002983946694547562,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_APARTMENTS",
-      "coefficient": -0.002973492425664256,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_T_RAMP",
-      "coefficient": -0.0029242476468706365,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_XBOX",
-      "coefficient": 0.0029151311536014268,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SHORT_BOOST",
-      "coefficient": -0.002908114398089609,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BRIDGE",
-      "coefficient": 0.0028274785924098595,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SHORT_STAIRS",
-      "coefficient": 0.0026781806035357006,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_SECOND_MID_DOOR",
-      "coefficient": -0.0026689677566009494,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_CLOSE_APARTMENTS",
-      "coefficient": -0.0026673767105405244,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BACK_SITE_A",
-      "coefficient": 0.0026118258990094952,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_TRIPLE_BOX",
-      "coefficient": 0.0025989833352308713,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_B_BOXES",
-      "coefficient": 0.0025900128347399326,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_BOOST_BOXES",
-      "coefficient": 0.0025841258655613145,
+      "feature": "T_region_A_NINJA",
+      "coefficient": 0.009946151635323704,
       "pattern": false
     },
     {
-      "feature": "CT_region_KITCHEN",
-      "coefficient": 0.002571282606254106,
+      "feature": "CT_region_TREE",
+      "coefficient": -0.009808107668231912,
       "pattern": false
     },
     {
-      "feature": "CT_region_HOUSE",
-      "coefficient": -0.0024809442900537645,
+      "feature": "T_region_BOILER",
+      "coefficient": 0.009705774009495823,
       "pattern": false
     },
     {
-      "feature": "T_region_ARCH",
-      "coefficient": -0.0024264218784735394,
+      "feature": "T_region_OUTSIDE_LONG",
+      "coefficient": 0.009616269958506533,
       "pattern": false
     },
     {
-      "feature": "CT_region_TUNNEL_STAIRS",
-      "coefficient": 0.00238016505709739,
+      "feature": "CT_region_SNEAKY",
+      "coefficient": -0.00958354563280075,
       "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_recent15",
-      "coefficient": 0.0023656166926822636,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_NINJA",
-      "coefficient": 0.0023451491392652074,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_BOOST",
-      "coefficient": 0.00230725047829034,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_E_BOX",
-      "coefficient": 0.0022416802429991497,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_A_together5",
-      "coefficient": -0.002129363660566361,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_BACK_PLAT",
-      "coefficient": -0.002125851981620142,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_PALACE_ALLEY",
-      "coefficient": 0.0020396170280975083,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SIDE_ALLEY",
-      "coefficient": 0.0019443834448487237,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_T_SPAWN",
-      "coefficient": -0.0018782815467414417,
-      "pattern": false
-    },
-    {
-      "feature": "T_region_QUAD",
-      "coefficient": -0.001868632303359635,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_A_NINJA",
-      "coefficient": 0.0018580316000497788,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_LIBRARY",
-      "coefficient": 0.001845232691893885,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_postplant_alive_at_site",
-      "coefficient": 0.0018256151546779493,
-      "pattern": true
-    },
-    {
-      "feature": "T_region_FOUNTAIN",
-      "coefficient": -0.0017386211470146848,
-      "pattern": false
-    },
-    {
-      "feature": "sitecoord__CT_B_preplant_pair_together5",
-      "coefficient": 0.0016588778461884338,
-      "pattern": true
     },
     {
-      "feature": "CT_region_CLOSE_MID_DOORS",
-      "coefficient": -0.00165072016892761,
+      "feature": "T_region_PATIO",
+      "coefficient": -0.009554638060030613,
       "pattern": false
     },
     {
-      "feature": "T_region_OUTSIDE_TUNNEL",
-      "coefficient": -0.0016470196182111387,
+      "feature": "T_region_BOOST_BOXES",
+      "coefficient": 0.009534856895295957,
       "pattern": false
     },
     {
-      "feature": "T_region_SIDE_ALLEY",
-      "coefficient": 0.0016384574228034102,
+      "feature": "T_region_SCAFFOLDING",
+      "coefficient": 0.009385772193762475,
       "pattern": false
     },
     {
-      "feature": "CT_region_EMPTY",
-      "coefficient": -0.001610356905147224,
+      "feature": "CT_region_2ND",
+      "coefficient": -0.00934503257267756,
       "pattern": false
     },
     {
-      "feature": "T_region_TUNNEL_STAIRS",
-      "coefficient": 0.0015834260691723863,
+      "feature": "T_region_B_BACK_SITE",
+      "coefficient": 0.009325887173672243,
       "pattern": false
     },
     {
       "feature": "CT_region_SHORT_STAIRS",
-      "coefficient": -0.0015579483366260302,
+      "coefficient": -0.009312477510121457,
       "pattern": false
     },
     {
-      "feature": "CT_region_COFFINS",
-      "coefficient": 0.0014842049966311364,
+      "feature": "CT_region_VENT",
+      "coefficient": -0.009276181149434548,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BLUE",
+      "coefficient": 0.009250927967235069,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOTTOM_MID",
+      "coefficient": -0.008926728462139984,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_BACK_SITE",
+      "coefficient": -0.008765347824891665,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_COFFINS",
+      "coefficient": 0.008616447283452984,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_TUNNEL",
+      "coefficient": 0.008615172933794692,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE_ALLEY",
+      "coefficient": 0.008603895837163353,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DARK",
+      "coefficient": -0.008536913292815645,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DOOR",
+      "coefficient": -0.008494959604340843,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE_INTERIOR",
+      "coefficient": 0.008333495192661198,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SCAFFOLDING",
+      "coefficient": -0.008076335421692131,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TV",
+      "coefficient": 0.00794880561664634,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE_MID_DOORS",
+      "coefficient": 0.007632327735776027,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_APPS_RAMP",
+      "coefficient": -0.0074494137539750085,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CHAIR",
+      "coefficient": -0.007398185689358605,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BIG_BOX",
+      "coefficient": 0.007326645281466061,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_WINDOW",
+      "coefficient": 0.007280268900993519,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_BOXES",
+      "coefficient": -0.0072337622499005555,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BIG_BOX",
+      "coefficient": 0.007229405549432372,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PALACE_ALLEY",
+      "coefficient": 0.007062298413055334,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CHAIR",
+      "coefficient": 0.007052542747157324,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PATIO",
+      "coefficient": -0.006993196197465549,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_RIGHT_SIDE_MID",
+      "coefficient": 0.0069664510297441,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SUICIDE",
+      "coefficient": 0.0069388278970487485,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_FENCE",
+      "coefficient": 0.006923947576457221,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHADOWS",
+      "coefficient": 0.006883216633474408,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GRAVEYARD",
+      "coefficient": -0.0067150153613803444,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BENCH",
+      "coefficient": 0.006607688621741819,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_TUNNEL",
+      "coefficient": -0.0065418143496230935,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UPSTAIRS",
+      "coefficient": -0.006473906125172413,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_VAN",
+      "coefficient": -0.006454999839551059,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PIT_PLAT",
+      "coefficient": -0.006432951886527893,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_JUNGLE",
+      "coefficient": -0.006162364021039287,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_MID",
+      "coefficient": -0.005881118919227397,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOOST",
+      "coefficient": 0.00578251688247159,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SNIPER_S_NEST",
+      "coefficient": 0.005746347683788781,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_MOLOTOV",
+      "coefficient": -0.005580579586556362,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_QUAD",
+      "coefficient": 0.005430646445920464,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_SPAWN",
+      "coefficient": -0.005378033470680902,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BACK_PLAT",
+      "coefficient": 0.005274157372531343,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOILER",
+      "coefficient": -0.005204921743784178,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_FOUNTAIN",
+      "coefficient": 0.005132446036190661,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_E_BOX",
+      "coefficient": 0.005005797573231501,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_XBOX",
+      "coefficient": -0.004992020353429392,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_WINDOW",
+      "coefficient": -0.004964441006877096,
       "pattern": false
     },
     {
       "feature": "T_region_B_WINDOW",
-      "coefficient": -0.0014613870416772226,
+      "coefficient": -0.004923749792581156,
       "pattern": false
     },
     {
-      "feature": "CT_region_BARRELS",
-      "coefficient": 0.0013600217665198791,
+      "feature": "CT_region_UPPER_B_TUNNELS",
+      "coefficient": -0.0049157375129770834,
       "pattern": false
     },
     {
-      "feature": "CT_region_B_DEFAULT_PLANT",
-      "coefficient": -0.00134151503214314,
+      "feature": "CT_region_WELL",
+      "coefficient": -0.004873040257403092,
       "pattern": false
     },
     {
-      "feature": "T_region_NINJA",
-      "coefficient": 0.0011864457409112865,
+      "feature": "CT_region_SANDWICH",
+      "coefficient": -0.00480194649151711,
       "pattern": false
     },
     {
-      "feature": "CT_region_CT_APARTMENTS",
-      "coefficient": -0.0011716565896587496,
+      "feature": "CT_region_BALCONY",
+      "coefficient": 0.004778831189857842,
       "pattern": false
     },
     {
-      "feature": "T_region_SPEEDWAY",
-      "coefficient": -0.0010634971238896106,
+      "feature": "CT_region_CART",
+      "coefficient": 0.004729434574433919,
       "pattern": false
     },
     {
-      "feature": "T_region_A_RAMP",
-      "coefficient": -0.0008725808401853897,
+      "feature": "CT_region_CLOSE",
+      "coefficient": 0.00471106290227846,
       "pattern": false
     },
     {
-      "feature": "CT_region_FOUNTAIN",
-      "coefficient": 0.0008232723897950154,
+      "feature": "CT_region_TETRIS",
+      "coefficient": -0.004679161362738409,
       "pattern": false
     },
     {
-      "feature": "T_region_LIVING_ROOM",
-      "coefficient": -0.0008121758159905765,
+      "feature": "T_region_B_BOXES",
+      "coefficient": 0.0045683507978644825,
       "pattern": false
     },
     {
-      "feature": "T_region_UPPER_B_TUNNELS",
-      "coefficient": 0.0007924348076766786,
+      "feature": "T_region_SECOND_MID",
+      "coefficient": 0.004553318103059739,
       "pattern": false
     },
     {
-      "feature": "CT_region_SAND_BAGS_B",
-      "coefficient": -0.0007865444234601398,
+      "feature": "T_region_PALM",
+      "coefficient": -0.0045313313226778675,
       "pattern": false
     },
     {
-      "feature": "T_region_EMPTY",
-      "coefficient": 0.0007786225989108087,
+      "feature": "T_region_SHORT_STAIRS",
+      "coefficient": 0.004468723876169256,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_B_pair_together5",
-      "coefficient": 0.0007143259367105117,
-      "pattern": true
-    },
-    {
-      "feature": "CT_region_TERRACE",
-      "coefficient": -0.0006905451815381081,
+      "feature": "T_region_KITCHEN",
+      "coefficient": 0.004372025417948676,
       "pattern": false
     },
     {
-      "feature": "T_region_SIDE_PIT",
-      "coefficient": 0.0004914110418538156,
+      "feature": "CT_region_SPEEDWAY",
+      "coefficient": -0.004314202352000456,
       "pattern": false
     },
     {
-      "feature": "sitecoord__CT_A_preplant_pair_together5",
-      "coefficient": -0.0004815011750315672,
-      "pattern": true
+      "feature": "T_region_SNIPERS_NEST",
+      "coefficient": 0.0042834492671126505,
+      "pattern": false
     },
     {
-      "feature": "CT_region_LADDER_ROOM",
-      "coefficient": 0.00040935623219569934,
+      "feature": "CT_region_PILLARS",
+      "coefficient": -0.00402772255276513,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CLOSE_MID_DOORS",
+      "coefficient": 0.003937225998430022,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LEDGE",
+      "coefficient": -0.0039329023406174,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_WELL",
+      "coefficient": 0.003919050709918424,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_ROOF",
+      "coefficient": -0.003911301054914089,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TV",
+      "coefficient": 0.003910271285004855,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_KITCHEN",
+      "coefficient": 0.003825621643216381,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SAND_BAGS_CONSTRUCTION",
+      "coefficient": 0.0037528343377837324,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_VENT",
+      "coefficient": 0.0037407168630543865,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_OUTSIDE_TUNNEL",
+      "coefficient": 0.0037314279366452642,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_NINJA",
+      "coefficient": 0.0036850921111913166,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SECOND_MID_STAIRS",
+      "coefficient": 0.0035904839615768336,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_HOUSE",
+      "coefficient": 0.00358723497812773,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LONG_CORNER",
+      "coefficient": 0.003545143799117044,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SAND_BAGS_B",
+      "coefficient": 0.003542869386216875,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BACK_SITE_A",
+      "coefficient": 0.0034675976074181477,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SANDWICH",
+      "coefficient": 0.0034633092962211482,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MID_BOXES",
+      "coefficient": 0.0034467620157986704,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_APARTMENTS",
+      "coefficient": 0.0034289648938174706,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TERRACE",
+      "coefficient": 0.003406599504834952,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE_ALLEY",
+      "coefficient": -0.0033560903567036843,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHOP",
+      "coefficient": -0.0033325274439476383,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOOST_BOXES",
+      "coefficient": 0.0032767827786087415,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TUNNEL_STAIRS",
+      "coefficient": -0.0032730991717043034,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_SMG",
+      "coefficient": -0.0032633460855594483,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_ARCH",
+      "coefficient": -0.003191331889997195,
       "pattern": false
     },
     {
       "feature": "CT_region_T_SPAWN",
-      "coefficient": -0.0002672788544729746,
+      "coefficient": 0.003134333015782682,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BRIDGE",
+      "coefficient": 0.003030860714595325,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE_ALLEY",
+      "coefficient": 0.002978824995283684,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CLOSE_APARTMENTS",
+      "coefficient": -0.002932531408920351,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOOST",
+      "coefficient": -0.002889217734946705,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SECOND_MID_DOOR",
+      "coefficient": -0.0028621399450477454,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BRIDGE",
+      "coefficient": 0.002859099973101201,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DARK",
+      "coefficient": -0.0028560412971957317,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LIBRARY",
+      "coefficient": 0.0028370172615178072,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE",
+      "coefficient": -0.0027825264762915023,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_QUAD",
+      "coefficient": 0.0026420625097567183,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_2ND",
+      "coefficient": -0.00257301752576685,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_OUTSIDE_TUNNELS",
+      "coefficient": 0.0025589453077757263,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_FIREBOX",
+      "coefficient": 0.002549470881072954,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_XBOX",
+      "coefficient": 0.002531390849705286,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_FLASH",
+      "coefficient": -0.002388434184862654,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_FOUNTAIN",
+      "coefficient": 0.0023497324907372405,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BARRELS",
+      "coefficient": 0.00229317137637626,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_E_BOX",
+      "coefficient": 0.0022326761025822156,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_APARTMENTS",
+      "coefficient": 0.0021710982994270663,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE_APARTMENTS",
+      "coefficient": -0.002042636132176192,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MID_BOXES",
+      "coefficient": 0.002010043721589877,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_HOUSE",
+      "coefficient": -0.0019614952263798265,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BACK_ALLEY",
+      "coefficient": -0.0019543097773515854,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_B_TUNNELS",
+      "coefficient": -0.001922476123995617,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_RAMP",
+      "coefficient": -0.0017332660575580712,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_DEFAULT_PLANT",
+      "coefficient": 0.0016746020644254126,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_DEFAULT_PLANT",
+      "coefficient": -0.0016549628894206494,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_EMPTY",
+      "coefficient": 0.0016533318306229075,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE",
+      "coefficient": -0.0016030854596850378,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_NINJA",
+      "coefficient": 0.0015781310343629083,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UPPER_B_TUNNELS",
+      "coefficient": 0.0015733538010276884,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LADDER_ROOM",
+      "coefficient": -0.0015231829260990593,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHORT_BOOST",
+      "coefficient": 0.0014508414437431974,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_COFFINS",
+      "coefficient": 0.001439876928863281,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MIDDLE",
+      "coefficient": -0.0014216372817367812,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE_PIT",
+      "coefficient": 0.001416215640555981,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_RIGHT_SIDE_MID",
+      "coefficient": -0.0014131155018990834,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_NINJA",
+      "coefficient": 0.0014087365567803797,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_RAMP",
+      "coefficient": -0.001398560766328422,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_EMPTY",
+      "coefficient": 0.0013562370231141698,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SPEEDWAY",
+      "coefficient": -0.0013331032633858459,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_TUNNEL",
+      "coefficient": -0.0012541188271654549,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT_APARTMENTS",
+      "coefficient": -0.0012128630920230626,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_FIREBOX",
+      "coefficient": 0.0011840163654575843,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MID_DOORS",
+      "coefficient": -0.0010927096178958656,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LIVING_ROOM",
+      "coefficient": -0.000983322817782408,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TRIPLE_BOX",
+      "coefficient": 0.0009202832416078165,
       "pattern": false
     },
     {
       "feature": "T_region_DOOR",
-      "coefficient": 0.0002484295626506211,
-      "pattern": false
-    },
-    {
-      "feature": "CT_region_SUICIDE",
-      "coefficient": 0.00023689446806798893,
+      "coefficient": 0.000876449643749902,
       "pattern": false
     },
     {
       "feature": "T_region_SNEAKY",
-      "coefficient": 0.00023115677228540695,
+      "coefficient": 0.0007988991678665895,
       "pattern": false
     },
     {
-      "feature": "sitecoord__T_A_postplant_alive_at_site",
-      "coefficient": -4.810967602541488e-05,
-      "pattern": true
+      "feature": "CT_region_TERRACE",
+      "coefficient": -0.000642801523742085,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_PLAT",
+      "coefficient": 0.00041221912760518186,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TUNNEL_STAIRS",
+      "coefficient": 0.00034911050868532495,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_APARTMENTS",
+      "coefficient": -0.00026745609103576335,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SUICIDE",
+      "coefficient": 0.00024221665740056347,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PIT_PLAT",
+      "coefficient": 0.00021981193938903532,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SAND_BAGS_B",
+      "coefficient": 0.000100901888195004,
+      "pattern": false
     },
     {
       "feature": "CT_region_SECOND_MID_DOOR",
@@ -2108,188 +1948,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.76896745064479,
-          "accuracy_at_0_5": 0.76896745064479,
-          "precision": 0.8444343656861475,
-          "recall": 0.7059747575970966,
-          "f1": 0.7690219796430152,
-          "roc_auc": 0.8753833954645862,
-          "log_loss": 0.43049133457720096,
-          "brier_score": 0.14419267457062887,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.769049291574441,
+          "accuracy_at_0_5": 0.769049291574441,
+          "precision": 0.8428575621496287,
+          "recall": 0.704055114249289,
+          "f1": 0.7672290572943801,
+          "roc_auc": 0.8754223842890199,
+          "log_loss": 0.4300312494737893,
+          "brier_score": 0.14414210192200236,
           "confusion_matrix": [
             [
-              26050,
-              4802
+              29307,
+              5354
             ],
             [
-              10856,
-              26066
+              12071,
+              28717
             ]
           ],
           "calibration": {
             "predicted": [
-              0.052038327463404865,
-              0.17733760737345564,
-              0.3277106818368306,
-              0.4270965881132679,
-              0.5213485185661074,
-              0.6995244353442173,
-              0.8957294272306631,
-              0.9802405957299936
+              0.04893066591053598,
+              0.17122002387157037,
+              0.3215765877875265,
+              0.42344907221535666,
+              0.5169669737760361,
+              0.6948137305258792,
+              0.8959816701609886,
+              0.9814449850416759
             ],
             "observed": [
-              0.03387629839471199,
-              0.18755901794145421,
-              0.3868492503836619,
-              0.4838290840415486,
-              0.5673984891406988,
-              0.741943099988195,
-              0.9570349386213409,
-              0.9997639282341831
+              0.031912637828668364,
+              0.1797264341003075,
+              0.3858551585197752,
+              0.47821015798960875,
+              0.5594316615417241,
+              0.7348107305693988,
+              0.9553599830346728,
+              0.9995758668221821
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20534094070889228
+              "n": 3658,
+              "brier_score": 0.20475024550317586
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.18042366336113727
+              "n": 3603,
+              "brier_score": 0.180046219510628
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.16201215859263499
+              "n": 3440,
+              "brier_score": 0.16069921307623714
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.14566607075197335
+              "n": 3097,
+              "brier_score": 0.14580878973716538
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7598425196850394,
-          "accuracy_at_0_5": 0.7598425196850394,
-          "precision": 0.8177389310789511,
-          "recall": 0.6997302599313389,
-          "f1": 0.7541460191608854,
-          "roc_auc": 0.8657372300377044,
-          "log_loss": 0.43866759836210095,
-          "brier_score": 0.14789674903235298,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7614892726946751,
+          "accuracy_at_0_5": 0.7614892726946751,
+          "precision": 0.8104322305229456,
+          "recall": 0.7027183342972817,
+          "f1": 0.7527414658323524,
+          "roc_auc": 0.8659773363447423,
+          "log_loss": 0.4379537752609078,
+          "brier_score": 0.14768442274829705,
           "confusion_matrix": [
             [
-              6066,
-              1272
+              6667,
+              1421
             ],
             [
-              2449,
-              5707
+              2570,
+              6075
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05433317403581452,
-              0.18629475726911127,
-              0.32664870663426,
-              0.42328912607761693,
-              0.5152519962408342,
-              0.6844517024877902,
-              0.8842183928359068,
-              0.9767548999307288
+              0.05111428780473576,
+              0.17783947551492132,
+              0.3165671818105268,
+              0.4177871740554917,
+              0.511831209865455,
+              0.6762011589035176,
+              0.880865103999636,
+              0.9777495691189121
             ],
             "observed": [
-              0.016520392359318535,
-              0.1982447083118224,
-              0.39204545454545453,
-              0.4682498709344347,
-              0.5209086215797625,
-              0.6668388429752066,
-              0.949406298399587,
-              0.9989674754775426
+              0.014818355640535373,
+              0.18833652007648183,
+              0.37254901960784315,
+              0.45841300191204587,
+              0.5088474414155906,
+              0.6510516252390057,
+              0.9402199904351984,
+              0.9990439770554493
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.2075479471399729
+              "n": 813,
+              "brier_score": 0.20498185263595575
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.1883658325924145
+              "n": 792,
+              "brier_score": 0.18576328324901645
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.16774876374092007
+              "n": 748,
+              "brier_score": 0.16689240962094246
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.14666116454743347
+              "n": 689,
+              "brier_score": 0.146147934029782
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7530723425820347,
-          "accuracy_at_0_5": 0.7530723425820347,
-          "precision": 0.8160296257108848,
-          "recall": 0.7110752564250317,
-          "f1": 0.7599458061337603,
-          "roc_auc": 0.8568097002449209,
-          "log_loss": 0.4556726762699752,
-          "brier_score": 0.15331336899838227,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7525816522574448,
+          "accuracy_at_0_5": 0.7525816522574448,
+          "precision": 0.8214196762141968,
+          "recall": 0.7105461596466659,
+          "f1": 0.7619707734072663,
+          "roc_auc": 0.8564700003399882,
+          "log_loss": 0.4565927110806216,
+          "brier_score": 0.15381506686823282,
           "confusion_matrix": [
             [
-              5718,
-              1391
+              5939,
+              1434
             ],
             [
-              2507,
-              6170
+              2687,
+              6596
             ]
           ],
           "calibration": {
             "predicted": [
-              0.056615091756884076,
-              0.20060400890713864,
-              0.3434469235105334,
-              0.43990048625692824,
-              0.5426557184641579,
-              0.7118951259955257,
-              0.8913050839992135,
-              0.9779650797610753
+              0.05416415920889538,
+              0.19787459321029174,
+              0.34195748461495484,
+              0.4406905748019132,
+              0.5465912750679024,
+              0.7194616867523624,
+              0.8978339251337276,
+              0.9803084526683478
             ],
             "observed": [
-              0.05521783181357649,
-              0.24581855043081602,
-              0.39939178915357326,
-              0.4845413076533198,
-              0.5281297516472377,
-              0.7582361885453623,
-              0.9295489102889002,
-              0.9964539007092199
+              0.05859750240153699,
+              0.2564841498559078,
+              0.4034582132564842,
+              0.49759846301633043,
+              0.5403458213256485,
+              0.7742555235350624,
+              0.9313160422670509,
+              0.9966378482228626
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20759110451726379
+              "n": 812,
+              "brier_score": 0.20953323988137934
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.187058573257394
+              "n": 803,
+              "brier_score": 0.18908210438373496
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17203621250933104
+              "n": 757,
+              "brier_score": 0.1753560211157206
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15475592481087116
+              "n": 692,
+              "brier_score": 0.15540101056868608
             }
           }
         }
@@ -2303,188 +2143,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.7690707350901526,
-          "accuracy_at_0_5": 0.7690707350901526,
-          "precision": 0.8442020777371436,
-          "recall": 0.7064893559395482,
-          "f1": 0.7692307692307693,
-          "roc_auc": 0.8755621601593031,
-          "log_loss": 0.4301945946722964,
-          "brier_score": 0.1441098041274637,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.769566197033758,
+          "accuracy_at_0_5": 0.769566197033758,
+          "precision": 0.8432787654755618,
+          "recall": 0.7047170736491125,
+          "f1": 0.7677965648956915,
+          "roc_auc": 0.8755641120297979,
+          "log_loss": 0.42975923309713804,
+          "brier_score": 0.14407065166126393,
           "confusion_matrix": [
             [
-              26038,
-              4814
+              29319,
+              5342
             ],
             [
-              10837,
-              26085
+              12044,
+              28744
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05184275419782005,
-              0.1767771739868375,
-              0.3271899369696639,
-              0.4270950541497667,
-              0.5214469998520049,
-              0.6994463297119993,
-              0.8964829695381541,
-              0.9808027277351172
+              0.048743479282279185,
+              0.17071723757361498,
+              0.32119131935042416,
+              0.42347292320908914,
+              0.5168874539877228,
+              0.6946337941345481,
+              0.8966033385768448,
+              0.9819542647116337
             ],
             "observed": [
-              0.03364022662889518,
-              0.18767705382436262,
-              0.38437020422618345,
-              0.488314447592068,
-              0.5651558073654391,
-              0.7414709007201039,
-              0.9577431539187913,
-              0.9998819641170916
+              0.031700593723494486,
+              0.1799385006892164,
+              0.3850068921641395,
+              0.4803308238786979,
+              0.5582652953027251,
+              0.734386597391581,
+              0.9553599830346728,
+              0.9998939667055455
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20517640840485804
+              "n": 3658,
+              "brier_score": 0.2045802562497075
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.180273320767202
+              "n": 3603,
+              "brier_score": 0.17991707462468906
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.1620078263073021
+              "n": 3440,
+              "brier_score": 0.16077176134943347
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.1455372840809695
+              "n": 3097,
+              "brier_score": 0.14561267307060083
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7603588485865497,
-          "accuracy_at_0_5": 0.7603588485865497,
-          "precision": 0.8188603416104493,
-          "recall": 0.6994850416871016,
-          "f1": 0.754479931230576,
-          "roc_auc": 0.8657878075537379,
-          "log_loss": 0.4385223347407123,
-          "brier_score": 0.14785077032820818,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7609514133747685,
+          "accuracy_at_0_5": 0.7609514133747685,
+          "precision": 0.8094603597601598,
+          "recall": 0.7027183342972817,
+          "f1": 0.7523219814241486,
+          "roc_auc": 0.8661060105754,
+          "log_loss": 0.4376846561980979,
+          "brier_score": 0.14759840030066812,
           "confusion_matrix": [
             [
-              6076,
-              1262
+              6658,
+              1430
             ],
             [
-              2451,
-              5705
+              2570,
+              6075
             ]
           ],
           "calibration": {
             "predicted": [
-              0.054098505593384597,
-              0.185656288684511,
-              0.3262357378681602,
-              0.4223717988273436,
-              0.5151916298739675,
-              0.6848099442521342,
-              0.8846606203912821,
-              0.9771735996800616
+              0.05088974741872026,
+              0.17726759335236186,
+              0.3160965098320176,
+              0.4170826537555869,
+              0.512087783405293,
+              0.6761727548316081,
+              0.881386495678493,
+              0.9781523363908101
             ],
             "observed": [
-              0.017036654620547237,
-              0.19308208569953536,
-              0.4034090909090909,
-              0.45844088797108934,
-              0.5240061951471348,
-              0.6647727272727273,
-              0.9514713474445018,
-              0.9989674754775426
+              0.016730401529636712,
+              0.18594646271510518,
+              0.3715925394548063,
+              0.46175908221797324,
+              0.5059780009564802,
+              0.652963671128107,
+              0.9392635102821616,
+              0.9990439770554493
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.2079883724218179
+              "n": 813,
+              "brier_score": 0.20525828387614092
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.18919702142731884
+              "n": 792,
+              "brier_score": 0.18632605881217965
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.1675870611033171
+              "n": 748,
+              "brier_score": 0.16675272296603807
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.1469905957897285
+              "n": 689,
+              "brier_score": 0.14663624281152457
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7526922589636387,
-          "accuracy_at_0_5": 0.7526922589636387,
-          "precision": 0.8153825822650984,
-          "recall": 0.7110752564250317,
-          "f1": 0.7596651071164737,
-          "roc_auc": 0.8563944115043072,
-          "log_loss": 0.45611071520409346,
-          "brier_score": 0.1535357361445836,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7516210374639769,
+          "accuracy_at_0_5": 0.7516210374639769,
+          "precision": 0.8193892750744787,
+          "recall": 0.7110847786275989,
+          "f1": 0.7614049253128785,
+          "roc_auc": 0.8561342638538127,
+          "log_loss": 0.45695176647157854,
+          "brier_score": 0.15399406020650538,
           "confusion_matrix": [
             [
-              5712,
-              1397
+              5918,
+              1455
             ],
             [
-              2507,
-              6170
+              2682,
+              6601
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05657564358556954,
-              0.2005883324047112,
-              0.34346050396103356,
-              0.4393291263141976,
-              0.5436005932168498,
-              0.7122107597385464,
-              0.8914877497765802,
-              0.9786020922211506
+              0.05399926299935876,
+              0.19760405709566672,
+              0.3420446670972478,
+              0.44004377487367,
+              0.5471875896704399,
+              0.7197524898058092,
+              0.8978375089056534,
+              0.9808998635897217
             ],
             "observed": [
-              0.05268490374873354,
-              0.2483527622909275,
-              0.3928028383172833,
-              0.49163710086163204,
-              0.5281297516472377,
-              0.7622909275215408,
-              0.9249873289406995,
-              0.9964539007092199
+              0.05859750240153699,
+              0.26032660902977905,
+              0.3952929875120077,
+              0.5086455331412104,
+              0.531700288184438,
+              0.7795389048991355,
+              0.9284341978866475,
+              0.9961575408261287
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20747240108158965
+              "n": 812,
+              "brier_score": 0.2095256739341199
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.18786735137045235
+              "n": 803,
+              "brier_score": 0.1896615907388784
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17202137116635233
+              "n": 757,
+              "brier_score": 0.17533099898435062
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15496915738705824
+              "n": 692,
+              "brier_score": 0.15549414749489485
             }
           }
         }
@@ -2495,17 +2335,17 @@
     "selection_metric": "validation Accuracy then Brier, fixed threshold 0.5",
     "differences": {
       "test": {
-        "accuracy": -0.0003800836183960321,
-        "roc_auc": -0.00041528874061369514,
-        "brier_score": 0.0002223671462013299,
-        "log_loss": 0.0004380389341182567
+        "accuracy": -0.0009606147934678733,
+        "roc_auc": -0.00033573648617546414,
+        "brier_score": 0.00017899333827256503,
+        "log_loss": 0.0003590553909569305
       }
     },
     "test_status": "Existing test previously examined; exploratory results. Validation alone selects configuration; independent future matches required for confirmation."
   },
   "dataset": "CS2 selected 17 teams, expanded corpus",
   "evaluation_scope": "Every 5 seconds + every second in final observed 10s of planted C4; match-disjoint split",
-  "training_demos": 156,
+  "training_demos": 173,
   "split_policy": {
     "unit": "match_id",
     "seed": "cs2-expanded-313",
@@ -2526,7 +2366,25 @@
     "previous_pilot_kept_in_train": true,
     "temporal_split": false,
     "test_used_for_selection": false,
-    "holdout_status": "Validation and test contain match IDs absent from the previous pilot; split fixed before mining"
+    "holdout_status": "Validation and test contain match IDs absent from the previous pilot; split fixed before mining",
+    "spirit_match_split": {
+      "2393242": "validation",
+      "2394977": "validation",
+      "2394888": "test",
+      "2394126": "test",
+      "2394900": "train",
+      "2393240": "train",
+      "2394156": "train",
+      "2394153": "train",
+      "2395001": "train",
+      "2394138": "train",
+      "2394879": "train",
+      "2394986": "train",
+      "2393226": "train",
+      "2394998": "train",
+      "2393245": "train"
+    },
+    "previous_splits_preserved": true
   },
   "comparison": {
     "baseline": {
@@ -2537,188 +2395,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.76896745064479,
-          "accuracy_at_0_5": 0.76896745064479,
-          "precision": 0.8444343656861475,
-          "recall": 0.7059747575970966,
-          "f1": 0.7690219796430152,
-          "roc_auc": 0.8753833954645862,
-          "log_loss": 0.43049133457720096,
-          "brier_score": 0.14419267457062887,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.769049291574441,
+          "accuracy_at_0_5": 0.769049291574441,
+          "precision": 0.8428575621496287,
+          "recall": 0.704055114249289,
+          "f1": 0.7672290572943801,
+          "roc_auc": 0.8754223842890199,
+          "log_loss": 0.4300312494737893,
+          "brier_score": 0.14414210192200236,
           "confusion_matrix": [
             [
-              26050,
-              4802
+              29307,
+              5354
             ],
             [
-              10856,
-              26066
+              12071,
+              28717
             ]
           ],
           "calibration": {
             "predicted": [
-              0.052038327463404865,
-              0.17733760737345564,
-              0.3277106818368306,
-              0.4270965881132679,
-              0.5213485185661074,
-              0.6995244353442173,
-              0.8957294272306631,
-              0.9802405957299936
+              0.04893066591053598,
+              0.17122002387157037,
+              0.3215765877875265,
+              0.42344907221535666,
+              0.5169669737760361,
+              0.6948137305258792,
+              0.8959816701609886,
+              0.9814449850416759
             ],
             "observed": [
-              0.03387629839471199,
-              0.18755901794145421,
-              0.3868492503836619,
-              0.4838290840415486,
-              0.5673984891406988,
-              0.741943099988195,
-              0.9570349386213409,
-              0.9997639282341831
+              0.031912637828668364,
+              0.1797264341003075,
+              0.3858551585197752,
+              0.47821015798960875,
+              0.5594316615417241,
+              0.7348107305693988,
+              0.9553599830346728,
+              0.9995758668221821
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20534094070889228
+              "n": 3658,
+              "brier_score": 0.20475024550317586
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.18042366336113727
+              "n": 3603,
+              "brier_score": 0.180046219510628
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.16201215859263499
+              "n": 3440,
+              "brier_score": 0.16069921307623714
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.14566607075197335
+              "n": 3097,
+              "brier_score": 0.14580878973716538
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7598425196850394,
-          "accuracy_at_0_5": 0.7598425196850394,
-          "precision": 0.8177389310789511,
-          "recall": 0.6997302599313389,
-          "f1": 0.7541460191608854,
-          "roc_auc": 0.8657372300377044,
-          "log_loss": 0.43866759836210095,
-          "brier_score": 0.14789674903235298,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7614892726946751,
+          "accuracy_at_0_5": 0.7614892726946751,
+          "precision": 0.8104322305229456,
+          "recall": 0.7027183342972817,
+          "f1": 0.7527414658323524,
+          "roc_auc": 0.8659773363447423,
+          "log_loss": 0.4379537752609078,
+          "brier_score": 0.14768442274829705,
           "confusion_matrix": [
             [
-              6066,
-              1272
+              6667,
+              1421
             ],
             [
-              2449,
-              5707
+              2570,
+              6075
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05433317403581452,
-              0.18629475726911127,
-              0.32664870663426,
-              0.42328912607761693,
-              0.5152519962408342,
-              0.6844517024877902,
-              0.8842183928359068,
-              0.9767548999307288
+              0.05111428780473576,
+              0.17783947551492132,
+              0.3165671818105268,
+              0.4177871740554917,
+              0.511831209865455,
+              0.6762011589035176,
+              0.880865103999636,
+              0.9777495691189121
             ],
             "observed": [
-              0.016520392359318535,
-              0.1982447083118224,
-              0.39204545454545453,
-              0.4682498709344347,
-              0.5209086215797625,
-              0.6668388429752066,
-              0.949406298399587,
-              0.9989674754775426
+              0.014818355640535373,
+              0.18833652007648183,
+              0.37254901960784315,
+              0.45841300191204587,
+              0.5088474414155906,
+              0.6510516252390057,
+              0.9402199904351984,
+              0.9990439770554493
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.2075479471399729
+              "n": 813,
+              "brier_score": 0.20498185263595575
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.1883658325924145
+              "n": 792,
+              "brier_score": 0.18576328324901645
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.16774876374092007
+              "n": 748,
+              "brier_score": 0.16689240962094246
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.14666116454743347
+              "n": 689,
+              "brier_score": 0.146147934029782
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7530723425820347,
-          "accuracy_at_0_5": 0.7530723425820347,
-          "precision": 0.8160296257108848,
-          "recall": 0.7110752564250317,
-          "f1": 0.7599458061337603,
-          "roc_auc": 0.8568097002449209,
-          "log_loss": 0.4556726762699752,
-          "brier_score": 0.15331336899838227,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7525816522574448,
+          "accuracy_at_0_5": 0.7525816522574448,
+          "precision": 0.8214196762141968,
+          "recall": 0.7105461596466659,
+          "f1": 0.7619707734072663,
+          "roc_auc": 0.8564700003399882,
+          "log_loss": 0.4565927110806216,
+          "brier_score": 0.15381506686823282,
           "confusion_matrix": [
             [
-              5718,
-              1391
+              5939,
+              1434
             ],
             [
-              2507,
-              6170
+              2687,
+              6596
             ]
           ],
           "calibration": {
             "predicted": [
-              0.056615091756884076,
-              0.20060400890713864,
-              0.3434469235105334,
-              0.43990048625692824,
-              0.5426557184641579,
-              0.7118951259955257,
-              0.8913050839992135,
-              0.9779650797610753
+              0.05416415920889538,
+              0.19787459321029174,
+              0.34195748461495484,
+              0.4406905748019132,
+              0.5465912750679024,
+              0.7194616867523624,
+              0.8978339251337276,
+              0.9803084526683478
             ],
             "observed": [
-              0.05521783181357649,
-              0.24581855043081602,
-              0.39939178915357326,
-              0.4845413076533198,
-              0.5281297516472377,
-              0.7582361885453623,
-              0.9295489102889002,
-              0.9964539007092199
+              0.05859750240153699,
+              0.2564841498559078,
+              0.4034582132564842,
+              0.49759846301633043,
+              0.5403458213256485,
+              0.7742555235350624,
+              0.9313160422670509,
+              0.9966378482228626
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20759110451726379
+              "n": 812,
+              "brier_score": 0.20953323988137934
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.187058573257394
+              "n": 803,
+              "brier_score": 0.18908210438373496
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17203621250933104
+              "n": 757,
+              "brier_score": 0.1753560211157206
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15475592481087116
+              "n": 692,
+              "brier_score": 0.15540101056868608
             }
           }
         }
@@ -2732,188 +2590,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.774028388467554,
-          "accuracy_at_0_5": 0.774028388467554,
-          "precision": 0.8457230631380204,
-          "recall": 0.715779210226965,
-          "f1": 0.7753443546376025,
-          "roc_auc": 0.8797635896124869,
-          "log_loss": 0.4248032068350461,
-          "brier_score": 0.1418889844660467,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.7750666012803351,
+          "accuracy_at_0_5": 0.7750666012803351,
+          "precision": 0.8449239681390297,
+          "recall": 0.7151858389722467,
+          "f1": 0.774660417192251,
+          "roc_auc": 0.8798554136690884,
+          "log_loss": 0.42441746499481997,
+          "brier_score": 0.14186953247471132,
           "confusion_matrix": [
             [
-              26031,
-              4821
+              29307,
+              5354
             ],
             [
-              10494,
-              26428
+              11617,
+              29171
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05089451181898464,
-              0.17429027907627398,
-              0.3209017239466723,
-              0.4257233060302068,
-              0.5277043178342077,
-              0.704937045610828,
-              0.8983768840218227,
-              0.9808905224670057
+              0.04792360738155361,
+              0.1681959197511916,
+              0.3149608479542963,
+              0.4221014915638281,
+              0.522913765155537,
+              0.6996908669173726,
+              0.8987057848168224,
+              0.9822422755240138
             ],
             "observed": [
-              0.030571293673276677,
-              0.1818932955618508,
-              0.37905796246015816,
-              0.4776912181303116,
-              0.5767233238904627,
-              0.7525675835202456,
-              0.9598677998111426,
-              0.9998819641170916
+              0.029156064461407973,
+              0.1773937016223094,
+              0.3717527303573322,
+              0.47216626020570457,
+              0.5704591241649878,
+              0.7454140600148447,
+              0.9587530484572155,
+              0.9997879334110911
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20259542268043024
+              "n": 3658,
+              "brier_score": 0.20176438319101994
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.17469828804184095
+              "n": 3603,
+              "brier_score": 0.1742977322848579
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.15820341085841955
+              "n": 3440,
+              "brier_score": 0.1573449835591371
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.14303547328928706
+              "n": 3097,
+              "brier_score": 0.14343701675926235
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7577126629663096,
-          "accuracy_at_0_5": 0.7577126629663096,
-          "precision": 0.8144285714285714,
-          "recall": 0.6989946051986268,
-          "f1": 0.7523093164423331,
-          "roc_auc": 0.8617900283528165,
-          "log_loss": 0.4445300410983701,
-          "brier_score": 0.1502577043774233,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7593975975617044,
+          "accuracy_at_0_5": 0.7593975975617044,
+          "precision": 0.8105418851687508,
+          "recall": 0.6972816657027183,
+          "f1": 0.7496580027359782,
+          "roc_auc": 0.8626315060076579,
+          "log_loss": 0.4429924750142188,
+          "brier_score": 0.14969085116797165,
           "confusion_matrix": [
             [
-              6039,
-              1299
+              6679,
+              1409
             ],
             [
-              2455,
-              5701
+              2617,
+              6028
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05265907444643403,
-              0.17929570802363315,
-              0.31683891777000717,
-              0.4208550877019419,
-              0.5163516417442384,
-              0.6891739031203564,
-              0.8888898534102425,
-              0.9774831375142593
+              0.04993914220809521,
+              0.17193959361843633,
+              0.30765442411523825,
+              0.4163510474859202,
+              0.5109996274377163,
+              0.6806568511655902,
+              0.8858541350010168,
+              0.9784735200311871
             ],
             "observed": [
-              0.022715539494062985,
-              0.21734641197728446,
-              0.38584710743801653,
-              0.4527620030975736,
-              0.5307176045431079,
-              0.6601239669421488,
-              0.9426948890036139,
-              0.9989674754775426
+              0.019120458891013385,
+              0.2055449330783939,
+              0.3615494978479197,
+              0.45267686424474185,
+              0.5136298421807748,
+              0.6472275334608031,
+              0.9344811095169775,
+              0.9990439770554493
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.20936193731285316
+              "n": 813,
+              "brier_score": 0.2060833662443171
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.19278839361281686
+              "n": 792,
+              "brier_score": 0.18933999458812487
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.17207294518708802
+              "n": 748,
+              "brier_score": 0.17083052706244814
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.1480774214474094
+              "n": 689,
+              "brier_score": 0.14683159569618587
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7558596224502724,
-          "accuracy_at_0_5": 0.7558596224502724,
-          "precision": 0.8173443874193973,
-          "recall": 0.7158003918404978,
-          "f1": 0.7632096338166626,
-          "roc_auc": 0.8549210824132942,
-          "log_loss": 0.4588935745312563,
-          "brier_score": 0.15451218956350501,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7553434197886647,
+          "accuracy_at_0_5": 0.7553434197886647,
+          "precision": 0.8223570190641247,
+          "recall": 0.7156091780674351,
+          "f1": 0.7652784977823858,
+          "roc_auc": 0.8547263446659751,
+          "log_loss": 0.45977527609214497,
+          "brier_score": 0.15498287321603918,
           "confusion_matrix": [
             [
-              5721,
-              1388
+              5938,
+              1435
             ],
             [
-              2466,
-              6211
+              2640,
+              6643
             ]
           ],
           "calibration": {
             "predicted": [
-              0.0562932328958898,
-              0.19653114059206972,
-              0.3371129123134558,
-              0.43803345606350447,
-              0.5462497711350648,
-              0.7137858058537929,
-              0.891532182319186,
-              0.9785996195686566
+              0.053831969518113164,
+              0.19341427436981512,
+              0.33522559584592454,
+              0.438768844793501,
+              0.5491219640318313,
+              0.7209612887004363,
+              0.8980420582176204,
+              0.9810221968340229
             ],
             "observed": [
-              0.05673758865248227,
-              0.24733907754688292,
-              0.40395337050177393,
-              0.46578813988849466,
-              0.548910288900152,
-              0.7516472377090725,
-              0.9265078560567663,
-              0.9964539007092199
+              0.06099903938520653,
+              0.2675312199807877,
+              0.4020172910662824,
+              0.4750240153698367,
+              0.5619596541786743,
+              0.7632084534101825,
+              0.930835734870317,
+              0.9971181556195965
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20994066208650705
+              "n": 812,
+              "brier_score": 0.21092719290867548
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.18939940124009086
+              "n": 803,
+              "brier_score": 0.19119771104123
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.1742220758035157
+              "n": 757,
+              "brier_score": 0.17843657613634256
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15625129446099453
+              "n": 692,
+              "brier_score": 0.15746323253985542
             }
           }
         }
@@ -2927,188 +2785,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.7740136335467879,
-          "accuracy_at_0_5": 0.7740136335467879,
-          "precision": 0.8458287982585313,
-          "recall": 0.7156167054872434,
-          "f1": 0.7752934272300469,
-          "roc_auc": 0.8799782118885529,
-          "log_loss": 0.42441252787997547,
-          "brier_score": 0.14177660152702137,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.7758485864623785,
+          "accuracy_at_0_5": 0.7758485864623785,
+          "precision": 0.8460289855072464,
+          "recall": 0.7156026282239875,
+          "f1": 0.7753692487514611,
+          "roc_auc": 0.8799861225109111,
+          "log_loss": 0.42412669975735906,
+          "brier_score": 0.14179193704437204,
           "confusion_matrix": [
             [
-              26036,
-              4816
+              29349,
+              5312
             ],
             [
-              10500,
-              26422
+              11600,
+              29188
             ]
           ],
           "calibration": {
             "predicted": [
-              0.0507034213751127,
-              0.1738808385873836,
-              0.3204262993360331,
-              0.42566387074996476,
-              0.5276188688888732,
-              0.7050328605592513,
-              0.899037465045316,
-              0.9814667339527903
+              0.04770803036127838,
+              0.167792369826461,
+              0.31455025629776284,
+              0.42213758286507413,
+              0.5228974811985215,
+              0.6998303088187208,
+              0.8992247712930913,
+              0.98271702195168
             ],
             "observed": [
-              0.03092540132200189,
-              0.1811850802644004,
-              0.37787746428993035,
-              0.4799338999055713,
-              0.5781397544853636,
-              0.7499704875457444,
-              0.9603399433427762,
-              0.9998819641170916
+              0.029474130619168787,
+              0.17622733538331037,
+              0.3732371964796946,
+              0.4703636941999788,
+              0.5735340897041671,
+              0.7443537270703001,
+              0.9580108153960344,
+              0.9996819001166366
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20257392556849158
+              "n": 3658,
+              "brier_score": 0.20171992607868813
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.17429020337193749
+              "n": 3603,
+              "brier_score": 0.1739247320888528
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.158206059147096
+              "n": 3440,
+              "brier_score": 0.15747768460500042
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.1430539477027459
+              "n": 3097,
+              "brier_score": 0.143365872691587
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7582935329805086,
-          "accuracy_at_0_5": 0.7582935329805086,
-          "precision": 0.8162007168458781,
-          "recall": 0.6980137322216773,
-          "f1": 0.7524948780648999,
-          "roc_auc": 0.8618170130533102,
-          "log_loss": 0.44437875182044473,
-          "brier_score": 0.15023336856735128,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7595171218550171,
+          "accuracy_at_0_5": 0.7595171218550171,
+          "precision": 0.8105928216158086,
+          "recall": 0.6975130133024869,
+          "f1": 0.7498134792340214,
+          "roc_auc": 0.8627459498437945,
+          "log_loss": 0.4426905347031479,
+          "brier_score": 0.14961261999634468,
           "confusion_matrix": [
             [
-              6056,
-              1282
+              6679,
+              1409
             ],
             [
-              2463,
-              5693
+              2615,
+              6030
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05243712887628021,
-              0.17854663136859958,
-              0.3163642271861786,
-              0.4199501575559772,
-              0.515853906749021,
-              0.6896883186055285,
-              0.8892692870153243,
-              0.978057670242227
+              0.04974090948730319,
+              0.1711217079895267,
+              0.3072657830510712,
+              0.41564707306356685,
+              0.5110326155115532,
+              0.6808332910417434,
+              0.886163527629726,
+              0.9789414819819556
             ],
             "observed": [
-              0.022715539494062985,
-              0.21424883840991224,
-              0.39204545454545453,
-              0.4527620030975736,
-              0.5281362932369644,
-              0.6570247933884298,
-              0.9452762003097573,
-              0.9989674754775426
+              0.019120458891013385,
+              0.20793499043977057,
+              0.35772357723577236,
+              0.4588910133843212,
+              0.5083692013390723,
+              0.6457934990439771,
+              0.9368723098995696,
+              0.998565965583174
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.20974245498063832
+              "n": 813,
+              "brier_score": 0.20633970976528382
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.19355087094534706
+              "n": 792,
+              "brier_score": 0.18972822516930576
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.17199994765938031
+              "n": 748,
+              "brier_score": 0.1707944686892711
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.14827707898710282
+              "n": 689,
+              "brier_score": 0.14714624504224147
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7544026352464209,
-          "accuracy_at_0_5": 0.7544026352464209,
-          "precision": 0.815872598052119,
-          "recall": 0.7144174253774346,
-          "f1": 0.7617818740399386,
-          "roc_auc": 0.8546276065155962,
-          "log_loss": 0.45910715986690026,
-          "brier_score": 0.15463777765174727,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7548030739673391,
+          "accuracy_at_0_5": 0.7548030739673391,
+          "precision": 0.8208071084783414,
+          "recall": 0.7164709684369277,
+          "f1": 0.7650983549982745,
+          "roc_auc": 0.8545131324921313,
+          "log_loss": 0.45987764367869705,
+          "brier_score": 0.15505960525933685,
           "confusion_matrix": [
             [
-              5710,
-              1399
+              5921,
+              1452
             ],
             [
-              2478,
-              6199
+              2632,
+              6651
             ]
           ],
           "calibration": {
             "predicted": [
-              0.056177987032922524,
-              0.1966381609922529,
-              0.3371784518764278,
-              0.43802069971377566,
-              0.5466285635600998,
-              0.7139974226687807,
-              0.891710971434769,
-              0.9792426575610187
+              0.053578141604224486,
+              0.1931920376131562,
+              0.33536102534096995,
+              0.43867079486022137,
+              0.5497387946066035,
+              0.7211408955461425,
+              0.8981708623778507,
+              0.9815555319745753
             ],
             "observed": [
-              0.05825734549138804,
-              0.25038013177901675,
-              0.39837810440952864,
-              0.4698428788646731,
-              0.5408008109477952,
-              0.7587430309173847,
-              0.9244804865686771,
-              0.9964539007092199
+              0.06292026897214217,
+              0.2675312199807877,
+              0.40057636887608067,
+              0.47742555235350626,
+              0.5576368876080692,
+              0.7675312199807877,
+              0.9289145052833814,
+              0.9961575408261287
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20990743310046628
+              "n": 812,
+              "brier_score": 0.2109595269661591
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.18998079187956096
+              "n": 803,
+              "brier_score": 0.19153531676177202
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17389174310977604
+              "n": 757,
+              "brier_score": 0.17816877750893545
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15644977490899525
+              "n": 692,
+              "brier_score": 0.15756262081518688
             }
           }
         }
@@ -3122,188 +2980,188 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.7690707350901526,
-          "accuracy_at_0_5": 0.7690707350901526,
-          "precision": 0.8442020777371436,
-          "recall": 0.7064893559395482,
-          "f1": 0.7692307692307693,
-          "roc_auc": 0.8755621601593031,
-          "log_loss": 0.4301945946722964,
-          "brier_score": 0.1441098041274637,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.769566197033758,
+          "accuracy_at_0_5": 0.769566197033758,
+          "precision": 0.8432787654755618,
+          "recall": 0.7047170736491125,
+          "f1": 0.7677965648956915,
+          "roc_auc": 0.8755641120297979,
+          "log_loss": 0.42975923309713804,
+          "brier_score": 0.14407065166126393,
           "confusion_matrix": [
             [
-              26038,
-              4814
+              29319,
+              5342
             ],
             [
-              10837,
-              26085
+              12044,
+              28744
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05184275419782005,
-              0.1767771739868375,
-              0.3271899369696639,
-              0.4270950541497667,
-              0.5214469998520049,
-              0.6994463297119993,
-              0.8964829695381541,
-              0.9808027277351172
+              0.048743479282279185,
+              0.17071723757361498,
+              0.32119131935042416,
+              0.42347292320908914,
+              0.5168874539877228,
+              0.6946337941345481,
+              0.8966033385768448,
+              0.9819542647116337
             ],
             "observed": [
-              0.03364022662889518,
-              0.18767705382436262,
-              0.38437020422618345,
-              0.488314447592068,
-              0.5651558073654391,
-              0.7414709007201039,
-              0.9577431539187913,
-              0.9998819641170916
+              0.031700593723494486,
+              0.1799385006892164,
+              0.3850068921641395,
+              0.4803308238786979,
+              0.5582652953027251,
+              0.734386597391581,
+              0.9553599830346728,
+              0.9998939667055455
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20517640840485804
+              "n": 3658,
+              "brier_score": 0.2045802562497075
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.180273320767202
+              "n": 3603,
+              "brier_score": 0.17991707462468906
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.1620078263073021
+              "n": 3440,
+              "brier_score": 0.16077176134943347
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.1455372840809695
+              "n": 3097,
+              "brier_score": 0.14561267307060083
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7603588485865497,
-          "accuracy_at_0_5": 0.7603588485865497,
-          "precision": 0.8188603416104493,
-          "recall": 0.6994850416871016,
-          "f1": 0.754479931230576,
-          "roc_auc": 0.8657878075537379,
-          "log_loss": 0.4385223347407123,
-          "brier_score": 0.14785077032820818,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7609514133747685,
+          "accuracy_at_0_5": 0.7609514133747685,
+          "precision": 0.8094603597601598,
+          "recall": 0.7027183342972817,
+          "f1": 0.7523219814241486,
+          "roc_auc": 0.8661060105754,
+          "log_loss": 0.4376846561980979,
+          "brier_score": 0.14759840030066812,
           "confusion_matrix": [
             [
-              6076,
-              1262
+              6658,
+              1430
             ],
             [
-              2451,
-              5705
+              2570,
+              6075
             ]
           ],
           "calibration": {
             "predicted": [
-              0.054098505593384597,
-              0.185656288684511,
-              0.3262357378681602,
-              0.4223717988273436,
-              0.5151916298739675,
-              0.6848099442521342,
-              0.8846606203912821,
-              0.9771735996800616
+              0.05088974741872026,
+              0.17726759335236186,
+              0.3160965098320176,
+              0.4170826537555869,
+              0.512087783405293,
+              0.6761727548316081,
+              0.881386495678493,
+              0.9781523363908101
             ],
             "observed": [
-              0.017036654620547237,
-              0.19308208569953536,
-              0.4034090909090909,
-              0.45844088797108934,
-              0.5240061951471348,
-              0.6647727272727273,
-              0.9514713474445018,
-              0.9989674754775426
+              0.016730401529636712,
+              0.18594646271510518,
+              0.3715925394548063,
+              0.46175908221797324,
+              0.5059780009564802,
+              0.652963671128107,
+              0.9392635102821616,
+              0.9990439770554493
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.2079883724218179
+              "n": 813,
+              "brier_score": 0.20525828387614092
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.18919702142731884
+              "n": 792,
+              "brier_score": 0.18632605881217965
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.1675870611033171
+              "n": 748,
+              "brier_score": 0.16675272296603807
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.1469905957897285
+              "n": 689,
+              "brier_score": 0.14663624281152457
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7526922589636387,
-          "accuracy_at_0_5": 0.7526922589636387,
-          "precision": 0.8153825822650984,
-          "recall": 0.7110752564250317,
-          "f1": 0.7596651071164737,
-          "roc_auc": 0.8563944115043072,
-          "log_loss": 0.45611071520409346,
-          "brier_score": 0.1535357361445836,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7516210374639769,
+          "accuracy_at_0_5": 0.7516210374639769,
+          "precision": 0.8193892750744787,
+          "recall": 0.7110847786275989,
+          "f1": 0.7614049253128785,
+          "roc_auc": 0.8561342638538127,
+          "log_loss": 0.45695176647157854,
+          "brier_score": 0.15399406020650538,
           "confusion_matrix": [
             [
-              5712,
-              1397
+              5918,
+              1455
             ],
             [
-              2507,
-              6170
+              2682,
+              6601
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05657564358556954,
-              0.2005883324047112,
-              0.34346050396103356,
-              0.4393291263141976,
-              0.5436005932168498,
-              0.7122107597385464,
-              0.8914877497765802,
-              0.9786020922211506
+              0.05399926299935876,
+              0.19760405709566672,
+              0.3420446670972478,
+              0.44004377487367,
+              0.5471875896704399,
+              0.7197524898058092,
+              0.8978375089056534,
+              0.9808998635897217
             ],
             "observed": [
-              0.05268490374873354,
-              0.2483527622909275,
-              0.3928028383172833,
-              0.49163710086163204,
-              0.5281297516472377,
-              0.7622909275215408,
-              0.9249873289406995,
-              0.9964539007092199
+              0.05859750240153699,
+              0.26032660902977905,
+              0.3952929875120077,
+              0.5086455331412104,
+              0.531700288184438,
+              0.7795389048991355,
+              0.9284341978866475,
+              0.9961575408261287
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20747240108158965
+              "n": 812,
+              "brier_score": 0.2095256739341199
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.18786735137045235
+              "n": 803,
+              "brier_score": 0.1896615907388784
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17202137116635233
+              "n": 757,
+              "brier_score": 0.17533099898435062
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15496915738705824
+              "n": 692,
+              "brier_score": 0.15549414749489485
             }
           }
         }
@@ -3346,24 +3204,24 @@
       "sitecoord__T_B_postplant_alive_at_site",
       "sitecoord__T_B_preplant_pair_together5"
     ],
-    "patterns": 167,
+    "patterns": 166,
     "recent_seconds": 15,
     "simultaneous_seconds": 5,
     "coverage": {
       "validation": {
-        "snapshots": 69644,
-        "with_site_pattern": 44942,
-        "with_coentry_pair": 15395
+        "snapshots": 75205,
+        "with_site_pattern": 47956,
+        "with_coentry_pair": 16016
       },
       "train": {
-        "snapshots": 302050,
-        "with_site_pattern": 193950,
-        "with_coentry_pair": 64611
+        "snapshots": 336734,
+        "with_site_pattern": 214582,
+        "with_coentry_pair": 70150
       },
       "test": {
-        "snapshots": 70884,
-        "with_site_pattern": 44996,
-        "with_coentry_pair": 14920
+        "snapshots": 74721,
+        "with_site_pattern": 47182,
+        "with_coentry_pair": 15431
       }
     },
     "candidate": {
@@ -3374,194 +3232,194 @@
       "decision_threshold": 0.5,
       "evaluation": {
         "train": {
-          "rounds": 3279,
-          "snapshots": 67774,
-          "accuracy": 0.7740136335467879,
-          "accuracy_at_0_5": 0.7740136335467879,
-          "precision": 0.8458287982585313,
-          "recall": 0.7156167054872434,
-          "f1": 0.7752934272300469,
-          "roc_auc": 0.8799782118885529,
-          "log_loss": 0.42441252787997547,
-          "brier_score": 0.14177660152702137,
+          "rounds": 3658,
+          "snapshots": 75449,
+          "accuracy": 0.7758485864623785,
+          "accuracy_at_0_5": 0.7758485864623785,
+          "precision": 0.8460289855072464,
+          "recall": 0.7156026282239875,
+          "f1": 0.7753692487514611,
+          "roc_auc": 0.8799861225109111,
+          "log_loss": 0.42412669975735906,
+          "brier_score": 0.14179193704437204,
           "confusion_matrix": [
             [
-              26036,
-              4816
+              29349,
+              5312
             ],
             [
-              10500,
-              26422
+              11600,
+              29188
             ]
           ],
           "calibration": {
             "predicted": [
-              0.0507034213751127,
-              0.1738808385873836,
-              0.3204262993360331,
-              0.42566387074996476,
-              0.5276188688888732,
-              0.7050328605592513,
-              0.899037465045316,
-              0.9814667339527903
+              0.04770803036127838,
+              0.167792369826461,
+              0.31455025629776284,
+              0.42213758286507413,
+              0.5228974811985215,
+              0.6998303088187208,
+              0.8992247712930913,
+              0.98271702195168
             ],
             "observed": [
-              0.03092540132200189,
-              0.1811850802644004,
-              0.37787746428993035,
-              0.4799338999055713,
-              0.5781397544853636,
-              0.7499704875457444,
-              0.9603399433427762,
-              0.9998819641170916
+              0.029474130619168787,
+              0.17622733538331037,
+              0.3732371964796946,
+              0.4703636941999788,
+              0.5735340897041671,
+              0.7443537270703001,
+              0.9580108153960344,
+              0.9996819001166366
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 3279,
-              "brier_score": 0.20257392556849158
+              "n": 3658,
+              "brier_score": 0.20171992607868813
             },
             "30": {
-              "n": 3228,
-              "brier_score": 0.17429020337193749
+              "n": 3603,
+              "brier_score": 0.1739247320888528
             },
             "45": {
-              "n": 3086,
-              "brier_score": 0.158206059147096
+              "n": 3440,
+              "brier_score": 0.15747768460500042
             },
             "60": {
-              "n": 2775,
-              "brier_score": 0.1430539477027459
+              "n": 3097,
+              "brier_score": 0.143365872691587
             }
           }
         },
         "validation": {
-          "rounds": 754,
-          "snapshots": 15494,
-          "accuracy": 0.7582935329805086,
-          "accuracy_at_0_5": 0.7582935329805086,
-          "precision": 0.8162007168458781,
-          "recall": 0.6980137322216773,
-          "f1": 0.7524948780648999,
-          "roc_auc": 0.8618170130533102,
-          "log_loss": 0.44437875182044473,
-          "brier_score": 0.15023336856735128,
+          "rounds": 813,
+          "snapshots": 16733,
+          "accuracy": 0.7595171218550171,
+          "accuracy_at_0_5": 0.7595171218550171,
+          "precision": 0.8105928216158086,
+          "recall": 0.6975130133024869,
+          "f1": 0.7498134792340214,
+          "roc_auc": 0.8627459498437945,
+          "log_loss": 0.4426905347031479,
+          "brier_score": 0.14961261999634468,
           "confusion_matrix": [
             [
-              6056,
-              1282
+              6679,
+              1409
             ],
             [
-              2463,
-              5693
+              2615,
+              6030
             ]
           ],
           "calibration": {
             "predicted": [
-              0.05243712887628021,
-              0.17854663136859958,
-              0.3163642271861786,
-              0.4199501575559772,
-              0.515853906749021,
-              0.6896883186055285,
-              0.8892692870153243,
-              0.978057670242227
+              0.04974090948730319,
+              0.1711217079895267,
+              0.3072657830510712,
+              0.41564707306356685,
+              0.5110326155115532,
+              0.6808332910417434,
+              0.886163527629726,
+              0.9789414819819556
             ],
             "observed": [
-              0.022715539494062985,
-              0.21424883840991224,
-              0.39204545454545453,
-              0.4527620030975736,
-              0.5281362932369644,
-              0.6570247933884298,
-              0.9452762003097573,
-              0.9989674754775426
+              0.019120458891013385,
+              0.20793499043977057,
+              0.35772357723577236,
+              0.4588910133843212,
+              0.5083692013390723,
+              0.6457934990439771,
+              0.9368723098995696,
+              0.998565965583174
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 754,
-              "brier_score": 0.20974245498063832
+              "n": 813,
+              "brier_score": 0.20633970976528382
             },
             "30": {
-              "n": 734,
-              "brier_score": 0.19355087094534706
+              "n": 792,
+              "brier_score": 0.18972822516930576
             },
             "45": {
-              "n": 695,
-              "brier_score": 0.17199994765938031
+              "n": 748,
+              "brier_score": 0.1707944686892711
             },
             "60": {
-              "n": 637,
-              "brier_score": 0.14827707898710282
+              "n": 689,
+              "brier_score": 0.14714624504224147
             }
           }
         },
         "test": {
-          "rounds": 773,
-          "snapshots": 15786,
-          "accuracy": 0.7544026352464209,
-          "accuracy_at_0_5": 0.7544026352464209,
-          "precision": 0.815872598052119,
-          "recall": 0.7144174253774346,
-          "f1": 0.7617818740399386,
-          "roc_auc": 0.8546276065155962,
-          "log_loss": 0.45910715986690026,
-          "brier_score": 0.15463777765174727,
+          "rounds": 813,
+          "snapshots": 16656,
+          "accuracy": 0.7548030739673391,
+          "accuracy_at_0_5": 0.7548030739673391,
+          "precision": 0.8208071084783414,
+          "recall": 0.7164709684369277,
+          "f1": 0.7650983549982745,
+          "roc_auc": 0.8545131324921313,
+          "log_loss": 0.45987764367869705,
+          "brier_score": 0.15505960525933685,
           "confusion_matrix": [
             [
-              5710,
-              1399
+              5921,
+              1452
             ],
             [
-              2478,
-              6199
+              2632,
+              6651
             ]
           ],
           "calibration": {
             "predicted": [
-              0.056177987032922524,
-              0.1966381609922529,
-              0.3371784518764278,
-              0.43802069971377566,
-              0.5466285635600998,
-              0.7139974226687807,
-              0.891710971434769,
-              0.9792426575610187
+              0.053578141604224486,
+              0.1931920376131562,
+              0.33536102534096995,
+              0.43867079486022137,
+              0.5497387946066035,
+              0.7211408955461425,
+              0.8981708623778507,
+              0.9815555319745753
             ],
             "observed": [
-              0.05825734549138804,
-              0.25038013177901675,
-              0.39837810440952864,
-              0.4698428788646731,
-              0.5408008109477952,
-              0.7587430309173847,
-              0.9244804865686771,
-              0.9964539007092199
+              0.06292026897214217,
+              0.2675312199807877,
+              0.40057636887608067,
+              0.47742555235350626,
+              0.5576368876080692,
+              0.7675312199807877,
+              0.9289145052833814,
+              0.9961575408261287
             ]
           },
           "by_seconds": {
             "15": {
-              "n": 772,
-              "brier_score": 0.20990743310046628
+              "n": 812,
+              "brier_score": 0.2109595269661591
             },
             "30": {
-              "n": 764,
-              "brier_score": 0.18998079187956096
+              "n": 803,
+              "brier_score": 0.19153531676177202
             },
             "45": {
-              "n": 719,
-              "brier_score": 0.17389174310977604
+              "n": 757,
+              "brier_score": 0.17816877750893545
             },
             "60": {
-              "n": 657,
-              "brier_score": 0.15644977490899525
+              "n": 692,
+              "brier_score": 0.15756262081518688
             }
           }
         }
       }
     },
-    "active": "compact",
+    "active": "baseline",
     "test_status": "Existing test previously examined; exploratory results. Validation alone selects configuration; independent future matches required for confirmation.",
     "pattern_choice": "compact"
   }

@@ -1,12 +1,12 @@
 # CS2 Tactical Replay
 
-Phát lại round đấu CS2 và dùng **PrefixSpan** để tìm các chuỗi di chuyển thường gặp. Demo có **226 bản ghi trận đấu, 4.806 round và 48.060 chuỗi tuyển thủ–round** trên Mirage, Inferno và Dust II.
+Phát lại round đấu CS2 và dùng **PrefixSpan** để tìm các chuỗi di chuyển thường gặp. Demo có **248 demo map, 5.284 round và 52.840 chuỗi tuyển thủ–round** trên Mirage, Inferno và Dust II.
 
 ![Round Replay trên Dust II](docs/replay.png)
 
 ## Chạy trên máy cá nhân
 
-Cần **Python 3.11 trở lên**, Git và Git LFS. Bản demo đầy đủ chiếm khoảng **4,3 GiB**. Nếu repo ở chế độ Private, hãy đăng nhập bằng tài khoản đã được cấp quyền truy cập.
+Cần **Python 3.11 trở lên**, Git và Git LFS. Bản demo đầy đủ chiếm khoảng **4,7 GiB**. Nếu repo ở chế độ Private, hãy đăng nhập bằng tài khoản đã được cấp quyền truy cập.
 
 ### Windows (PowerShell)
 
