@@ -1,6 +1,7 @@
 const labels = {smoke:'Smoke', flash:'Flash', fire:'Lửa'};
 const colors = {smoke:'#b6c5d7', flash:'#fff1a0', fire:'#ff8838'};
 const utilityByDemo = new Map();
+let renderedMarkup = null;
 
 export async function replayUtility(round) {
     if (round.metadata.game?.toUpperCase() !== 'CS2') return null;
@@ -48,7 +49,7 @@ export function utilityControls(round, effects, seek, redraw) {
         marker.style.backgroundColor = colors[e.kind];
         marker.title = labels[e.kind]+' · '+seconds.toFixed(1)+'s';
         marker.setAttribute('aria-label', marker.title);
-        marker.addEventListener('click', () => seek(Math.ceil(seconds)));
+        marker.addEventListener('click', () => seek(seconds));
         timeline.append(marker);
     }
     panel.append(timeline);
@@ -71,17 +72,22 @@ export function renderUtility(effects, meta, radar, seconds) {
     const layer = document.querySelector('#utility-layer');
     if (!effects?.length || !radar || !meta || seconds >= (meta.end_tick-meta.start_tick)/meta.tick_rate) {
         layer.replaceChildren();
+        renderedMarkup = null;
         return;
     }
     const tick = meta.start_tick + seconds*meta.tick_rate;
     const enabled = new Set([...document.querySelectorAll('#replay-utility input:checked')].map(input => input.dataset.utility));
     const active = effects.filter(e => enabled.has(e.kind)
-        && e.start_tick <= tick && tick < (e.end_tick ?? e.start_tick+meta.tick_rate));
-    layer.innerHTML = active.map(e => {
+        && e.start_tick <= tick && tick < (e.end_tick ?? (e.kind === 'flash' ? e.start_tick+meta.tick_rate : e.start_tick)));
+    const markup = active.map(e => {
         const x = (e.x-radar.x)/radar.scale;
         const y = (radar.y-e.y)/radar.scale;
-        return `<g data-effect="${e.kind}" transform="translate(${x} ${y})">
+        return `<g data-effect="${e.kind}" data-start-tick="${e.start_tick}" transform="translate(${x} ${y})">
             <title>${labels[e.kind]}</title>${utilityIcon(e.kind)}
         </g>`;
     }).join('');
+    if (markup !== renderedMarkup) {
+        layer.innerHTML = markup;
+        renderedMarkup = markup;
+    }
 }

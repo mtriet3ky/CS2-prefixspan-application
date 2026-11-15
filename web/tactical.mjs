@@ -1,3 +1,4 @@
+import {createRosterPicker} from './roster_picker.mjs?v=2';
 import {enableWheelZoom,enableDragPan} from './wheel_zoom.mjs?v=2';
 import {clusterLocationMarkers,hasVisibleMovement,holdPaths,locationMarkers,tacticalPaths} from './tactical_paths.mjs?v=marker-clusters-3';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -5,6 +6,8 @@ const pct=n=>(n*100).toFixed(2)+'%',fmt=n=>Number(n).toFixed(1)+'s',pretty=s=>cu
 let mode='profile',catalog,data,shown=8,revision=0,proofRevision=0,currentMap='',items=[],selected=-1;let regionGeometry=null,activeView=null,locationSelection=null,panX=0,panY=0;const traceCache=new Map();
 let observedMarkers=[];
 let rosterMedia={teams:{},players:{}};
+const teamPicker=createRosterPicker($('#team'),id=>rosterMedia.teams[id]);
+const playerPicker=createRosterPicker($('#player'),id=>rosterMedia.players[id]);
 function showIdentity(selector,url,fallback){
  const slot=$(selector);
  if(slot.dataset.url===(url||'')&&slot.dataset.fallback===fallback)return;
@@ -20,13 +23,25 @@ function showIdentity(selector,url,fallback){
  slot.append(img);
 }
 function refreshIdentity(){
- const teamId=$('#team').value;
+ const selectedTeam=$('#team').value;
  const player=catalog.players.find(p=>p.id===$('#player').value);
- const team=$('#team').selectedOptions[0]?.textContent;
- const initials=name=>name?.slice(0,3).toUpperCase()||'–';
- showIdentity('#team-picture',rosterMedia.teams[teamId],teamId==='all'?'CS2':initials(team));
- showIdentity('#player-picture',rosterMedia.players[player?.id],initials(player?.name));
+ const playerTeams=new Set((player?.contexts||[]).filter(context=>
+  context.map===$('#map').value&&context.side===$('#side').value&&
+  ($('#weapon').value==='all'||context.weapon===$('#weapon').value)).map(context=>context.team_id));
+ const inferredTeam=mode==='profile'&&selectedTeam==='all'&&playerTeams.size===1
+  ? playerTeams.values().next().value : null;
+ const teamId=inferredTeam||selectedTeam;
+ const team=catalog.teams.find(item=>item.id===teamId);
+ const initials=name=>name?.slice(0,3).toUpperCase()||'CS2';
+ showIdentity('#team-picture',rosterMedia.teams[teamId],initials(team?.name));
+ $('#team-picture').title=team?.name||'';
+ $('#team-context').textContent=inferredTeam?team?.name||'':'';
+ $('#team-context').hidden=!inferredTeam;
+ showIdentity('#player-picture',rosterMedia.players[player?.id],player?initials(player.name):'');
+ teamPicker.refresh();
+ playerPicker.refresh();
 }
+
 const get=async(path,params={})=>{const r=await fetch(path+'?'+new URLSearchParams(params));if(!r.ok)throw Error((await r.text()).replace(/<[^>]+>/g,' ').slice(-400));return r.json()};
 function option(el,values){el.innerHTML=values.map(([id,name])=>`<option value="${esc(id)}">${esc(name)}</option>`).join('')}
 function searchText(value){return String(value).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();}

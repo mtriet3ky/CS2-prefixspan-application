@@ -1,0 +1,18 @@
+.roster-field{position:relative;display:grid;gap:5px;min-width:0}
+.roster-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:48px;text-align:left}
+.roster-trigger span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.roster-trigger::after{content:'\25BE';color:var(--muted)}
+.roster-options{position:absolute;z-index:8;top:100%;left:0;width:max(100%,270px);max-width:min(390px,calc(100vw - 36px));max-height:min(380px,56vh);overflow:auto;background:#101e2a;border:1px solid var(--line);border-radius:8px;padding:4px;box-shadow:0 12px 24px #0007}
+.roster-option{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px;width:100%;min-height:54px;padding:4px 8px;border:1px solid transparent;background:transparent;text-align:left;font-size:14px}
+.roster-option[aria-current],.roster-option:focus-visible,.roster-option:hover{background:#223b4d;border-color:#52788c}
+.roster-option-photo{position:relative;display:grid;place-items:center;width:48px;height:46px;overflow:hidden;border-radius:5px;background:#0c1822;color:var(--muted);font-size:12px;font-weight:700}
+.roster-option-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0c1822}
+.team-picker .roster-option-photo img{padding:4px}
+.player-picker .roster-option-photo img{object-fit:cover;object-position:center top}
+@media(max-width:600px){.roster-options{width:100%;max-width:100%}.roster-option{overflow-wrap:anywhere}}
+
+.roster-option-media,.roster-selected-media{display:flex;gap:4px;align-items:center}
+.roster-selected-media:empty{display:none}
+.roster-trigger .roster-selected-media{overflow:visible;flex-shrink:0}
+.roster-trigger .roster-selected-media .roster-option-photo{width:32px;height:32px}
+.roster-trigger [id$="-value"]{flex:1}

@@ -101,3 +101,9 @@ body{max-width:none;padding:12px}.tactical-layout{grid-template-columns:minmax(1
 .replay-match-field select{width:100%;min-width:0}
 #replay-team{min-width:150px;max-width:220px}
 #round{min-width:90px}
+
+.replay-team-field{width:min(225px,100%)}
+.replay-player-field{width:min(245px,100%)}
+.replay-match-field .roster-options{max-width:100%}
+.replay-match-field .roster-option{min-height:58px}
+@media(max-width:600px){.selectors.replay-selectors .replay-match-field{min-width:100%}}
