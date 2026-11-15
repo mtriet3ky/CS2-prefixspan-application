@@ -20,3 +20,25 @@ export function holdPaths(proofs,traces){
   .map(event=>({sequence_id:proof.sequence_id,start:event.seconds,end:event.end_seconds,region:event.region})));
  return tacticalPaths(windows,traces);
 }
+
+// Mark each named area once, using a sample that is part of the drawn track.
+export function locationMarkers(keys,aliases,proofs,traces,paths){
+ const coordinate=([x,y])=>`${x},${y}`;
+ const drawn=new Set(paths.flat().map(coordinate));
+ const marked=new Set(),markers=[];
+ for(const key of new Set(keys)){
+  const regions=new Set([key,...(aliases[key]||[])]);
+  const signature=[...regions].sort().join('|');
+  if(marked.has(signature))continue;
+  for(const proof of proofs){
+   const point=traces.get(proof.sequence_id).track.find(p=>
+    p.t>=proof.start&&p.t<=proof.end&&p.alive&&p.valid&&p.region&&p.region!=='UNKNOWN'&&
+    (regions.has(p.region)||regions.has(`MACRO_${p.macro_zone}`))&&drawn.has(coordinate([p.x,p.y])));
+   if(!point)continue;
+   markers.push({key,x:point.x,y:point.y});
+   marked.add(signature);
+   break;
+  }
+ }
+ return markers;
+}
