@@ -1,5 +1,5 @@
 import {enableWheelZoom,enableDragPan} from './wheel_zoom.mjs?v=2';
-import {holdPaths,tacticalPaths} from './tactical_paths.mjs?v=hold-window-1';
+import {holdPaths,tacticalPaths} from './tactical_paths.mjs?v=hold-approach-2';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=n=>(n*100).toFixed(2)+'%',fmt=n=>Number(n).toFixed(1)+'s',pretty=s=>currentMap==='de_mirage'&&s==='MOVE_TRUCK'?'VAN':s.replace(/^MOVE_/,'').replaceAll('_',' ');
 let mode='profile',catalog,data,shown=8,revision=0,proofRevision=0,currentMap='',items=[],selected=-1;let regionGeometry=null,activeView=null,locationSelection=null,panX=0,panY=0;const traceCache=new Map();
@@ -47,7 +47,7 @@ function renderList(){if(mode==='profile'){$('#list').innerHTML='';$('#more').hi
 async function showRole(i){
  const v=++proofRevision,r=profileRole(data.roles[i]);activeView=()=>showRole(i);selected=-1;$('#list').querySelectorAll('.card').forEach(e=>e.classList.remove('selected'));$('#roles').querySelectorAll('[data-role]').forEach(b=>b.classList.toggle('selected',+b.dataset.role===i));
  showRegionLegend(r.code);$('#map-title').textContent=r.label;$('#paths').replaceChildren();
- try{const traces=await loadTraces(r.rounds);if(v!==proofRevision)return;drawPaths(r.code.includes('_HOLD_')?holdPaths(r.rounds,traces):tacticalPaths(r.rounds,traces,true),data.side);$('#proof').innerHTML=`<h3>${esc(r.label)}</h3><p>${pct(r.share)} · ${r.count}/${r.total} round · ${esc(r.route)}</p>`}catch(e){if(v===proofRevision)$('#proof').textContent=e.message}
+ try{const traces=await loadTraces(r.rounds);if(v!==proofRevision)return;const hold=r.code.includes('_HOLD_');const paths=hold?holdPaths(r.rounds,traces):tacticalPaths(r.rounds,traces,true);drawPaths(paths,data.side);$('#proof').innerHTML=`<h3>${esc(r.label)}</h3><p>${pct(r.share)} · ${r.count}/${r.total} round · ${esc(r.route)}</p>${hold?holdPathNote(paths):''}`}catch(e){if(v===proofRevision)$('#proof').textContent=e.message}
 }
 async function loadTraces(proofs){const ids=[...new Set(proofs.map(p=>p.sequence_id))];for(let i=0;i<ids.length;i+=6)await Promise.all(ids.slice(i,i+6).map(async id=>{if(!traceCache.has(id))traceCache.set(id,(await get('api/analysis/trace',{id})).sequence)}));return traceCache}
 function regionPolygons(keys){
@@ -125,11 +125,14 @@ function showRegionLegend(selection){
  drawLocationLabels();
 }
 
+function holdPathNote(paths){
+ return `<p class="muted">${paths.length?'Đường quan sát được trong tối đa 8 giây trước lúc giữ vị trí.':'Không có đoạn di chuyển liền mạch đủ rõ trước lúc giữ vị trí.'}</p>`;
+}
 function drawPaths(paths,side){const color=side==='CT'?'#65d5ff':'#ffb361';$('#paths').innerHTML=paths.map(points=>points.length===1?`<circle cx="${points[0][0]}" cy="${points[0][1]}" r="8" fill="${color}" opacity=".12"/>`:points.slice(1).map((p,i)=>`<path d="M${points[i][0]} ${points[i][1]}L${p[0]} ${p[1]}" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round" opacity="${.12+.3*(i+1)/points.length}"/>`).join('')).join('')}
 async function selectProof(i,j){const v=++proofRevision,p=items[i];activeView=()=>selectProof(i,0);selected=i;$('#roles').querySelectorAll('[data-role]').forEach(e=>e.classList.remove('selected'));$('#list').querySelectorAll('.card').forEach((e,k)=>e.classList.toggle('selected',k===i));$('#proof').textContent='Đang tổng hợp đường đi…';
  showRegionLegend(mode==='profile'?p.actions:p.label);$('#paths').replaceChildren();
- try{const proofs=mode==='profile'?p.evidence:p.evidence.flatMap(d=>d.participants);const traces=await loadTraces(proofs);if(v!==proofRevision)return;drawPaths(mode==='plays'&&p.label.includes('_HOLD_')?holdPaths(proofs,traces):tacticalPaths(proofs,traces,true),mode==='profile'?data.side:p.side);
- $('#map-title').textContent=mode==='profile'?'Tuyến thường đi':p.title;$('#proof').innerHTML=mode==='profile'?`<div class="chain">${p.actions.map(a=>`<span class="region">${esc(pretty(a))}</span>`).join(' → ')}</div><p>Pattern Support ${pct(p.support)} · ${p.support_count}/${p.total_sequences} sequences</p>`:`<h3>${esc(p.title)}</h3><p>${pct(p.frequency)} · ${p.count}/${p.total} ${esc(p.side)}-round</p>`;
+ try{const proofs=mode==='profile'?p.evidence:p.evidence.flatMap(d=>d.participants);const traces=await loadTraces(proofs);if(v!==proofRevision)return;const hold=mode==='plays'&&p.label.includes('_HOLD_');const paths=hold?holdPaths(proofs,traces):tacticalPaths(proofs,traces,true);drawPaths(paths,mode==='profile'?data.side:p.side);
+ $('#map-title').textContent=mode==='profile'?'Tuyến thường đi':p.title;$('#proof').innerHTML=mode==='profile'?`<div class="chain">${p.actions.map(a=>`<span class="region">${esc(pretty(a))}</span>`).join(' → ')}</div><p>Pattern Support ${pct(p.support)} · ${p.support_count}/${p.total_sequences} sequences</p>`:`<h3>${esc(p.title)}</h3><p>${pct(p.frequency)} · ${p.count}/${p.total} ${esc(p.side)}-round</p>${hold?holdPathNote(paths):''}`;
  }catch(e){if(v===proofRevision)$('#proof').textContent='Không tải được đường đi: '+e.message}
 }
 function updateMapTransform(){
