@@ -53,23 +53,29 @@ export function holdPaths(proofs,traces){
  return paths;
 }
 
-// Mark each named area once, using a sample that is part of the drawn track.
-export function locationMarkers(keys,aliases,proofs,traces,paths){
- const coordinate=([x,y])=>`${x},${y}`;
- const drawn=new Set(paths.flat().map(coordinate));
- const marked=new Set(),markers=[];
- for(const key of new Set(keys)){
+// One observed marker per area for each matched occurrence.
+export function locationMarkers(keys,aliases,proofs,traces,holdTracks){
+ const areas=new Map();
+ for(const key of keys){
   const regions=new Set([key,...(aliases[key]||[])]);
   const signature=[...regions].sort().join('|');
-  if(marked.has(signature))continue;
-  for(const proof of proofs){
-   const point=traces.get(proof.sequence_id).track.find(p=>
-    p.t>=proof.start&&p.t<=proof.end&&p.alive&&p.valid&&p.region&&p.region!=='UNKNOWN'&&
-    (regions.has(p.region)||regions.has(`MACRO_${p.macro_zone}`))&&drawn.has(coordinate([p.x,p.y])));
-   if(!point)continue;
-   markers.push({key,x:point.x,y:point.y});
-   marked.add(signature);
-   break;
+  if(!areas.has(signature))areas.set(signature,{key,regions});
+ }
+ const coordinate=([x,y])=>`${x},${y}`;
+ const seen=new Set(),markers=[];
+ for(const proof of proofs){
+  const id=JSON.stringify([proof.sequence_id,proof.start,proof.end]);
+  if(seen.has(id))continue;
+  seen.add(id);
+  const track=traces.get(proof.sequence_id).track;
+  const paths=holdTracks?.get(proof);
+  const visible=paths?.filter(hasVisibleMovement);
+  const eligible=paths&&new Set((visible.length?visible:paths).flat().map(coordinate));
+  for(const {key,regions} of areas.values()){
+   const point=track.find(p=>p.t>=proof.start&&p.t<=proof.end&&observedPoint(p)&&
+    (regions.has(p.region)||regions.has(`MACRO_${p.macro_zone}`))&&
+    (!eligible||eligible.has(coordinate([p.x,p.y]))));
+   if(point)markers.push({key,x:point.x,y:point.y});
   }
  }
  return markers;
