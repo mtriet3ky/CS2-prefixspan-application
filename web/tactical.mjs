@@ -142,8 +142,8 @@ function drawLocationMarkers(){
  const pixelsPerUnit=Math.min(svg.clientWidth,svg.clientHeight)/1024 * Number($('#zoom').value);
  if(!pixelsPerUnit||!observedMarkers.length){layer.replaceChildren();return;}
  const clusters=clusterLocationMarkers(observedMarkers,8/pixelsPerUnit);
- const radius=2.5/pixelsPerUnit;
- layer.innerHTML=clusters.map(({key,x,y,count})=>`<g data-region="${esc(key)}" data-count="${count}"><circle cx="${x}" cy="${y}" r="${radius}" fill="#f04452"/>${count>1?`<text x="${x+5/pixelsPerUnit}" y="${y-4/pixelsPerUnit}" fill="#fff" paint-order="stroke" stroke="#141b24" stroke-width="${2/pixelsPerUnit}" font-size="${11/pixelsPerUnit}" font-weight="700">${count}</text>`:''}</g>`).join('');
+ const radius=4/pixelsPerUnit;
+ layer.innerHTML=clusters.map(({key,x,y,count})=>`<g data-region="${esc(key)}" data-count="${count}"><circle cx="${x}" cy="${y}" r="${radius}" fill="#f04452"/>${count>1?`<text x="${x+7/pixelsPerUnit}" y="${y-4/pixelsPerUnit}" fill="#fff" paint-order="stroke" stroke="#141b24" stroke-width="${2/pixelsPerUnit}" font-size="${11/pixelsPerUnit}" font-weight="700">${count}</text>`:''}</g>`).join('');
 }
 function drawPaths(paths,side){const color=side==='CT'?'#65d5ff':'#ffb361';$('#paths').innerHTML=paths.map(points=>points.length===1?`<circle cx="${points[0][0]}" cy="${points[0][1]}" r="8" fill="${color}" opacity=".12"/>`:points.slice(1).map((p,i)=>`<path d="M${points[i][0]} ${points[i][1]}L${p[0]} ${p[1]}" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round" opacity="${.12+.3*(i+1)/points.length}"/>`).join('')).join('')}
 async function selectProof(i,j){const v=++proofRevision,p=items[i];activeView=()=>selectProof(i,0);selected=i;$('#roles').querySelectorAll('[data-role]').forEach(e=>e.classList.remove('selected'));$('#list').querySelectorAll('.card').forEach((e,k)=>e.classList.toggle('selected',k===i));$('#proof').textContent='Đang tổng hợp đường đi…';
