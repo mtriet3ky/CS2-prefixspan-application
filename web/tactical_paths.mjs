@@ -53,27 +53,30 @@ export function holdPaths(proofs,traces){
  return paths;
 }
 
-// Highlight only observed segments inside a named area during a matched occurrence.
-export function locationSegments(keys,aliases,proofs,traces,holdTracks){
- const areas=keys.map(key=>new Set([key,...(aliases[key]||[])]));
- const edge=(a,b)=>`${a[0]},${a[1]} ${b[0]},${b[1]}`;
- const segments=new Map();
+// One observed marker per area for each matched occurrence.
+export function locationMarkers(keys,aliases,proofs,traces,holdTracks){
+ const areas=new Map();
+ for(const key of keys){
+  const regions=new Set([key,...(aliases[key]||[])]);
+  const signature=[...regions].sort().join('|');
+  if(!areas.has(signature))areas.set(signature,{key,regions});
+ }
+ const coordinate=([x,y])=>`${x},${y}`;
+ const seen=new Set(),markers=[];
  for(const proof of proofs){
+  const id=JSON.stringify([proof.sequence_id,proof.start,proof.end]);
+  if(seen.has(id))continue;
+  seen.add(id);
   const track=traces.get(proof.sequence_id).track;
   const paths=holdTracks?.get(proof);
-  const drawn=paths&&new Set(paths.filter(hasVisibleMovement).flatMap(path=>
-   path.slice(1).map((b,i)=>edge(path[i],b))));
-  if(drawn&&!drawn.size)continue;
-  for(let i=1;i<track.length;i++){
-   const a=track[i-1],b=track[i];
-   if(a.t<proof.start||b.t>proof.end||b.t-a.t>.75||!observedPoint(a)||!observedPoint(b))continue;
-   const inArea=(area,p)=>area.has(p.region)||area.has(`MACRO_${p.macro_zone}`);
-   if(!areas.some(area=>inArea(area,a)&&inArea(area,b)))continue;
-   const start=[a.x,a.y],end=[b.x,b.y];
-   if(a.x===b.x&&a.y===b.y)continue;
-   const key=edge(start,end);
-   if(!drawn||drawn.has(key))segments.set(key,[start,end]);
+  const visible=paths?.filter(hasVisibleMovement);
+  const eligible=paths&&new Set((visible.length?visible:paths).flat().map(coordinate));
+  for(const {key,regions} of areas.values()){
+   const point=track.find(p=>p.t>=proof.start&&p.t<=proof.end&&observedPoint(p)&&
+    (regions.has(p.region)||regions.has(`MACRO_${p.macro_zone}`))&&
+    (!eligible||eligible.has(coordinate([p.x,p.y]))));
+   if(point)markers.push({key,x:point.x,y:point.y});
   }
  }
- return [...segments.values()];
+ return markers;
 }
