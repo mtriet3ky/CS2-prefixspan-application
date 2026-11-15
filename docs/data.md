@@ -16,3 +16,6 @@ Giao diện phát lại những mốc đã quan sát. Utility chỉ xuất hiệ
 `file_timestamps.json` lưu thông tin để khôi phục timestamp sau khi clone, giúp cache phân tích nhận đúng bản dữ liệu. Cache JSON và SQLite trong `data/analysis/` đi cùng nhau.
 
 Thông báo giấy phép tài nguyên hiện có nằm trong `web/assets/`. Xem [Awpy](https://github.com/pnxenopoulos/awpy) và [Total CS Callouts](https://totalcsgo.com/callouts) để tham khảo các nguồn dùng trong quá trình xây dựng dữ liệu và bản đồ.
+
+
+Ảnh ở bộ chọn chiến thuật được tham chiếu từ danh mục [tuyển thủ BLAST.tv](https://blast.tv/cs/player) và [đội BLAST.tv](https://blast.tv/cs/team). Ảnh tuyển thủ được ghép theo SteamID. Logo dùng đội đang chọn trong bộ lọc demo. Khi nguồn thiếu ảnh hoặc CDN không tải được, giao diện hiển thị tên viết tắt.

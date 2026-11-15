@@ -2,14 +2,26 @@
 <html lang="vi" class="demo-backdrop">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CS2 · Khai phá chiến thuật</title>
-<link rel="stylesheet" href="tactical.css?v=location-arrows-25"><link rel="stylesheet" href="demo-backdrop.css?v=1">
+<link rel="stylesheet" href="tactical.css?v=identity-pickers-26"><link rel="stylesheet" href="demo-backdrop.css?v=1">
 <header><div><h1>Khai phá chiến thuật</h1><p>Tuyến thường đi, vị trí phòng thủ và dấu hiệu bài đội từ round thực.</p></div><a class="button" href="intelligence.html">← Round Replay</a></header>
 <nav aria-label="Ứng dụng"><button data-mode="profile" aria-pressed="true">Hồ sơ tuyển thủ</button><button data-mode="plays" aria-pressed="false">Bài di chuyển của đội</button></nav>
-<form id="filters"><label>Đội tuyển<select id="team"></select></label><label class="personal">Tìm tuyển thủ<input id="player-search" type="search" placeholder="Tên hoặc SteamID" autocomplete="off"></label><label class="personal">Tuyển thủ<select id="player" aria-label="Tuyển thủ"></select></label><label>Map<select id="map"></select></label><label>Phe<select id="side"><option>CT</option><option>T</option></select></label><label class="personal">Súng chính đầu round<select id="weapon"><option value="all">Tất cả</option><option>Rifle</option><option>AWP</option><option>SMG</option><option>Pistol</option><option value="Other">Khác</option><option value="Unknown">Không xác định</option></select></label><input id="split" type="hidden" value="all"><label class="personal">min_sup (%)<input id="support" type="number" min="1" max="100" step="0.01" value="2"></label><button type="submit" id="run">Phân tích</button></form>
+<form id="filters"><div class="identity-pickers">
+  <div class="identity-picker team-picker">
+    <span id="team-picture" class="identity-picture" aria-hidden="true"></span>
+    <label>Đội tuyển<select id="team"></select></label>
+  </div>
+  <div class="identity-picker player-picker personal">
+    <span id="player-picture" class="identity-picture" aria-hidden="true"></span>
+    <div class="player-picker-fields">
+      <label>Tìm tuyển thủ<input id="player-search" type="search" placeholder="Tên hoặc SteamID" autocomplete="off"></label>
+      <label>Tuyển thủ<select id="player" aria-label="Tuyển thủ"></select></label>
+    </div>
+  </div>
+</div><label>Map<select id="map"></select></label><label>Phe<select id="side"><option>CT</option><option>T</option></select></label><label class="personal">Súng chính đầu round<select id="weapon"><option value="all">Tất cả</option><option>Rifle</option><option>AWP</option><option>SMG</option><option>Pistol</option><option value="Other">Khác</option><option value="Unknown">Không xác định</option></select></label><input id="split" type="hidden" value="all"><label class="personal">min_sup (%)<input id="support" type="number" min="1" max="100" step="0.01" value="2"></label><button type="submit" id="run">Phân tích</button></form>
 <p id="status" role="status">Đang đọc dữ liệu…</p>
 <main>
 <section class="visual"><div class="map-heading"><h2 id="map-title">Bản đồ</h2><label>Zoom <input id="zoom" type="range" min="1" max="2.5" step=".1" value="1"></label></div><div class="map-wrap"><aside id="map-region-legend" class="map-region-legend" aria-label="Khu vực liên quan" hidden></aside><svg id="map-svg" viewBox="0 0 1024 1024" aria-label="Tuyến thực tế của tuyển thủ"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><g id="scene"><image id="radar" width="1024" height="1024"/><g id="paths"></g><g id="location-markers" pointer-events="none"></g></g><g id="location-labels" pointer-events="none"></g></svg></div><div id="proof"><p>Chọn hành vi để xem đường đi trên bản đồ.</p></div></section>
 <section class="results"><div id="summary"></div><div id="roles"></div><div id="list"></div><button id="more" hidden>Xem thêm</button></section>
 </main>
-<script type="module" src="tactical.mjs?v=marker-size-36"></script>
+<script type="module" src="tactical.mjs?v=identity-pickers-37"></script>
 </html>

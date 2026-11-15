@@ -4,6 +4,29 @@ const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>
 const pct=n=>(n*100).toFixed(2)+'%',fmt=n=>Number(n).toFixed(1)+'s',pretty=s=>currentMap==='de_mirage'&&s==='MOVE_TRUCK'?'VAN':s.replace(/^MOVE_/,'').replaceAll('_',' ');
 let mode='profile',catalog,data,shown=8,revision=0,proofRevision=0,currentMap='',items=[],selected=-1;let regionGeometry=null,activeView=null,locationSelection=null,panX=0,panY=0;const traceCache=new Map();
 let observedMarkers=[];
+let rosterMedia={teams:{},players:{}};
+function showIdentity(selector,url,fallback){
+ const slot=$(selector);
+ if(slot.dataset.url===(url||'')&&slot.dataset.fallback===fallback)return;
+ slot.dataset.url=url||'';
+ slot.dataset.fallback=fallback;
+ slot.textContent=fallback;
+ if(!url)return;
+ const img=document.createElement('img');
+ img.alt='';
+ img.referrerPolicy='no-referrer';
+ img.addEventListener('error',()=>img.remove(),{once:true});
+ img.src=url;
+ slot.append(img);
+}
+function refreshIdentity(){
+ const teamId=$('#team').value;
+ const player=catalog.players.find(p=>p.id===$('#player').value);
+ const team=$('#team').selectedOptions[0]?.textContent;
+ const initials=name=>name?.slice(0,3).toUpperCase()||'–';
+ showIdentity('#team-picture',rosterMedia.teams[teamId],teamId==='all'?'CS2':initials(team));
+ showIdentity('#player-picture',rosterMedia.players[player?.id],initials(player?.name));
+}
 const get=async(path,params={})=>{const r=await fetch(path+'?'+new URLSearchParams(params));if(!r.ok)throw Error((await r.text()).replace(/<[^>]+>/g,' ').slice(-400));return r.json()};
 function option(el,values){el.innerHTML=values.map(([id,name])=>`<option value="${esc(id)}">${esc(name)}</option>`).join('')}
 function searchText(value){return String(value).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();}
@@ -27,6 +50,7 @@ function refreshPlayers(){
  $('#run').disabled=mode==='profile'&&!candidates.length;
  const player=catalog.players.find(p=>p.id===$('#player').value);
  $('#player').title=player?'SteamID '+player.id+' · '+(player.aliases||[]).join(' / '):'';
+ refreshIdentity();
 }
 function mapChanged(){panX=0;panY=0;updateMapTransform();activeView=null;locationSelection=null;$('#location-labels').replaceChildren();currentMap=$('#map').value;$('#radar').setAttribute('href',`assets/${currentMap}.png`);$('#map-title').textContent=currentMap.replace('de_','');$('#paths').innerHTML='';observedMarkers=[];$('#location-markers').replaceChildren();$('#map-region-legend').hidden=true;$('#map-region-legend').innerHTML='';$('#proof').textContent='Chọn hành vi để xem đường đi trên bản đồ.';proofRevision++}
 function switchMode(next){mode=next;$('#player-search').value='';$('#team option[value="all"]').disabled=mode==='plays';if(mode==='plays'&&$('#team').value==='all')$('#team').selectedIndex=1;refreshPlayers();document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));document.querySelectorAll('.personal').forEach(e=>e.hidden=mode!=='profile');document.querySelectorAll('.team-only').forEach(e=>e.hidden=mode!=='plays');$('#roles').innerHTML='';run()}
@@ -171,6 +195,7 @@ enableDragPan($('.map-wrap'),(dx,dy)=>{
 $('#player-search').oninput=refreshPlayers;
 $('#team').onchange=()=>{$('#player-search').value='';refreshPlayers();run();};
 for(const id of ['map','side','weapon'])$('#'+id).onchange=()=>{refreshPlayers();run();};
-$('#player').onchange=run;
+$('#player').onchange=()=>{refreshIdentity();run();};
 $('#filters').onsubmit=e=>{e.preventDefault();run()};$('#more').onclick=()=>{shown+=8;renderList()};document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>switchMode(b.dataset.mode));
+get('assets/roster-media.json').then(media=>{rosterMedia=media;if(catalog)refreshIdentity();}).catch(()=>{});
 try{catalog=await get('api/analysis/catalog');option($('#team'),[['all','Tất cả đội'],...catalog.teams.map(t=>[t.id,t.name])]);option($('#map'),catalog.maps.map(m=>[m,m.replace('de_','')]));$('#map').value='de_mirage';refreshPlayers();await run()}catch(e){$('#status').textContent='Không đọc được dữ liệu: '+e.message;$('#status').className='error'}
