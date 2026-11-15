@@ -1,0 +1,44 @@
+html.demo-backdrop {
+  background-color: #0c131b;
+}
+
+.demo-backdrop body {
+  background: transparent;
+  isolation: isolate;
+}
+
+.demo-backdrop body::before {
+  content: "";
+  position: fixed;
+  inset: -8px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(160deg, rgb(8 14 21 / 70%), rgb(8 14 21 / 83%)),
+    url("assets/demo-background.png") center 32% / cover no-repeat;
+  filter: blur(5px);
+}
+
+.demo-backdrop .winrate-panel,
+.demo-backdrop .center-map,
+.demo-backdrop .pattern-panel,
+.demo-backdrop #evaluation > article,
+.demo-backdrop .visual,
+.demo-backdrop .methods {
+  background: rgb(16 27 38 / 84%);
+}
+
+.demo-backdrop .map-and-teams {
+  background: transparent;
+}
+
+.demo-backdrop .map-and-teams .viewport,
+.demo-backdrop .map-wrap {
+  background: #080e14;
+}
+
+@media (forced-colors: active) {
+  .demo-backdrop body::before {
+    content: none;
+  }
+}

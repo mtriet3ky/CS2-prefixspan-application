@@ -1,0 +1,1508 @@
+{
+  "map": "de_mirage",
+  "status": "ACCEPTED_IMAGE_REGISTRATION",
+  "radar_release": "2000943",
+  "radar_sha256": "c8032f6c83ffca63c0a20ebdcc598a0e1aa618efd746e381e2db26f33a4a964f",
+  "totalcs_page": "https://totalcsgo.com/callouts/mirage",
+  "totalcs_image": "https://static.totalcsgo.com/totalcsgo-strapi/mirage_11347b32ec.png",
+  "totalcs_sha256": "9fea4a6d60570d055bbd6b93ccaede9691750e8814bc3f08bea3cf11b9c0facb",
+  "matrix": [
+    [
+      0.777350326537036,
+      1.5805430441902704e-05,
+      1.9014364184133055
+    ],
+    [
+      -1.5805430441902704e-05,
+      0.777350326537036,
+      1.9033589386218137
+    ]
+  ],
+  "matches": 244,
+  "train_inliers": 104,
+  "test_consensus": 44,
+  "test_matches": 74,
+  "polygons": [
+    {
+      "id": 791,
+      "name": "Mid",
+      "polygon": [
+        [
+          357.0,
+          308.0
+        ],
+        [
+          591.0,
+          305.0
+        ],
+        [
+          588.0,
+          416.0
+        ],
+        [
+          443.0,
+          413.0
+        ],
+        [
+          443.0,
+          392.0
+        ],
+        [
+          352.0,
+          397.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TopofMid",
+        "Catwalk",
+        "Middle"
+      ]
+    },
+    {
+      "id": 765,
+      "name": "B Site",
+      "polygon": [
+        [
+          147.0,
+          264.0
+        ],
+        [
+          218.0,
+          267.0
+        ],
+        [
+          223.0,
+          192.0
+        ],
+        [
+          147.0,
+          192.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 789,
+      "name": "A Site",
+      "polygon": [
+        [
+          380.0,
+          669.0
+        ],
+        [
+          490.0,
+          650.0
+        ],
+        [
+          500.0,
+          580.0
+        ],
+        [
+          378.0,
+          592.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 790,
+      "name": "T Spawn",
+      "polygon": [
+        [
+          673.0,
+          468.0
+        ],
+        [
+          729.0,
+          471.0
+        ],
+        [
+          738.0,
+          245.0
+        ],
+        [
+          670.0,
+          243.0
+        ]
+      ],
+      "compatible_native_names": [
+        "PalaceAlley",
+        "TSpawn"
+      ]
+    },
+    {
+      "id": 792,
+      "name": "T Roof",
+      "polygon": [
+        [
+          639.0,
+          467.0
+        ],
+        [
+          639.0,
+          542.0
+        ],
+        [
+          622.0,
+          543.0
+        ],
+        [
+          625.0,
+          451.0
+        ],
+        [
+          686.0,
+          450.0
+        ],
+        [
+          688.0,
+          470.0
+        ]
+      ],
+      "compatible_native_names": [
+        "PalaceAlley"
+      ]
+    },
+    {
+      "id": 793,
+      "name": "A Ramp",
+      "polygon": [
+        [
+          540.0,
+          540.0
+        ],
+        [
+          622.0,
+          539.0
+        ],
+        [
+          627.0,
+          440.0
+        ],
+        [
+          593.0,
+          440.0
+        ],
+        [
+          592.0,
+          486.0
+        ],
+        [
+          536.0,
+          487.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TRamp",
+        "PalaceAlley"
+      ]
+    },
+    {
+      "id": 766,
+      "name": "Palace",
+      "polygon": [
+        [
+          501.0,
+          643.0
+        ],
+        [
+          677.0,
+          646.0
+        ],
+        [
+          675.0,
+          547.0
+        ],
+        [
+          729.0,
+          480.0
+        ],
+        [
+          648.0,
+          482.0
+        ],
+        [
+          646.0,
+          571.0
+        ],
+        [
+          548.0,
+          572.0
+        ],
+        [
+          550.0,
+          609.0
+        ],
+        [
+          502.0,
+          609.0
+        ]
+      ],
+      "compatible_native_names": [
+        "PalaceInterior"
+      ]
+    },
+    {
+      "id": 767,
+      "name": "Pillars",
+      "polygon": [
+        [
+          550.0,
+          621.0
+        ],
+        [
+          643.0,
+          619.0
+        ],
+        [
+          644.0,
+          595.0
+        ],
+        [
+          548.0,
+          595.0
+        ]
+      ],
+      "compatible_native_names": [
+        "PalaceInterior"
+      ]
+    },
+    {
+      "id": 795,
+      "name": "Balcony",
+      "polygon": [
+        [
+          498.0,
+          609.0
+        ],
+        [
+          534.0,
+          611.0
+        ],
+        [
+          535.0,
+          562.0
+        ],
+        [
+          500.0,
+          562.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA",
+        "Scaffolding"
+      ]
+    },
+    {
+      "id": 794,
+      "name": "Shadows",
+      "polygon": [
+        [
+          498.0,
+          609.0
+        ],
+        [
+          534.0,
+          611.0
+        ],
+        [
+          535.0,
+          562.0
+        ],
+        [
+          500.0,
+          562.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA",
+        "Scaffolding"
+      ]
+    },
+    {
+      "id": 768,
+      "name": "Tetris",
+      "polygon": [
+        [
+          507.0,
+          520.0
+        ],
+        [
+          519.0,
+          477.0
+        ],
+        [
+          464.0,
+          480.0
+        ],
+        [
+          465.0,
+          513.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 769,
+      "name": "Sandwich",
+      "polygon": [
+        [
+          446.0,
+          521.0
+        ],
+        [
+          468.0,
+          523.0
+        ],
+        [
+          470.0,
+          493.0
+        ],
+        [
+          442.0,
+          494.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 796,
+      "name": "Stairs",
+      "polygon": [
+        [
+          415.0,
+          466.0
+        ],
+        [
+          434.0,
+          467.0
+        ],
+        [
+          445.0,
+          525.0
+        ],
+        [
+          419.0,
+          526.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA",
+        "Stairs"
+      ]
+    },
+    {
+      "id": 770,
+      "name": "Firebox",
+      "polygon": [
+        [
+          441.0,
+          649.0
+        ],
+        [
+          492.0,
+          654.0
+        ],
+        [
+          496.0,
+          612.0
+        ],
+        [
+          461.0,
+          613.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 771,
+      "name": "Ninja",
+      "polygon": [
+        [
+          425.0,
+          650.0
+        ],
+        [
+          447.0,
+          650.0
+        ],
+        [
+          453.0,
+          627.0
+        ],
+        [
+          428.0,
+          631.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 772,
+      "name": "CT",
+      "polygon": [
+        [
+          261.0,
+          650.0
+        ],
+        [
+          392.0,
+          682.0
+        ],
+        [
+          373.0,
+          618.0
+        ],
+        [
+          289.0,
+          600.0
+        ],
+        [
+          242.0,
+          609.0
+        ]
+      ],
+      "compatible_native_names": [
+        "CTSpawn",
+        "TicketBooth"
+      ]
+    },
+    {
+      "id": 797,
+      "name": "Ticket Booth",
+      "polygon": [
+        [
+          368.0,
+          635.0
+        ],
+        [
+          387.0,
+          666.0
+        ],
+        [
+          374.0,
+          688.0
+        ],
+        [
+          329.0,
+          666.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TicketBooth"
+      ]
+    },
+    {
+      "id": 800,
+      "name": "Trash",
+      "polygon": [
+        [
+          330.0,
+          627.0
+        ],
+        [
+          367.0,
+          633.0
+        ],
+        [
+          369.0,
+          606.0
+        ],
+        [
+          328.0,
+          608.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TicketBooth"
+      ]
+    },
+    {
+      "id": 773,
+      "name": "CT Spawn",
+      "polygon": [
+        [
+          234.0,
+          536.0
+        ],
+        [
+          184.0,
+          541.0
+        ],
+        [
+          185.0,
+          608.0
+        ],
+        [
+          282.0,
+          607.0
+        ],
+        [
+          275.0,
+          384.0
+        ],
+        [
+          230.0,
+          385.0
+        ]
+      ],
+      "compatible_native_names": [
+        "CTSpawn"
+      ]
+    },
+    {
+      "id": 774,
+      "name": "Jungle",
+      "polygon": [
+        [
+          301.0,
+          514.0
+        ],
+        [
+          392.0,
+          522.0
+        ],
+        [
+          388.0,
+          465.0
+        ],
+        [
+          295.0,
+          457.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Jungle"
+      ]
+    },
+    {
+      "id": 775,
+      "name": "Connector",
+      "polygon": [
+        [
+          375.0,
+          468.0
+        ],
+        [
+          430.0,
+          472.0
+        ],
+        [
+          427.0,
+          394.0
+        ],
+        [
+          375.0,
+          395.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Connector"
+      ]
+    },
+    {
+      "id": 802,
+      "name": "Vent",
+      "polygon": [
+        [
+          306.0,
+          347.0
+        ],
+        [
+          336.0,
+          349.0
+        ],
+        [
+          338.0,
+          321.0
+        ],
+        [
+          302.0,
+          321.0
+        ]
+      ],
+      "compatible_native_names": [
+        "SnipersNest",
+        "Ladder"
+      ]
+    },
+    {
+      "id": 798,
+      "name": "Sniper's Nest",
+      "polygon": [
+        [
+          297.0,
+          436.0
+        ],
+        [
+          334.0,
+          442.0
+        ],
+        [
+          335.0,
+          352.0
+        ],
+        [
+          308.0,
+          352.0
+        ]
+      ],
+      "compatible_native_names": [
+        "SnipersNest"
+      ]
+    },
+    {
+      "id": 799,
+      "name": "Ladder Room",
+      "polygon": [
+        [
+          311.0,
+          266.0
+        ],
+        [
+          349.0,
+          268.0
+        ],
+        [
+          350.0,
+          302.0
+        ],
+        [
+          313.0,
+          323.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Tunnel",
+        "Ladder"
+      ]
+    },
+    {
+      "id": 776,
+      "name": "Underpass",
+      "polygon": [
+        [
+          370.0,
+          215.0
+        ],
+        [
+          364.0,
+          395.0
+        ],
+        [
+          338.0,
+          395.0
+        ],
+        [
+          342.0,
+          187.0
+        ],
+        [
+          494.0,
+          193.0
+        ],
+        [
+          492.0,
+          212.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Catwalk",
+        "Tunnel",
+        "BackAlley",
+        "Middle",
+        "TunnelStairs"
+      ]
+    },
+    {
+      "id": 777,
+      "name": "Boost",
+      "polygon": [
+        [
+          323.0,
+          355.0
+        ],
+        [
+          335.0,
+          350.0
+        ],
+        [
+          346.0,
+          381.0
+        ],
+        [
+          335.0,
+          384.0
+        ]
+      ],
+      "compatible_native_names": [
+        "SnipersNest",
+        "Middle"
+      ]
+    },
+    {
+      "id": 801,
+      "name": "Chair",
+      "polygon": [
+        [
+          440.0,
+          419.0
+        ],
+        [
+          499.0,
+          422.0
+        ],
+        [
+          498.0,
+          393.0
+        ],
+        [
+          436.0,
+          393.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Middle"
+      ]
+    },
+    {
+      "id": 803,
+      "name": "Top Mid",
+      "polygon": [
+        [
+          513.0,
+          420.0
+        ],
+        [
+          593.0,
+          422.0
+        ],
+        [
+          593.0,
+          290.0
+        ],
+        [
+          491.0,
+          286.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TopofMid"
+      ]
+    },
+    {
+      "id": 804,
+      "name": "Mid Boxes",
+      "polygon": [
+        [
+          538.0,
+          396.0
+        ],
+        [
+          575.0,
+          398.0
+        ],
+        [
+          568.0,
+          349.0
+        ],
+        [
+          533.0,
+          354.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TopofMid"
+      ]
+    },
+    {
+      "id": 805,
+      "name": "Default",
+      "polygon": [
+        [
+          448.0,
+          620.0
+        ],
+        [
+          471.0,
+          618.0
+        ],
+        [
+          469.0,
+          597.0
+        ],
+        [
+          450.0,
+          602.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 809,
+      "name": "Triple Box",
+      "polygon": [
+        [
+          395.0,
+          611.0
+        ],
+        [
+          434.0,
+          596.0
+        ],
+        [
+          425.0,
+          569.0
+        ],
+        [
+          381.0,
+          586.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteA"
+      ]
+    },
+    {
+      "id": 808,
+      "name": "Catwalk",
+      "polygon": [
+        [
+          360.0,
+          350.0
+        ],
+        [
+          537.0,
+          350.0
+        ],
+        [
+          539.0,
+          312.0
+        ],
+        [
+          359.0,
+          311.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TopofMid",
+        "Catwalk"
+      ]
+    },
+    {
+      "id": 806,
+      "name": "B Short",
+      "polygon": [
+        [
+          290.0,
+          255.0
+        ],
+        [
+          358.0,
+          257.0
+        ],
+        [
+          357.0,
+          314.0
+        ],
+        [
+          404.0,
+          315.0
+        ],
+        [
+          389.0,
+          219.0
+        ],
+        [
+          315.0,
+          216.0
+        ],
+        [
+          313.0,
+          182.0
+        ],
+        [
+          291.0,
+          182.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB",
+        "Catwalk",
+        "Tunnel"
+      ]
+    },
+    {
+      "id": 807,
+      "name": "Short Corner",
+      "polygon": [
+        [
+          290.0,
+          211.0
+        ],
+        [
+          318.0,
+          216.0
+        ],
+        [
+          322.0,
+          173.0
+        ],
+        [
+          293.0,
+          174.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Apartments",
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 810,
+      "name": "Market",
+      "polygon": [
+        [
+          135.0,
+          378.0
+        ],
+        [
+          268.0,
+          384.0
+        ],
+        [
+          264.0,
+          342.0
+        ],
+        [
+          225.0,
+          343.0
+        ],
+        [
+          218.0,
+          311.0
+        ],
+        [
+          133.0,
+          310.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Shop"
+      ]
+    },
+    {
+      "id": 811,
+      "name": "Window",
+      "polygon": [
+        [
+          179.0,
+          325.0
+        ],
+        [
+          216.0,
+          324.0
+        ],
+        [
+          218.0,
+          303.0
+        ],
+        [
+          178.0,
+          304.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Shop",
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 812,
+      "name": "Door",
+      "polygon": [
+        [
+          122.0,
+          321.0
+        ],
+        [
+          152.0,
+          324.0
+        ],
+        [
+          154.0,
+          300.0
+        ],
+        [
+          122.0,
+          299.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Shop",
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 778,
+      "name": "Bench",
+      "polygon": [
+        [
+          83.0,
+          257.0
+        ],
+        [
+          131.0,
+          259.0
+        ],
+        [
+          139.0,
+          177.0
+        ],
+        [
+          81.0,
+          179.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 814,
+      "name": "Van",
+      "polygon": [
+        [
+          128.0,
+          175.0
+        ],
+        [
+          177.0,
+          172.0
+        ],
+        [
+          173.0,
+          132.0
+        ],
+        [
+          133.0,
+          138.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Truck"
+      ]
+    },
+    {
+      "id": 815,
+      "name": "B Apartments",
+      "polygon": [
+        [
+          178.0,
+          165.0
+        ],
+        [
+          319.0,
+          167.0
+        ],
+        [
+          321.0,
+          214.0
+        ],
+        [
+          352.0,
+          216.0
+        ],
+        [
+          355.0,
+          136.0
+        ],
+        [
+          176.0,
+          130.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Apartments",
+        "Balcony"
+      ]
+    },
+    {
+      "id": 779,
+      "name": "Kitchen",
+      "polygon": [
+        [
+          317.0,
+          214.0
+        ],
+        [
+          352.0,
+          215.0
+        ],
+        [
+          352.0,
+          165.0
+        ],
+        [
+          314.0,
+          166.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Apartments",
+        "TunnelStairs"
+      ]
+    },
+    {
+      "id": 780,
+      "name": "B Plat",
+      "polygon": [
+        [
+          172.0,
+          166.0
+        ],
+        [
+          203.0,
+          167.0
+        ],
+        [
+          205.0,
+          128.0
+        ],
+        [
+          172.0,
+          127.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Truck",
+        "Balcony"
+      ]
+    },
+    {
+      "id": 817,
+      "name": "Side Alley",
+      "polygon": [
+        [
+          529.0,
+          286.0
+        ],
+        [
+          575.0,
+          288.0
+        ],
+        [
+          583.0,
+          206.0
+        ],
+        [
+          661.0,
+          203.0
+        ],
+        [
+          675.0,
+          248.0
+        ],
+        [
+          723.0,
+          252.0
+        ],
+        [
+          725.0,
+          162.0
+        ],
+        [
+          528.0,
+          158.0
+        ]
+      ],
+      "compatible_native_names": [
+        "TopofMid",
+        "TSpawn",
+        "SideAlley"
+      ]
+    },
+    {
+      "id": 781,
+      "name": "TV",
+      "polygon": [
+        [
+          545.0,
+          140.0
+        ],
+        [
+          586.0,
+          140.0
+        ],
+        [
+          584.0,
+          120.0
+        ],
+        [
+          542.0,
+          123.0
+        ]
+      ],
+      "compatible_native_names": [
+        "House"
+      ]
+    },
+    {
+      "id": 813,
+      "name": "Cart",
+      "polygon": [
+        [
+          550.0,
+          178.0
+        ],
+        [
+          588.0,
+          182.0
+        ],
+        [
+          594.0,
+          157.0
+        ],
+        [
+          547.0,
+          158.0
+        ]
+      ],
+      "compatible_native_names": [
+        "House",
+        "SideAlley"
+      ]
+    },
+    {
+      "id": 782,
+      "name": "Apps Ramp",
+      "polygon": [
+        [
+          601.0,
+          178.0
+        ],
+        [
+          659.0,
+          179.0
+        ],
+        [
+          662.0,
+          157.0
+        ],
+        [
+          600.0,
+          156.0
+        ]
+      ],
+      "compatible_native_names": [
+        "House",
+        "SideAlley"
+      ]
+    },
+    {
+      "id": 783,
+      "name": "Arches",
+      "polygon": [
+        [
+          252.0,
+          253.0
+        ],
+        [
+          282.0,
+          256.0
+        ],
+        [
+          283.0,
+          179.0
+        ],
+        [
+          250.0,
+          180.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 784,
+      "name": "Sneaky",
+      "polygon": [
+        [
+          133.0,
+          389.0
+        ],
+        [
+          183.0,
+          380.0
+        ],
+        [
+          169.0,
+          361.0
+        ],
+        [
+          130.0,
+          363.0
+        ]
+      ],
+      "compatible_native_names": [
+        "Shop"
+      ]
+    },
+    {
+      "id": 785,
+      "name": "Empty",
+      "polygon": [
+        [
+          149.0,
+          268.0
+        ],
+        [
+          176.0,
+          270.0
+        ],
+        [
+          174.0,
+          241.0
+        ],
+        [
+          141.0,
+          245.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 786,
+      "name": "E Box",
+      "polygon": [
+        [
+          232.0,
+          314.0
+        ],
+        [
+          273.0,
+          317.0
+        ],
+        [
+          277.0,
+          246.0
+        ],
+        [
+          233.0,
+          251.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 787,
+      "name": "Boost Boxes",
+      "polygon": [
+        [
+          189.0,
+          215.0
+        ],
+        [
+          220.0,
+          220.0
+        ],
+        [
+          221.0,
+          190.0
+        ],
+        [
+          185.0,
+          191.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BombsiteB"
+      ]
+    },
+    {
+      "id": 788,
+      "name": "House",
+      "polygon": [
+        [
+          485.0,
+          152.0
+        ],
+        [
+          612.0,
+          153.0
+        ],
+        [
+          613.0,
+          126.0
+        ],
+        [
+          484.0,
+          127.0
+        ]
+      ],
+      "compatible_native_names": [
+        "House"
+      ]
+    },
+    {
+      "id": 816,
+      "name": "Back Alley",
+      "polygon": [
+        [
+          352.0,
+          190.0
+        ],
+        [
+          487.0,
+          189.0
+        ],
+        [
+          489.0,
+          122.0
+        ],
+        [
+          432.0,
+          127.0
+        ],
+        [
+          432.0,
+          164.0
+        ],
+        [
+          349.0,
+          164.0
+        ]
+      ],
+      "compatible_native_names": [
+        "BackAlley"
+      ]
+    }
+  ],
+  "margin_px": 3,
+  "native_semantics_source": "Existing reviewed callout/native-name compatibility list, retained as a semantic constraint; legacy world transforms and NAV geometry NOT reused.",
+  "version_note": "Pinned November 2026 CS2 asset bundle; April demos require observational NAV/landmark validation. Not an exact-build asset claim.",
+  "landmark_gate": {
+    "plant_events": 7,
+    "passed": 7,
+    "nav_alive_coverage": 0.8441468081405462
+  }
+}

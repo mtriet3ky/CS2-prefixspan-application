@@ -1,0 +1,51 @@
+{
+  "artifacts": {
+    "geometry.zip": {
+      "bytes": 56674290,
+      "sha256": "7451a538a6447217d190c4e80f0270dfd19588852afd8c5213936ab2ef85633b"
+    },
+    "images.zip": {
+      "bytes": 2876805,
+      "sha256": "b1c463c2d3566d77d60247424c756f6e8198473b19e5006268d74b682599e052"
+    },
+    "navs.zip": {
+      "bytes": 8432990,
+      "sha256": "b6c429d0cc295857ea0d8d6896aba7bbac61cf6189c74755480b98b2a1e6bf7f"
+    }
+  },
+  "buildid": "26598758",
+  "client_version": "2000943",
+  "generated_at": "2026-11-12T08:22:47.776138+00:00",
+  "maps": [
+    "ar_baggage",
+    "ar_pool_day",
+    "ar_shoots",
+    "ar_shoots_night",
+    "cs_italy",
+    "cs_office",
+    "cs_shelter",
+    "de_ancient",
+    "de_ancient_night",
+    "de_anubis",
+    "de_boulder",
+    "de_cache",
+    "de_debris",
+    "de_dust2",
+    "de_eldorado",
+    "de_fachwerk",
+    "de_inferno",
+    "de_mirage",
+    "de_nuke",
+    "de_overpass",
+    "de_poseidon",
+    "de_train",
+    "de_vertigo",
+    "rush_001"
+  ],
+  "patch_version": "1.41.9.7",
+  "release_key": "2000943",
+  "server_version": "2000943",
+  "source_revision": "11228971",
+  "version_date": "Nov 11 2026",
+  "version_time": "10:20:41"
+}

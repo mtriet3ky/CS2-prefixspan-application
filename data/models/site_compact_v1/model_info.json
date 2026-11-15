@@ -1,0 +1,3568 @@
+{
+  "version": "cs2_lr_v4_site_coord",
+  "mapping_version": "cs2_spatial_v2",
+  "data_fingerprint": "227958c0057617b1c65d7c28a9afa123d27d06beac752c7aecf11ffe89da6ed9",
+  "chosen_family": "D_state_site_compact",
+  "decision_threshold": 0.5,
+  "evaluation": {
+    "train": {
+      "rounds": 3279,
+      "snapshots": 67774,
+      "accuracy": 0.7690707350901526,
+      "accuracy_at_0_5": 0.7690707350901526,
+      "precision": 0.8442020777371436,
+      "recall": 0.7064893559395482,
+      "f1": 0.7692307692307693,
+      "roc_auc": 0.8755621601593031,
+      "log_loss": 0.4301945946722964,
+      "brier_score": 0.1441098041274637,
+      "confusion_matrix": [
+        [
+          26038,
+          4814
+        ],
+        [
+          10837,
+          26085
+        ]
+      ],
+      "calibration": {
+        "predicted": [
+          0.05184275419782005,
+          0.1767771739868375,
+          0.3271899369696639,
+          0.4270950541497667,
+          0.5214469998520049,
+          0.6994463297119993,
+          0.8964829695381541,
+          0.9808027277351172
+        ],
+        "observed": [
+          0.03364022662889518,
+          0.18767705382436262,
+          0.38437020422618345,
+          0.488314447592068,
+          0.5651558073654391,
+          0.7414709007201039,
+          0.9577431539187913,
+          0.9998819641170916
+        ]
+      },
+      "by_seconds": {
+        "15": {
+          "n": 3279,
+          "brier_score": 0.20517640840485804
+        },
+        "30": {
+          "n": 3228,
+          "brier_score": 0.180273320767202
+        },
+        "45": {
+          "n": 3086,
+          "brier_score": 0.1620078263073021
+        },
+        "60": {
+          "n": 2775,
+          "brier_score": 0.1455372840809695
+        }
+      }
+    },
+    "validation": {
+      "rounds": 754,
+      "snapshots": 15494,
+      "accuracy": 0.7603588485865497,
+      "accuracy_at_0_5": 0.7603588485865497,
+      "precision": 0.8188603416104493,
+      "recall": 0.6994850416871016,
+      "f1": 0.754479931230576,
+      "roc_auc": 0.8657878075537379,
+      "log_loss": 0.4385223347407123,
+      "brier_score": 0.14785077032820818,
+      "confusion_matrix": [
+        [
+          6076,
+          1262
+        ],
+        [
+          2451,
+          5705
+        ]
+      ],
+      "calibration": {
+        "predicted": [
+          0.054098505593384597,
+          0.185656288684511,
+          0.3262357378681602,
+          0.4223717988273436,
+          0.5151916298739675,
+          0.6848099442521342,
+          0.8846606203912821,
+          0.9771735996800616
+        ],
+        "observed": [
+          0.017036654620547237,
+          0.19308208569953536,
+          0.4034090909090909,
+          0.45844088797108934,
+          0.5240061951471348,
+          0.6647727272727273,
+          0.9514713474445018,
+          0.9989674754775426
+        ]
+      },
+      "by_seconds": {
+        "15": {
+          "n": 754,
+          "brier_score": 0.2079883724218179
+        },
+        "30": {
+          "n": 734,
+          "brier_score": 0.18919702142731884
+        },
+        "45": {
+          "n": 695,
+          "brier_score": 0.1675870611033171
+        },
+        "60": {
+          "n": 637,
+          "brier_score": 0.1469905957897285
+        }
+      }
+    },
+    "test": {
+      "rounds": 773,
+      "snapshots": 15786,
+      "accuracy": 0.7526922589636387,
+      "accuracy_at_0_5": 0.7526922589636387,
+      "precision": 0.8153825822650984,
+      "recall": 0.7110752564250317,
+      "f1": 0.7596651071164737,
+      "roc_auc": 0.8563944115043072,
+      "log_loss": 0.45611071520409346,
+      "brier_score": 0.1535357361445836,
+      "confusion_matrix": [
+        [
+          5712,
+          1397
+        ],
+        [
+          2507,
+          6170
+        ]
+      ],
+      "calibration": {
+        "predicted": [
+          0.05657564358556954,
+          0.2005883324047112,
+          0.34346050396103356,
+          0.4393291263141976,
+          0.5436005932168498,
+          0.7122107597385464,
+          0.8914877497765802,
+          0.9786020922211506
+        ],
+        "observed": [
+          0.05268490374873354,
+          0.2483527622909275,
+          0.3928028383172833,
+          0.49163710086163204,
+          0.5281297516472377,
+          0.7622909275215408,
+          0.9249873289406995,
+          0.9964539007092199
+        ]
+      },
+      "by_seconds": {
+        "15": {
+          "n": 772,
+          "brier_score": 0.20747240108158965
+        },
+        "30": {
+          "n": 764,
+          "brier_score": 0.18786735137045235
+        },
+        "45": {
+          "n": 719,
+          "brier_score": 0.17202137116635233
+        },
+        "60": {
+          "n": 657,
+          "brier_score": 0.15496915738705824
+        }
+      }
+    }
+  },
+  "coefficients": [
+    {
+      "feature": "T_armor",
+      "coefficient": 0.407848450784915,
+      "pattern": false
+    },
+    {
+      "feature": "CT_armor",
+      "coefficient": -0.3222525115373722,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_elapsed_seconds",
+      "coefficient": 0.3146821760355068,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_Pistols",
+      "coefficient": 0.3139468532714992,
+      "pattern": false
+    },
+    {
+      "feature": "T_alive",
+      "coefficient": 0.3118773724748146,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_Rifle",
+      "coefficient": -0.27347818179570627,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_Rifle",
+      "coefficient": 0.2641239547066172,
+      "pattern": false
+    },
+    {
+      "feature": "T_hp",
+      "coefficient": 0.24726790053347686,
+      "pattern": false
+    },
+    {
+      "feature": "CT_alive",
+      "coefficient": -0.24643360490076344,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_Pistols",
+      "coefficient": -0.24407747063602322,
+      "pattern": false
+    },
+    {
+      "feature": "CT_hp",
+      "coefficient": -0.2417928824784793,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_planted",
+      "coefficient": 0.17370525581967636,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_timer_length",
+      "coefficient": 0.17370525581965124,
+      "pattern": false
+    },
+    {
+      "feature": "CT_defusing",
+      "coefficient": -0.1717906957194343,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_SITE",
+      "coefficient": 0.15242364475870113,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_SMG",
+      "coefficient": -0.13847601562012324,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_Sniper",
+      "coefficient": 0.11744100257001935,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_site_A",
+      "coefficient": 0.1157080620167628,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_site_B",
+      "coefficient": 0.11359511924077154,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_SITE",
+      "coefficient": 0.11315246009267156,
+      "pattern": false
+    },
+    {
+      "feature": "CT_kits",
+      "coefficient": -0.1044587375346258,
+      "pattern": false
+    },
+    {
+      "feature": "CT_smoke",
+      "coefficient": -0.10254492776718914,
+      "pattern": false
+    },
+    {
+      "feature": "T_smoke",
+      "coefficient": 0.09131514213824964,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_Sniper",
+      "coefficient": -0.09088584225542427,
+      "pattern": false
+    },
+    {
+      "feature": "CT_he",
+      "coefficient": -0.08571453855969635,
+      "pattern": false
+    },
+    {
+      "feature": "bomb_seconds_remaining",
+      "coefficient": -0.0840910543093763,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CT_SPAWN",
+      "coefficient": 0.08251257045675067,
+      "pattern": false
+    },
+    {
+      "feature": "T_molotov",
+      "coefficient": 0.07375149159351378,
+      "pattern": false
+    },
+    {
+      "feature": "T_he",
+      "coefficient": 0.06970195445080705,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT_SPAWN",
+      "coefficient": -0.06909806362882188,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT",
+      "coefficient": -0.06831204606058373,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_SMOKE",
+      "coefficient": 0.0640836682541795,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_alive_recent15",
+      "coefficient": 0.05768737483964997,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_LONG_DOORS",
+      "coefficient": 0.05728824083781078,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PIT",
+      "coefficient": 0.05596439315769209,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CT",
+      "coefficient": 0.05563428115713663,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BANANA",
+      "coefficient": 0.05317441793653714,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CEMETERY",
+      "coefficient": 0.05238738186487364,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CATWALK",
+      "coefficient": -0.051623168429757754,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_alive_recent15",
+      "coefficient": 0.051299377248170755,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_A_SITE",
+      "coefficient": -0.04999263784406968,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UNDERPASS",
+      "coefficient": -0.047774165378582215,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_HE",
+      "coefficient": 0.047592869849044296,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_SMOKE",
+      "coefficient": -0.04413312153571332,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_SITE",
+      "coefficient": -0.04407986832028377,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_PLATFORM",
+      "coefficient": -0.044063736427319346,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CONNECTOR",
+      "coefficient": 0.04293957356144778,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_HE",
+      "coefficient": -0.0425108716844713,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_LONG",
+      "coefficient": 0.04238707454037249,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MIDDLE",
+      "coefficient": -0.042256616946876865,
+      "pattern": false
+    },
+    {
+      "feature": "CT_flash",
+      "coefficient": 0.03885433023089579,
+      "pattern": false
+    },
+    {
+      "feature": "map=de_mirage",
+      "coefficient": -0.038564156311500515,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHADOWS",
+      "coefficient": -0.03745584083659903,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_RAMP",
+      "coefficient": -0.036136716849079244,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_SHORT",
+      "coefficient": 0.03542581899524683,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BACK_SITE_A",
+      "coefficient": 0.03521502064300376,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DEFAULT",
+      "coefficient": -0.034653969390790774,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT_MID",
+      "coefficient": -0.034527350134859205,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_alive_recent15",
+      "coefficient": -0.0343847680618426,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_B_PLAT",
+      "coefficient": 0.034273648658472544,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CONSTRUCTION",
+      "coefficient": 0.03392498268225822,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BANANA",
+      "coefficient": -0.033735528305886386,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_SHORT",
+      "coefficient": 0.03355762069250587,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_LONG",
+      "coefficient": -0.033548264887455284,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BLUE",
+      "coefficient": 0.033398657160564615,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DOUBLE_STACK",
+      "coefficient": -0.03210445009903855,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_MOLOTOV",
+      "coefficient": 0.031321982101038724,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_SHORT",
+      "coefficient": -0.031205617081736282,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_pair_together5",
+      "coefficient": 0.0309161399513087,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_A_DEFAULT_PLANT",
+      "coefficient": -0.030342411195798193,
+      "pattern": false
+    },
+    {
+      "feature": "map=de_dust2",
+      "coefficient": 0.03011740673305026,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CT_MID",
+      "coefficient": 0.03011731405314579,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOGS",
+      "coefficient": 0.02911245782105699,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_PLATFORM",
+      "coefficient": 0.02905590580033272,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_APARTMENTS",
+      "coefficient": 0.02854358114409851,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TRUCK",
+      "coefficient": 0.028468246397146534,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CATWALK",
+      "coefficient": 0.027955514701611024,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_PLAT",
+      "coefficient": -0.027559321658679407,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CLOSE_LEFT",
+      "coefficient": -0.02755394403943299,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TETRIS",
+      "coefficient": 0.027016828900755498,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SECOND_MID",
+      "coefficient": -0.02701483484773112,
+      "pattern": false
+    },
+    {
+      "feature": "CT_weapon_Heavy",
+      "coefficient": -0.02690255978120174,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MARKET",
+      "coefficient": 0.02687705559428966,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_CAR",
+      "coefficient": 0.026748565588249958,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_CLOSET",
+      "coefficient": 0.026606916863346534,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DOSIA",
+      "coefficient": 0.026549948260338768,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_HOLE",
+      "coefficient": -0.026537455592343193,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PIT",
+      "coefficient": -0.0264428454004471,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_1ST",
+      "coefficient": -0.02626164313993288,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_SHORT",
+      "coefficient": -0.026224934767818557,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PALACE",
+      "coefficient": 0.026084407394386794,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_DOORS",
+      "coefficient": 0.02603155907285783,
+      "pattern": false
+    },
+    {
+      "feature": "elapsed_seconds",
+      "coefficient": 0.025716737961148806,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UNDER_A",
+      "coefficient": 0.025614566770300627,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_alive_at_site",
+      "coefficient": -0.025369354892330206,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_PALACE_INTERIOR",
+      "coefficient": -0.025293262558249964,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_postplant_alive_at_site",
+      "coefficient": -0.02510866099240204,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_CAR",
+      "coefficient": -0.024880358283331804,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_DEFAULT_PLANT",
+      "coefficient": 0.0248468007781685,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DEFAULT",
+      "coefficient": 0.02443534892726848,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BACK_ALLEY",
+      "coefficient": 0.024377568281287187,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_STAIRS",
+      "coefficient": -0.024333542439887064,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_CROSS",
+      "coefficient": 0.024314468168010427,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CONNECTOR",
+      "coefficient": -0.024102778711291798,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_CAR",
+      "coefficient": 0.024038596712594347,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UPSTAIRS",
+      "coefficient": 0.023850531545608167,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_CAR",
+      "coefficient": -0.023839299457313733,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE_PIT",
+      "coefficient": -0.023726620150664755,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UPPER_TUNNEL",
+      "coefficient": 0.023417151471446525,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_DOORS",
+      "coefficient": -0.02327216720260789,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UPPER_TUNNEL",
+      "coefficient": 0.023068582932690967,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_ARCHES",
+      "coefficient": 0.02305201049110223,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DOSIA",
+      "coefficient": -0.022612406594205055,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DECK",
+      "coefficient": -0.022495480178637183,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MID_DOORS",
+      "coefficient": -0.021267269301698224,
+      "pattern": false
+    },
+    {
+      "feature": "T_flash",
+      "coefficient": 0.021070305307950562,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_1ST",
+      "coefficient": 0.02101953258385366,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LONG_A",
+      "coefficient": -0.020958248670145358,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TOP_OF_MID",
+      "coefficient": 0.020802942324824828,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BACK_PLAT",
+      "coefficient": 0.020625285845519876,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SNIPERS_NEST",
+      "coefficient": -0.02053605768695157,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CART",
+      "coefficient": 0.020443126231417544,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE",
+      "coefficient": 0.0203340629719272,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHOP",
+      "coefficient": 0.020187584294654195,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_together5",
+      "coefficient": 0.019811658889624814,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_LADDER",
+      "coefficient": -0.01932223124462551,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UNDER_A",
+      "coefficient": -0.019208975209162548,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_ARCHES",
+      "coefficient": -0.019201768837512515,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UNDERPASS",
+      "coefficient": 0.018901386999646476,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_APPS_RAMP",
+      "coefficient": 0.01875415182106639,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_preplant_pair_together5",
+      "coefficient": 0.01870825185665073,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_LADDER_ROOM",
+      "coefficient": 0.018477654130959236,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_GARDEN",
+      "coefficient": 0.018449362491443667,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TOP_OF_MID",
+      "coefficient": -0.017861917769207092,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_alive_at_site",
+      "coefficient": -0.017767561894597175,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_DOUBLE_STACK",
+      "coefficient": 0.017682085379430786,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_RUINS",
+      "coefficient": -0.01729004692455042,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_ELEVATOR",
+      "coefficient": 0.017227152031661513,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_RUINS",
+      "coefficient": 0.017224776587066105,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SNIPER_S_NEST",
+      "coefficient": -0.017165706534190948,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_alive_recent15",
+      "coefficient": -0.016798021665183998,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_PILLARS",
+      "coefficient": 0.016749559777574516,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_OUTSIDE_LONG",
+      "coefficient": 0.016579064942239125,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LONG_CORNER",
+      "coefficient": -0.016484446893980265,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CONSTRUCTION",
+      "coefficient": 0.016453720648543033,
+      "pattern": false
+    },
+    {
+      "feature": "CT_molotov",
+      "coefficient": -0.016280385490182465,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PALM",
+      "coefficient": 0.01619907093184596,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_RAMP",
+      "coefficient": 0.016180600398626174,
+      "pattern": false
+    },
+    {
+      "feature": "clock_seconds",
+      "coefficient": -0.015982947536004488,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_BACK_SITE",
+      "coefficient": 0.015959052379545525,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_CROSS",
+      "coefficient": -0.015889171600874902,
+      "pattern": false
+    },
+    {
+      "feature": "T_utility30_FLASH",
+      "coefficient": -0.01585121994143994,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_PLAT",
+      "coefficient": 0.015610482379275684,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_pair_together5",
+      "coefficient": 0.015585446458950759,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_FENCE",
+      "coefficient": 0.015387357917667172,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PIT_PLAT",
+      "coefficient": -0.01533596843661283,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_EXTENDED_A",
+      "coefficient": 0.015080916006636023,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE_LEFT",
+      "coefficient": 0.015068274770453374,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHORT_BOOST",
+      "coefficient": 0.015043394439243279,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CHAIR",
+      "coefficient": -0.015032744543241118,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TREE",
+      "coefficient": 0.015015758564489074,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE",
+      "coefficient": 0.014947281932751556,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BALCONY",
+      "coefficient": 0.014930405645516643,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_recent15",
+      "coefficient": 0.014752165403836906,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_MARKET",
+      "coefficient": -0.014642347280365791,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_ARCH",
+      "coefficient": -0.014514536118666018,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_JUNGLE",
+      "coefficient": 0.014433448663967301,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LONG_A",
+      "coefficient": 0.014334930824342292,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_TUNNELS",
+      "coefficient": 0.014201507296718083,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_GRILL",
+      "coefficient": 0.014200674201787628,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GRILL",
+      "coefficient": -0.014156023729162494,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_VAN",
+      "coefficient": 0.014137798126348555,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_MID",
+      "coefficient": 0.013945877510362487,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE_INTERIOR",
+      "coefficient": 0.013765457247351896,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_living_pair_at_site",
+      "coefficient": -0.013753971126158417,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_CEMETERY",
+      "coefficient": 0.013628157990738929,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_postplant_alive_at_site",
+      "coefficient": -0.013539483232994027,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_LIBRARY",
+      "coefficient": 0.013501548550112681,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOGS",
+      "coefficient": -0.01333929409729028,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_APARTMENTS",
+      "coefficient": -0.013337695885346303,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SCAFFOLDING",
+      "coefficient": 0.013189473897519222,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_WINDOW",
+      "coefficient": -0.013114963028829911,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TRIPLE_BOX",
+      "coefficient": -0.01304247149943147,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHORT_CORNER",
+      "coefficient": 0.0129526219899065,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_GRAVEYARD",
+      "coefficient": 0.012876451774652908,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_ROOF",
+      "coefficient": -0.01287068054230588,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_EXTENDED_A",
+      "coefficient": -0.012758494225310509,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_B_TUNNELS",
+      "coefficient": 0.012587214086727003,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_recent15",
+      "coefficient": 0.01230780438985418,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_TREE",
+      "coefficient": -0.012126350274381074,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LIVING_ROOM",
+      "coefficient": 0.01208426472898919,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LADDER",
+      "coefficient": 0.011986887462028258,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOTTOM_MID",
+      "coefficient": -0.01193789799298779,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_ELEVATOR",
+      "coefficient": -0.011787502694368294,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CAR",
+      "coefficient": 0.011736262007507567,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHORT_CORNER",
+      "coefficient": -0.011582473949994539,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_VAN",
+      "coefficient": -0.01149336644178034,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_TUNNEL",
+      "coefficient": -0.011425746755278451,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GARDEN",
+      "coefficient": 0.011424265650773164,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_NINJA",
+      "coefficient": 0.011355042543502327,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SNEAKY",
+      "coefficient": -0.011354634861450325,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DARK",
+      "coefficient": -0.011302941652828892,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CT_APARTMENTS",
+      "coefficient": -0.01127750014825073,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SECOND_MID_STAIRS",
+      "coefficient": -0.011182282760074996,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_CLOSET",
+      "coefficient": -0.011074172233210333,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BENCH",
+      "coefficient": 0.010954645015661657,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_LONG",
+      "coefficient": 0.010792164696373426,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_STAIRS",
+      "coefficient": 0.010632584450882438,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_BOXES",
+      "coefficient": -0.01056174976511876,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SUICIDE",
+      "coefficient": 0.010402347618342668,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_2ND",
+      "coefficient": -0.010330504323487732,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_RIGHT_SIDE_MID",
+      "coefficient": 0.010178037890924349,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BARRELS",
+      "coefficient": 0.010149981137280755,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PATIO",
+      "coefficient": -0.010138243680899668,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_living_pair_at_site",
+      "coefficient": -0.010052820270919706,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_BOTTOM_MID",
+      "coefficient": -0.009960924443118862,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_recent15",
+      "coefficient": -0.009933863287222875,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_SCAFFOLDING",
+      "coefficient": -0.00989968743309494,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOILER",
+      "coefficient": 0.009836339572302132,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PIT_PLAT",
+      "coefficient": -0.009799552468416756,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LEDGE",
+      "coefficient": 0.00977206406893314,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SAND_BAGS_CONSTRUCTION",
+      "coefficient": 0.00964095821583564,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MID_DOORS",
+      "coefficient": -0.009587715999502967,
+      "pattern": false
+    },
+    {
+      "feature": "map=de_inferno",
+      "coefficient": 0.009541793859428101,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GOOSE",
+      "coefficient": -0.00952560448791552,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TRUCK",
+      "coefficient": -0.00942849596444911,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_alive_at_site",
+      "coefficient": 0.009405108566893763,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_APARTMENTS",
+      "coefficient": -0.009169944966457446,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_HOLE",
+      "coefficient": 0.009050807905247074,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_WINDOW",
+      "coefficient": -0.008800112467046635,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LONG_DOORS",
+      "coefficient": 0.008495092043085812,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_FIREBOX",
+      "coefficient": 0.008457537374450722,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_ROOF",
+      "coefficient": -0.00845641004979714,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_FLASH",
+      "coefficient": -0.008435046286665906,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_OUTSIDE_TUNNEL",
+      "coefficient": 0.008411446255260089,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_VENT",
+      "coefficient": -0.008315875508919133,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_XBOX",
+      "coefficient": -0.00825757571113985,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_together5",
+      "coefficient": -0.00823064784755011,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_WINDOW",
+      "coefficient": 0.008175910526150784,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PATIO",
+      "coefficient": -0.008142591528832184,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_CAR",
+      "coefficient": 0.008134745381983433,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOOST_BOXES",
+      "coefficient": 0.007881676738482593,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_BACK_SITE",
+      "coefficient": -0.007854240136177696,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_E_BOX",
+      "coefficient": 0.007793249168740481,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TV",
+      "coefficient": 0.00770993425933942,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_APPS_RAMP",
+      "coefficient": -0.007527605846575119,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SANDWICH",
+      "coefficient": -0.007334122192085131,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_UPPER_B_TUNNELS",
+      "coefficient": -0.007246029347251346,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_COFFINS",
+      "coefficient": 0.007115290949280694,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BIG_BOX",
+      "coefficient": 0.007053133807578261,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_GRAVEYARD",
+      "coefficient": -0.006855704662726962,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_FENCE",
+      "coefficient": 0.006835959077012284,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_HOUSE",
+      "coefficient": 0.006817293459120485,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BENCH",
+      "coefficient": 0.0066945303534271935,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_living_pair_at_site",
+      "coefficient": -0.006463150469259894,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_UPSTAIRS",
+      "coefficient": -0.006428404104338252,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_2ND",
+      "coefficient": -0.006265073206967835,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALM",
+      "coefficient": -0.006233863863817442,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_pair_together5",
+      "coefficient": -0.006129663018134401,
+      "pattern": true
+    },
+    {
+      "feature": "sitecoord__CT_A_living_pair_at_site",
+      "coefficient": 0.005843441355701357,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_B_DEFAULT_PLANT",
+      "coefficient": -0.005811294231546795,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SECOND_MID",
+      "coefficient": 0.00569135997414889,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE",
+      "coefficient": -0.005686436621526699,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_RIGHT_SIDE_MID",
+      "coefficient": 0.0055889945139801535,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOILER",
+      "coefficient": -0.005586597244850082,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_together5",
+      "coefficient": 0.005583600090831516,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_SPEEDWAY",
+      "coefficient": -0.005473402191432141,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MID_BOXES",
+      "coefficient": 0.005453887374762797,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BIG_BOX",
+      "coefficient": 0.005359517451358543,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHOP",
+      "coefficient": -0.0053115894813377355,
+      "pattern": false
+    },
+    {
+      "feature": "CT_utility30_MOLOTOV",
+      "coefficient": -0.005266930461484569,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BALCONY",
+      "coefficient": 0.0052356517671895845,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CART",
+      "coefficient": 0.005200696620632583,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LOWER_TUNNEL",
+      "coefficient": 0.005171999403817809,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_QUAD",
+      "coefficient": 0.0051121307503151185,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SNIPERS_NEST",
+      "coefficient": 0.005099429901331817,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_WELL",
+      "coefficient": -0.004969338332002183,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TETRIS",
+      "coefficient": -0.0049533546818989,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_GOOSE",
+      "coefficient": 0.004876041030575961,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_APARTMENTS",
+      "coefficient": 0.004595630841839093,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SANDWICH",
+      "coefficient": -0.004474653778297578,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LONG_CORNER",
+      "coefficient": 0.004473331196176625,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_SMG",
+      "coefficient": 0.00431609648111715,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DOOR",
+      "coefficient": -0.0043020505700969245,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE",
+      "coefficient": -0.004292045207101025,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_PLAT",
+      "coefficient": -0.004283529598916357,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_MIDDLE",
+      "coefficient": 0.004275096032446423,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_VENT",
+      "coefficient": 0.004213096885901704,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_preplant_pair_together5",
+      "coefficient": 0.0041592285157946735,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_FIREBOX",
+      "coefficient": 0.004131313121402531,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LEDGE",
+      "coefficient": -0.004097880049069861,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_B_TUNNELS",
+      "coefficient": 0.004071182944177382,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PILLARS",
+      "coefficient": -0.004070987570304081,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TV",
+      "coefficient": 0.004032439308455155,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_DARK",
+      "coefficient": -0.004024224628046715,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SECOND_MID_STAIRS",
+      "coefficient": 0.003920403038599114,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_PALACE_ALLEY",
+      "coefficient": 0.003910698326419442,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_KITCHEN",
+      "coefficient": 0.0038954891066405616,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_MID_BOXES",
+      "coefficient": 0.0038632584757578243,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CHAIR",
+      "coefficient": 0.0038620709511271757,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SAND_BAGS_B",
+      "coefficient": 0.003855621115566047,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BRIDGE",
+      "coefficient": 0.0037799812664232866,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LOWER_MID",
+      "coefficient": -0.0037512137957102574,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BACK_ALLEY",
+      "coefficient": -0.0036792679488404784,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SNIPER_S_NEST",
+      "coefficient": 0.003633154766518334,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TERRACE",
+      "coefficient": 0.0036129376994606076,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CLOSE",
+      "coefficient": 0.0035555389114594327,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOOST",
+      "coefficient": -0.0035463409734219015,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CLOSE_APARTMENTS",
+      "coefficient": -0.003441209499558256,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_JUNGLE",
+      "coefficient": -0.0033888605915589017,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHADOWS",
+      "coefficient": 0.0033402922372813017,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_WELL",
+      "coefficient": 0.0033217432953506956,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BLUE",
+      "coefficient": 0.0033128431423904065,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_APARTMENTS",
+      "coefficient": 0.0032661190897306557,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE_MID_DOORS",
+      "coefficient": 0.003169209230225242,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SAND_BAGS_CONSTRUCTION",
+      "coefficient": 0.0031577527047140265,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_alive_at_site",
+      "coefficient": -0.00308127335660225,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_OUTSIDE_TUNNELS",
+      "coefficient": -0.002983946694547562,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_APARTMENTS",
+      "coefficient": -0.002973492425664256,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_RAMP",
+      "coefficient": -0.0029242476468706365,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_XBOX",
+      "coefficient": 0.0029151311536014268,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHORT_BOOST",
+      "coefficient": -0.002908114398089609,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BRIDGE",
+      "coefficient": 0.0028274785924098595,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SHORT_STAIRS",
+      "coefficient": 0.0026781806035357006,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SECOND_MID_DOOR",
+      "coefficient": -0.0026689677566009494,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_CLOSE_APARTMENTS",
+      "coefficient": -0.0026673767105405244,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BACK_SITE_A",
+      "coefficient": 0.0026118258990094952,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TRIPLE_BOX",
+      "coefficient": 0.0025989833352308713,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_BOXES",
+      "coefficient": 0.0025900128347399326,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BOOST_BOXES",
+      "coefficient": 0.0025841258655613145,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_KITCHEN",
+      "coefficient": 0.002571282606254106,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_HOUSE",
+      "coefficient": -0.0024809442900537645,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_ARCH",
+      "coefficient": -0.0024264218784735394,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_TUNNEL_STAIRS",
+      "coefficient": 0.00238016505709739,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_recent15",
+      "coefficient": 0.0023656166926822636,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_NINJA",
+      "coefficient": 0.0023451491392652074,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_BOOST",
+      "coefficient": 0.00230725047829034,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_E_BOX",
+      "coefficient": 0.0022416802429991497,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_together5",
+      "coefficient": -0.002129363660566361,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_BACK_PLAT",
+      "coefficient": -0.002125851981620142,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_PALACE_ALLEY",
+      "coefficient": 0.0020396170280975083,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SIDE_ALLEY",
+      "coefficient": 0.0019443834448487237,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_T_SPAWN",
+      "coefficient": -0.0018782815467414417,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_QUAD",
+      "coefficient": -0.001868632303359635,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_A_NINJA",
+      "coefficient": 0.0018580316000497788,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_LIBRARY",
+      "coefficient": 0.001845232691893885,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_postplant_alive_at_site",
+      "coefficient": 0.0018256151546779493,
+      "pattern": true
+    },
+    {
+      "feature": "T_region_FOUNTAIN",
+      "coefficient": -0.0017386211470146848,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_B_preplant_pair_together5",
+      "coefficient": 0.0016588778461884338,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_CLOSE_MID_DOORS",
+      "coefficient": -0.00165072016892761,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_OUTSIDE_TUNNEL",
+      "coefficient": -0.0016470196182111387,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE_ALLEY",
+      "coefficient": 0.0016384574228034102,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_EMPTY",
+      "coefficient": -0.001610356905147224,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_TUNNEL_STAIRS",
+      "coefficient": 0.0015834260691723863,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SHORT_STAIRS",
+      "coefficient": -0.0015579483366260302,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_COFFINS",
+      "coefficient": 0.0014842049966311364,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_B_WINDOW",
+      "coefficient": -0.0014613870416772226,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_BARRELS",
+      "coefficient": 0.0013600217665198791,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_B_DEFAULT_PLANT",
+      "coefficient": -0.00134151503214314,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_NINJA",
+      "coefficient": 0.0011864457409112865,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_CT_APARTMENTS",
+      "coefficient": -0.0011716565896587496,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SPEEDWAY",
+      "coefficient": -0.0010634971238896106,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_A_RAMP",
+      "coefficient": -0.0008725808401853897,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_FOUNTAIN",
+      "coefficient": 0.0008232723897950154,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_LIVING_ROOM",
+      "coefficient": -0.0008121758159905765,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_UPPER_B_TUNNELS",
+      "coefficient": 0.0007924348076766786,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SAND_BAGS_B",
+      "coefficient": -0.0007865444234601398,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_EMPTY",
+      "coefficient": 0.0007786225989108087,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_B_pair_together5",
+      "coefficient": 0.0007143259367105117,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_TERRACE",
+      "coefficient": -0.0006905451815381081,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SIDE_PIT",
+      "coefficient": 0.0004914110418538156,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__CT_A_preplant_pair_together5",
+      "coefficient": -0.0004815011750315672,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_LADDER_ROOM",
+      "coefficient": 0.00040935623219569934,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_T_SPAWN",
+      "coefficient": -0.0002672788544729746,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_DOOR",
+      "coefficient": 0.0002484295626506211,
+      "pattern": false
+    },
+    {
+      "feature": "CT_region_SUICIDE",
+      "coefficient": 0.00023689446806798893,
+      "pattern": false
+    },
+    {
+      "feature": "T_region_SNEAKY",
+      "coefficient": 0.00023115677228540695,
+      "pattern": false
+    },
+    {
+      "feature": "sitecoord__T_A_postplant_alive_at_site",
+      "coefficient": -4.810967602541488e-05,
+      "pattern": true
+    },
+    {
+      "feature": "CT_region_SECOND_MID_DOOR",
+      "coefficient": 0.0,
+      "pattern": false
+    },
+    {
+      "feature": "T_kits",
+      "coefficient": 0.0,
+      "pattern": false
+    },
+    {
+      "feature": "T_weapon_Heavy",
+      "coefficient": 0.0,
+      "pattern": false
+    }
+  ],
+  "primary_comparison": {
+    "baseline": {
+      "id": "A_state",
+      "label": "LR + trạng thái + utility",
+      "features": 349,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.76896745064479,
+          "accuracy_at_0_5": 0.76896745064479,
+          "precision": 0.8444343656861475,
+          "recall": 0.7059747575970966,
+          "f1": 0.7690219796430152,
+          "roc_auc": 0.8753833954645862,
+          "log_loss": 0.43049133457720096,
+          "brier_score": 0.14419267457062887,
+          "confusion_matrix": [
+            [
+              26050,
+              4802
+            ],
+            [
+              10856,
+              26066
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.052038327463404865,
+              0.17733760737345564,
+              0.3277106818368306,
+              0.4270965881132679,
+              0.5213485185661074,
+              0.6995244353442173,
+              0.8957294272306631,
+              0.9802405957299936
+            ],
+            "observed": [
+              0.03387629839471199,
+              0.18755901794145421,
+              0.3868492503836619,
+              0.4838290840415486,
+              0.5673984891406988,
+              0.741943099988195,
+              0.9570349386213409,
+              0.9997639282341831
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20534094070889228
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.18042366336113727
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.16201215859263499
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.14566607075197335
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7598425196850394,
+          "accuracy_at_0_5": 0.7598425196850394,
+          "precision": 0.8177389310789511,
+          "recall": 0.6997302599313389,
+          "f1": 0.7541460191608854,
+          "roc_auc": 0.8657372300377044,
+          "log_loss": 0.43866759836210095,
+          "brier_score": 0.14789674903235298,
+          "confusion_matrix": [
+            [
+              6066,
+              1272
+            ],
+            [
+              2449,
+              5707
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05433317403581452,
+              0.18629475726911127,
+              0.32664870663426,
+              0.42328912607761693,
+              0.5152519962408342,
+              0.6844517024877902,
+              0.8842183928359068,
+              0.9767548999307288
+            ],
+            "observed": [
+              0.016520392359318535,
+              0.1982447083118224,
+              0.39204545454545453,
+              0.4682498709344347,
+              0.5209086215797625,
+              0.6668388429752066,
+              0.949406298399587,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.2075479471399729
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.1883658325924145
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.16774876374092007
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.14666116454743347
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7530723425820347,
+          "accuracy_at_0_5": 0.7530723425820347,
+          "precision": 0.8160296257108848,
+          "recall": 0.7110752564250317,
+          "f1": 0.7599458061337603,
+          "roc_auc": 0.8568097002449209,
+          "log_loss": 0.4556726762699752,
+          "brier_score": 0.15331336899838227,
+          "confusion_matrix": [
+            [
+              5718,
+              1391
+            ],
+            [
+              2507,
+              6170
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.056615091756884076,
+              0.20060400890713864,
+              0.3434469235105334,
+              0.43990048625692824,
+              0.5426557184641579,
+              0.7118951259955257,
+              0.8913050839992135,
+              0.9779650797610753
+            ],
+            "observed": [
+              0.05521783181357649,
+              0.24581855043081602,
+              0.39939178915357326,
+              0.4845413076533198,
+              0.5281297516472377,
+              0.7582361885453623,
+              0.9295489102889002,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20759110451726379
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.187058573257394
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17203621250933104
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15475592481087116
+            }
+          }
+        }
+      }
+    },
+    "with_pattern": {
+      "id": "D_state_site_compact",
+      "label": "LR + phối hợp site từ PrefixSpan",
+      "features": 381,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.7690707350901526,
+          "accuracy_at_0_5": 0.7690707350901526,
+          "precision": 0.8442020777371436,
+          "recall": 0.7064893559395482,
+          "f1": 0.7692307692307693,
+          "roc_auc": 0.8755621601593031,
+          "log_loss": 0.4301945946722964,
+          "brier_score": 0.1441098041274637,
+          "confusion_matrix": [
+            [
+              26038,
+              4814
+            ],
+            [
+              10837,
+              26085
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05184275419782005,
+              0.1767771739868375,
+              0.3271899369696639,
+              0.4270950541497667,
+              0.5214469998520049,
+              0.6994463297119993,
+              0.8964829695381541,
+              0.9808027277351172
+            ],
+            "observed": [
+              0.03364022662889518,
+              0.18767705382436262,
+              0.38437020422618345,
+              0.488314447592068,
+              0.5651558073654391,
+              0.7414709007201039,
+              0.9577431539187913,
+              0.9998819641170916
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20517640840485804
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.180273320767202
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.1620078263073021
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.1455372840809695
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7603588485865497,
+          "accuracy_at_0_5": 0.7603588485865497,
+          "precision": 0.8188603416104493,
+          "recall": 0.6994850416871016,
+          "f1": 0.754479931230576,
+          "roc_auc": 0.8657878075537379,
+          "log_loss": 0.4385223347407123,
+          "brier_score": 0.14785077032820818,
+          "confusion_matrix": [
+            [
+              6076,
+              1262
+            ],
+            [
+              2451,
+              5705
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.054098505593384597,
+              0.185656288684511,
+              0.3262357378681602,
+              0.4223717988273436,
+              0.5151916298739675,
+              0.6848099442521342,
+              0.8846606203912821,
+              0.9771735996800616
+            ],
+            "observed": [
+              0.017036654620547237,
+              0.19308208569953536,
+              0.4034090909090909,
+              0.45844088797108934,
+              0.5240061951471348,
+              0.6647727272727273,
+              0.9514713474445018,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.2079883724218179
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.18919702142731884
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.1675870611033171
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.1469905957897285
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7526922589636387,
+          "accuracy_at_0_5": 0.7526922589636387,
+          "precision": 0.8153825822650984,
+          "recall": 0.7110752564250317,
+          "f1": 0.7596651071164737,
+          "roc_auc": 0.8563944115043072,
+          "log_loss": 0.45611071520409346,
+          "brier_score": 0.1535357361445836,
+          "confusion_matrix": [
+            [
+              5712,
+              1397
+            ],
+            [
+              2507,
+              6170
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05657564358556954,
+              0.2005883324047112,
+              0.34346050396103356,
+              0.4393291263141976,
+              0.5436005932168498,
+              0.7122107597385464,
+              0.8914877497765802,
+              0.9786020922211506
+            ],
+            "observed": [
+              0.05268490374873354,
+              0.2483527622909275,
+              0.3928028383172833,
+              0.49163710086163204,
+              0.5281297516472377,
+              0.7622909275215408,
+              0.9249873289406995,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20747240108158965
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.18786735137045235
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17202137116635233
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15496915738705824
+            }
+          }
+        }
+      }
+    },
+    "pattern_features": 32,
+    "pattern_support_percent": 2,
+    "selection_metric": "validation Accuracy then Brier, fixed threshold 0.5",
+    "differences": {
+      "test": {
+        "accuracy": -0.0003800836183960321,
+        "roc_auc": -0.00041528874061369514,
+        "brier_score": 0.0002223671462013299,
+        "log_loss": 0.0004380389341182567
+      }
+    },
+    "test_status": "Existing test previously examined; exploratory results. Validation alone selects configuration; independent future matches required for confirmation."
+  },
+  "dataset": "CS2 selected 17 teams, expanded corpus",
+  "evaluation_scope": "Every 5 seconds + every second in final observed 10s of planted C4; match-disjoint split",
+  "training_demos": 156,
+  "split_policy": {
+    "unit": "match_id",
+    "seed": "cs2-expanded-313",
+    "method": "Deterministic hash, approximately 70/15/15 by match",
+    "pinned_previous_pilot_matches": [
+      "2393023",
+      "2393086",
+      "2393088",
+      "2393224",
+      "2393228",
+      "2393230",
+      "2393236",
+      "2393238",
+      "2393239",
+      "2393241",
+      "2393244"
+    ],
+    "previous_pilot_kept_in_train": true,
+    "temporal_split": false,
+    "test_used_for_selection": false,
+    "holdout_status": "Validation and test contain match IDs absent from the previous pilot; split fixed before mining"
+  },
+  "comparison": {
+    "baseline": {
+      "id": "A_state",
+      "label": "LR + trạng thái + utility",
+      "features": 349,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.76896745064479,
+          "accuracy_at_0_5": 0.76896745064479,
+          "precision": 0.8444343656861475,
+          "recall": 0.7059747575970966,
+          "f1": 0.7690219796430152,
+          "roc_auc": 0.8753833954645862,
+          "log_loss": 0.43049133457720096,
+          "brier_score": 0.14419267457062887,
+          "confusion_matrix": [
+            [
+              26050,
+              4802
+            ],
+            [
+              10856,
+              26066
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.052038327463404865,
+              0.17733760737345564,
+              0.3277106818368306,
+              0.4270965881132679,
+              0.5213485185661074,
+              0.6995244353442173,
+              0.8957294272306631,
+              0.9802405957299936
+            ],
+            "observed": [
+              0.03387629839471199,
+              0.18755901794145421,
+              0.3868492503836619,
+              0.4838290840415486,
+              0.5673984891406988,
+              0.741943099988195,
+              0.9570349386213409,
+              0.9997639282341831
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20534094070889228
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.18042366336113727
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.16201215859263499
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.14566607075197335
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7598425196850394,
+          "accuracy_at_0_5": 0.7598425196850394,
+          "precision": 0.8177389310789511,
+          "recall": 0.6997302599313389,
+          "f1": 0.7541460191608854,
+          "roc_auc": 0.8657372300377044,
+          "log_loss": 0.43866759836210095,
+          "brier_score": 0.14789674903235298,
+          "confusion_matrix": [
+            [
+              6066,
+              1272
+            ],
+            [
+              2449,
+              5707
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05433317403581452,
+              0.18629475726911127,
+              0.32664870663426,
+              0.42328912607761693,
+              0.5152519962408342,
+              0.6844517024877902,
+              0.8842183928359068,
+              0.9767548999307288
+            ],
+            "observed": [
+              0.016520392359318535,
+              0.1982447083118224,
+              0.39204545454545453,
+              0.4682498709344347,
+              0.5209086215797625,
+              0.6668388429752066,
+              0.949406298399587,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.2075479471399729
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.1883658325924145
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.16774876374092007
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.14666116454743347
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7530723425820347,
+          "accuracy_at_0_5": 0.7530723425820347,
+          "precision": 0.8160296257108848,
+          "recall": 0.7110752564250317,
+          "f1": 0.7599458061337603,
+          "roc_auc": 0.8568097002449209,
+          "log_loss": 0.4556726762699752,
+          "brier_score": 0.15331336899838227,
+          "confusion_matrix": [
+            [
+              5718,
+              1391
+            ],
+            [
+              2507,
+              6170
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.056615091756884076,
+              0.20060400890713864,
+              0.3434469235105334,
+              0.43990048625692824,
+              0.5426557184641579,
+              0.7118951259955257,
+              0.8913050839992135,
+              0.9779650797610753
+            ],
+            "observed": [
+              0.05521783181357649,
+              0.24581855043081602,
+              0.39939178915357326,
+              0.4845413076533198,
+              0.5281297516472377,
+              0.7582361885453623,
+              0.9295489102889002,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20759110451726379
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.187058573257394
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17203621250933104
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15475592481087116
+            }
+          }
+        }
+      }
+    },
+    "pattern": {
+      "id": "B_state_global",
+      "label": "LR + trạng thái + utility + PrefixSpan MOVE",
+      "features": 589,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.774028388467554,
+          "accuracy_at_0_5": 0.774028388467554,
+          "precision": 0.8457230631380204,
+          "recall": 0.715779210226965,
+          "f1": 0.7753443546376025,
+          "roc_auc": 0.8797635896124869,
+          "log_loss": 0.4248032068350461,
+          "brier_score": 0.1418889844660467,
+          "confusion_matrix": [
+            [
+              26031,
+              4821
+            ],
+            [
+              10494,
+              26428
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05089451181898464,
+              0.17429027907627398,
+              0.3209017239466723,
+              0.4257233060302068,
+              0.5277043178342077,
+              0.704937045610828,
+              0.8983768840218227,
+              0.9808905224670057
+            ],
+            "observed": [
+              0.030571293673276677,
+              0.1818932955618508,
+              0.37905796246015816,
+              0.4776912181303116,
+              0.5767233238904627,
+              0.7525675835202456,
+              0.9598677998111426,
+              0.9998819641170916
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20259542268043024
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.17469828804184095
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.15820341085841955
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.14303547328928706
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7577126629663096,
+          "accuracy_at_0_5": 0.7577126629663096,
+          "precision": 0.8144285714285714,
+          "recall": 0.6989946051986268,
+          "f1": 0.7523093164423331,
+          "roc_auc": 0.8617900283528165,
+          "log_loss": 0.4445300410983701,
+          "brier_score": 0.1502577043774233,
+          "confusion_matrix": [
+            [
+              6039,
+              1299
+            ],
+            [
+              2455,
+              5701
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05265907444643403,
+              0.17929570802363315,
+              0.31683891777000717,
+              0.4208550877019419,
+              0.5163516417442384,
+              0.6891739031203564,
+              0.8888898534102425,
+              0.9774831375142593
+            ],
+            "observed": [
+              0.022715539494062985,
+              0.21734641197728446,
+              0.38584710743801653,
+              0.4527620030975736,
+              0.5307176045431079,
+              0.6601239669421488,
+              0.9426948890036139,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.20936193731285316
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.19278839361281686
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.17207294518708802
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.1480774214474094
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7558596224502724,
+          "accuracy_at_0_5": 0.7558596224502724,
+          "precision": 0.8173443874193973,
+          "recall": 0.7158003918404978,
+          "f1": 0.7632096338166626,
+          "roc_auc": 0.8549210824132942,
+          "log_loss": 0.4588935745312563,
+          "brier_score": 0.15451218956350501,
+          "confusion_matrix": [
+            [
+              5721,
+              1388
+            ],
+            [
+              2466,
+              6211
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.0562932328958898,
+              0.19653114059206972,
+              0.3371129123134558,
+              0.43803345606350447,
+              0.5462497711350648,
+              0.7137858058537929,
+              0.891532182319186,
+              0.9785996195686566
+            ],
+            "observed": [
+              0.05673758865248227,
+              0.24733907754688292,
+              0.40395337050177393,
+              0.46578813988849466,
+              0.548910288900152,
+              0.7516472377090725,
+              0.9265078560567663,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20994066208650705
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.18939940124009086
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.1742220758035157
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15625129446099453
+            }
+          }
+        }
+      }
+    },
+    "coordination": {
+      "id": "C_state_pattern_site",
+      "label": "LR + PrefixSpan + phối hợp vào site",
+      "features": 621,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.7740136335467879,
+          "accuracy_at_0_5": 0.7740136335467879,
+          "precision": 0.8458287982585313,
+          "recall": 0.7156167054872434,
+          "f1": 0.7752934272300469,
+          "roc_auc": 0.8799782118885529,
+          "log_loss": 0.42441252787997547,
+          "brier_score": 0.14177660152702137,
+          "confusion_matrix": [
+            [
+              26036,
+              4816
+            ],
+            [
+              10500,
+              26422
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.0507034213751127,
+              0.1738808385873836,
+              0.3204262993360331,
+              0.42566387074996476,
+              0.5276188688888732,
+              0.7050328605592513,
+              0.899037465045316,
+              0.9814667339527903
+            ],
+            "observed": [
+              0.03092540132200189,
+              0.1811850802644004,
+              0.37787746428993035,
+              0.4799338999055713,
+              0.5781397544853636,
+              0.7499704875457444,
+              0.9603399433427762,
+              0.9998819641170916
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20257392556849158
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.17429020337193749
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.158206059147096
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.1430539477027459
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7582935329805086,
+          "accuracy_at_0_5": 0.7582935329805086,
+          "precision": 0.8162007168458781,
+          "recall": 0.6980137322216773,
+          "f1": 0.7524948780648999,
+          "roc_auc": 0.8618170130533102,
+          "log_loss": 0.44437875182044473,
+          "brier_score": 0.15023336856735128,
+          "confusion_matrix": [
+            [
+              6056,
+              1282
+            ],
+            [
+              2463,
+              5693
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05243712887628021,
+              0.17854663136859958,
+              0.3163642271861786,
+              0.4199501575559772,
+              0.515853906749021,
+              0.6896883186055285,
+              0.8892692870153243,
+              0.978057670242227
+            ],
+            "observed": [
+              0.022715539494062985,
+              0.21424883840991224,
+              0.39204545454545453,
+              0.4527620030975736,
+              0.5281362932369644,
+              0.6570247933884298,
+              0.9452762003097573,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.20974245498063832
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.19355087094534706
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.17199994765938031
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.14827707898710282
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7544026352464209,
+          "accuracy_at_0_5": 0.7544026352464209,
+          "precision": 0.815872598052119,
+          "recall": 0.7144174253774346,
+          "f1": 0.7617818740399386,
+          "roc_auc": 0.8546276065155962,
+          "log_loss": 0.45910715986690026,
+          "brier_score": 0.15463777765174727,
+          "confusion_matrix": [
+            [
+              5710,
+              1399
+            ],
+            [
+              2478,
+              6199
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.056177987032922524,
+              0.1966381609922529,
+              0.3371784518764278,
+              0.43802069971377566,
+              0.5466285635600998,
+              0.7139974226687807,
+              0.891710971434769,
+              0.9792426575610187
+            ],
+            "observed": [
+              0.05825734549138804,
+              0.25038013177901675,
+              0.39837810440952864,
+              0.4698428788646731,
+              0.5408008109477952,
+              0.7587430309173847,
+              0.9244804865686771,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20990743310046628
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.18998079187956096
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17389174310977604
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15644977490899525
+            }
+          }
+        }
+      }
+    },
+    "compact": {
+      "id": "D_state_site_compact",
+      "label": "LR + phối hợp site từ PrefixSpan",
+      "features": 381,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.7690707350901526,
+          "accuracy_at_0_5": 0.7690707350901526,
+          "precision": 0.8442020777371436,
+          "recall": 0.7064893559395482,
+          "f1": 0.7692307692307693,
+          "roc_auc": 0.8755621601593031,
+          "log_loss": 0.4301945946722964,
+          "brier_score": 0.1441098041274637,
+          "confusion_matrix": [
+            [
+              26038,
+              4814
+            ],
+            [
+              10837,
+              26085
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05184275419782005,
+              0.1767771739868375,
+              0.3271899369696639,
+              0.4270950541497667,
+              0.5214469998520049,
+              0.6994463297119993,
+              0.8964829695381541,
+              0.9808027277351172
+            ],
+            "observed": [
+              0.03364022662889518,
+              0.18767705382436262,
+              0.38437020422618345,
+              0.488314447592068,
+              0.5651558073654391,
+              0.7414709007201039,
+              0.9577431539187913,
+              0.9998819641170916
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20517640840485804
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.180273320767202
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.1620078263073021
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.1455372840809695
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7603588485865497,
+          "accuracy_at_0_5": 0.7603588485865497,
+          "precision": 0.8188603416104493,
+          "recall": 0.6994850416871016,
+          "f1": 0.754479931230576,
+          "roc_auc": 0.8657878075537379,
+          "log_loss": 0.4385223347407123,
+          "brier_score": 0.14785077032820818,
+          "confusion_matrix": [
+            [
+              6076,
+              1262
+            ],
+            [
+              2451,
+              5705
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.054098505593384597,
+              0.185656288684511,
+              0.3262357378681602,
+              0.4223717988273436,
+              0.5151916298739675,
+              0.6848099442521342,
+              0.8846606203912821,
+              0.9771735996800616
+            ],
+            "observed": [
+              0.017036654620547237,
+              0.19308208569953536,
+              0.4034090909090909,
+              0.45844088797108934,
+              0.5240061951471348,
+              0.6647727272727273,
+              0.9514713474445018,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.2079883724218179
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.18919702142731884
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.1675870611033171
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.1469905957897285
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7526922589636387,
+          "accuracy_at_0_5": 0.7526922589636387,
+          "precision": 0.8153825822650984,
+          "recall": 0.7110752564250317,
+          "f1": 0.7596651071164737,
+          "roc_auc": 0.8563944115043072,
+          "log_loss": 0.45611071520409346,
+          "brier_score": 0.1535357361445836,
+          "confusion_matrix": [
+            [
+              5712,
+              1397
+            ],
+            [
+              2507,
+              6170
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05657564358556954,
+              0.2005883324047112,
+              0.34346050396103356,
+              0.4393291263141976,
+              0.5436005932168498,
+              0.7122107597385464,
+              0.8914877497765802,
+              0.9786020922211506
+            ],
+            "observed": [
+              0.05268490374873354,
+              0.2483527622909275,
+              0.3928028383172833,
+              0.49163710086163204,
+              0.5281297516472377,
+              0.7622909275215408,
+              0.9249873289406995,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20747240108158965
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.18786735137045235
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17202137116635233
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15496915738705824
+            }
+          }
+        }
+      }
+    }
+  },
+  "site_coordination": {
+    "version": "prefixspan_site_coordination_v1",
+    "features": [
+      "sitecoord__CT_A_recent15",
+      "sitecoord__CT_A_together5",
+      "sitecoord__CT_A_alive_recent15",
+      "sitecoord__CT_A_alive_at_site",
+      "sitecoord__CT_A_pair_together5",
+      "sitecoord__CT_A_living_pair_at_site",
+      "sitecoord__CT_A_postplant_alive_at_site",
+      "sitecoord__CT_A_preplant_pair_together5",
+      "sitecoord__CT_B_recent15",
+      "sitecoord__CT_B_together5",
+      "sitecoord__CT_B_alive_recent15",
+      "sitecoord__CT_B_alive_at_site",
+      "sitecoord__CT_B_pair_together5",
+      "sitecoord__CT_B_living_pair_at_site",
+      "sitecoord__CT_B_postplant_alive_at_site",
+      "sitecoord__CT_B_preplant_pair_together5",
+      "sitecoord__T_A_recent15",
+      "sitecoord__T_A_together5",
+      "sitecoord__T_A_alive_recent15",
+      "sitecoord__T_A_alive_at_site",
+      "sitecoord__T_A_pair_together5",
+      "sitecoord__T_A_living_pair_at_site",
+      "sitecoord__T_A_postplant_alive_at_site",
+      "sitecoord__T_A_preplant_pair_together5",
+      "sitecoord__T_B_recent15",
+      "sitecoord__T_B_together5",
+      "sitecoord__T_B_alive_recent15",
+      "sitecoord__T_B_alive_at_site",
+      "sitecoord__T_B_pair_together5",
+      "sitecoord__T_B_living_pair_at_site",
+      "sitecoord__T_B_postplant_alive_at_site",
+      "sitecoord__T_B_preplant_pair_together5"
+    ],
+    "patterns": 167,
+    "recent_seconds": 15,
+    "simultaneous_seconds": 5,
+    "coverage": {
+      "validation": {
+        "snapshots": 69644,
+        "with_site_pattern": 44942,
+        "with_coentry_pair": 15395
+      },
+      "train": {
+        "snapshots": 302050,
+        "with_site_pattern": 193950,
+        "with_coentry_pair": 64611
+      },
+      "test": {
+        "snapshots": 70884,
+        "with_site_pattern": 44996,
+        "with_coentry_pair": 14920
+      }
+    },
+    "candidate": {
+      "id": "C_state_pattern_site",
+      "label": "LR + PrefixSpan + phối hợp vào site",
+      "features": 621,
+      "chosen_C": 0.01,
+      "decision_threshold": 0.5,
+      "evaluation": {
+        "train": {
+          "rounds": 3279,
+          "snapshots": 67774,
+          "accuracy": 0.7740136335467879,
+          "accuracy_at_0_5": 0.7740136335467879,
+          "precision": 0.8458287982585313,
+          "recall": 0.7156167054872434,
+          "f1": 0.7752934272300469,
+          "roc_auc": 0.8799782118885529,
+          "log_loss": 0.42441252787997547,
+          "brier_score": 0.14177660152702137,
+          "confusion_matrix": [
+            [
+              26036,
+              4816
+            ],
+            [
+              10500,
+              26422
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.0507034213751127,
+              0.1738808385873836,
+              0.3204262993360331,
+              0.42566387074996476,
+              0.5276188688888732,
+              0.7050328605592513,
+              0.899037465045316,
+              0.9814667339527903
+            ],
+            "observed": [
+              0.03092540132200189,
+              0.1811850802644004,
+              0.37787746428993035,
+              0.4799338999055713,
+              0.5781397544853636,
+              0.7499704875457444,
+              0.9603399433427762,
+              0.9998819641170916
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 3279,
+              "brier_score": 0.20257392556849158
+            },
+            "30": {
+              "n": 3228,
+              "brier_score": 0.17429020337193749
+            },
+            "45": {
+              "n": 3086,
+              "brier_score": 0.158206059147096
+            },
+            "60": {
+              "n": 2775,
+              "brier_score": 0.1430539477027459
+            }
+          }
+        },
+        "validation": {
+          "rounds": 754,
+          "snapshots": 15494,
+          "accuracy": 0.7582935329805086,
+          "accuracy_at_0_5": 0.7582935329805086,
+          "precision": 0.8162007168458781,
+          "recall": 0.6980137322216773,
+          "f1": 0.7524948780648999,
+          "roc_auc": 0.8618170130533102,
+          "log_loss": 0.44437875182044473,
+          "brier_score": 0.15023336856735128,
+          "confusion_matrix": [
+            [
+              6056,
+              1282
+            ],
+            [
+              2463,
+              5693
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.05243712887628021,
+              0.17854663136859958,
+              0.3163642271861786,
+              0.4199501575559772,
+              0.515853906749021,
+              0.6896883186055285,
+              0.8892692870153243,
+              0.978057670242227
+            ],
+            "observed": [
+              0.022715539494062985,
+              0.21424883840991224,
+              0.39204545454545453,
+              0.4527620030975736,
+              0.5281362932369644,
+              0.6570247933884298,
+              0.9452762003097573,
+              0.9989674754775426
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 754,
+              "brier_score": 0.20974245498063832
+            },
+            "30": {
+              "n": 734,
+              "brier_score": 0.19355087094534706
+            },
+            "45": {
+              "n": 695,
+              "brier_score": 0.17199994765938031
+            },
+            "60": {
+              "n": 637,
+              "brier_score": 0.14827707898710282
+            }
+          }
+        },
+        "test": {
+          "rounds": 773,
+          "snapshots": 15786,
+          "accuracy": 0.7544026352464209,
+          "accuracy_at_0_5": 0.7544026352464209,
+          "precision": 0.815872598052119,
+          "recall": 0.7144174253774346,
+          "f1": 0.7617818740399386,
+          "roc_auc": 0.8546276065155962,
+          "log_loss": 0.45910715986690026,
+          "brier_score": 0.15463777765174727,
+          "confusion_matrix": [
+            [
+              5710,
+              1399
+            ],
+            [
+              2478,
+              6199
+            ]
+          ],
+          "calibration": {
+            "predicted": [
+              0.056177987032922524,
+              0.1966381609922529,
+              0.3371784518764278,
+              0.43802069971377566,
+              0.5466285635600998,
+              0.7139974226687807,
+              0.891710971434769,
+              0.9792426575610187
+            ],
+            "observed": [
+              0.05825734549138804,
+              0.25038013177901675,
+              0.39837810440952864,
+              0.4698428788646731,
+              0.5408008109477952,
+              0.7587430309173847,
+              0.9244804865686771,
+              0.9964539007092199
+            ]
+          },
+          "by_seconds": {
+            "15": {
+              "n": 772,
+              "brier_score": 0.20990743310046628
+            },
+            "30": {
+              "n": 764,
+              "brier_score": 0.18998079187956096
+            },
+            "45": {
+              "n": 719,
+              "brier_score": 0.17389174310977604
+            },
+            "60": {
+              "n": 657,
+              "brier_score": 0.15644977490899525
+            }
+          }
+        }
+      }
+    },
+    "active": "compact",
+    "test_status": "Existing test previously examined; exploratory results. Validation alone selects configuration; independent future matches required for confirmation.",
+    "pattern_choice": "compact"
+  }
+}

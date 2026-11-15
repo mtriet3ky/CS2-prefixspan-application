@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs2-tactical"
+version = "0.1.0"
+description = "CS2 round replay and tactical sequence analysis with PrefixSpan"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy==2.4.6",
+    "pyarrow==26.0.0",
+]
+
+[project.scripts]
+cs2-tactical = "cs2_tactical.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

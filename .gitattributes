@@ -1,0 +1,19 @@
+* text=auto
+*.py text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+
+# Preserve bytes used by the model and analysis fingerprints.
+*.json -text
+src/cs2_tactical/tactical_analysis.py -text
+
+# Runtime data tracked by Git LFS.
+data/**/*.parquet filter=lfs diff=lfs merge=lfs -text
+data/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
+data/analysis/*.sqlite filter=lfs diff=lfs merge=lfs -text
+data/analysis/*.json filter=lfs diff=lfs merge=lfs -text
+data/mining/*.json filter=lfs diff=lfs merge=lfs -text
+data/models/**/*.joblib filter=lfs diff=lfs merge=lfs -text
