@@ -80,3 +80,14 @@ export function locationMarkers(keys,aliases,proofs,traces,holdTracks){
  }
  return markers;
 }
+
+// Keep the representative point on an observed route, even when points overlap.
+export function clusterLocationMarkers(markers,distance){
+ const clusters=[];
+ for(const marker of markers){
+  const cluster=clusters.find(p=>p.key===marker.key&&Math.hypot(p.x-marker.x,p.y-marker.y)<=distance);
+  if(cluster)cluster.count++;
+  else clusters.push({...marker,count:1});
+ }
+ return clusters;
+}
