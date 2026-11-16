@@ -6,8 +6,6 @@ let utilityEffects=null, bombMarker=null;
 const activeRouteFlashes=new Map();
 let nextFlashId=0;
 const presentationRouteDuration=1300;
-const presentationRouteGap=350;
-let routeBatchTimer=null, nextRouteFlashAt=0;
 import {modelComparisonView} from './model_comparison.mjs?v=site-coord-1';
 import {candidatePatterns,completionPhase,phaseLabels,percent} from './pattern_outcomes.mjs';
 import {groupRelated,replayPatternOrder,rowKey} from './pattern_cards.mjs';
@@ -285,12 +283,9 @@ function setPatternSide(side){
 }
 
 function clearRouteFlashes(){
- clearTimeout(routeBatchTimer);
- routeBatchTimer=null;
- nextRouteFlashAt=0;
- for(const [route,flash] of activeRouteFlashes){
+ for(const flash of activeRouteFlashes.values()){
   flash.animation.cancel();
-  route.remove();
+  flash.route.remove();
  }
  activeRouteFlashes.clear();
 }
@@ -314,12 +309,11 @@ function flashRouteMarkup(flash,tick){
 }
 
 function updateRouteFlashes(tick){
- for(const [route,flash] of activeRouteFlashes)route.innerHTML=flashRouteMarkup(flash,tick);
+ for(const flash of activeRouteFlashes.values())flash.route.innerHTML=flashRouteMarkup(flash,tick);
 }
 
 function flashNewRoutes(matches,tick,previousSecond,displayTick=tick){
  if(previousSecond===null||activeProof||!document.body.classList.contains('presenting'))return;
- if(routeBatchTimer!==null||performance.now()<nextRouteFlashAt)return;
  const previousTick=round.frames.findLast(f=>f.requested_seconds<=previousSecond)?.tick??round.metadata.start_tick-1;
  const visible=chronologicalMatches(matches,visiblePatterns(),tick)
   .filter(row=>row.completed>previousTick&&(patternSideView==='all'||row.pattern.side===patternSideView));
@@ -331,6 +325,11 @@ function flashNewRoutes(matches,tick,previousSecond,displayTick=tick){
   const markup=flashRouteMarkup(flash,displayTick);
   if(!markup)continue;
   flashed.add(player.player_id);
+  const previous=activeRouteFlashes.get(player.player_id);
+  if(previous){
+   previous.animation.cancel();
+   previous.route.remove();
+  }
   const route=document.createElementNS('http://www.w3.org/2000/svg','g');
   const name=playerNames[player.player_id]||player.player_id;
   route.setAttribute('data-player-id',player.player_id);
@@ -339,14 +338,13 @@ function flashNewRoutes(matches,tick,previousSecond,displayTick=tick){
   $('#route-flashes').append(route);
   const frames=window.matchMedia('(prefers-reduced-motion: reduce)').matches
    ?[{opacity:1},{opacity:0}] : [{opacity:1},{opacity:.35,offset:.22},{opacity:1,offset:.42},{opacity:0}];
+  flash.route=route;
   flash.animation=route.animate(frames,{duration:presentationRouteDuration,easing:'ease-out'});
-  activeRouteFlashes.set(route,flash);
- }
- if(flashed.size){
-  routeBatchTimer=setTimeout(()=>{
-   clearRouteFlashes();
-   nextRouteFlashAt=performance.now()+presentationRouteGap;
-  },presentationRouteDuration);
+  activeRouteFlashes.set(player.player_id,flash);
+  flash.animation.onfinish=()=>{
+   route.remove();
+   if(activeRouteFlashes.get(player.player_id)===flash)activeRouteFlashes.delete(player.player_id);
+  };
  }
 }
 
