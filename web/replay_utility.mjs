@@ -15,12 +15,20 @@ export async function replayUtility(round) {
         }).catch(error => { utilityByDemo.delete(demoId); throw error; }));
     }
     const data = await utilityByDemo.get(demoId);
-    return data?.[round.metadata.round_id] ?? null;
+    const effects = data?.[round.metadata.round_id];
+    return effects?.filter(e => e.kind === 'flash' || e.end_tick > e.start_tick) ?? null;
 }
 
 export function utilityControls(round, effects, seek, redraw) {
     const panel = document.querySelector('#replay-utility');
     panel.replaceChildren();
+    if (round?.metadata.game?.toUpperCase() === 'CS2' && effects === null) {
+        panel.hidden = false;
+        const note = document.createElement('span');
+        note.textContent = 'Chưa có dữ liệu utility cho round này.';
+        panel.append(note);
+        return;
+    }
     panel.hidden = !effects?.length;
     if (panel.hidden) return;
     for (const [kind, name] of Object.entries(labels)) {

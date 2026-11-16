@@ -1,6 +1,6 @@
 import {createRosterPicker} from './roster_picker.mjs?v=2';
 import {enableWheelZoom,enableDragPan} from './wheel_zoom.mjs?v=2';
-import {replayUtility, utilityControls, renderUtility} from './replay_utility.mjs?v=tick-lifetime-3';
+import {replayUtility, utilityControls, renderUtility} from './replay_utility.mjs?v=observed-ends-1';
 import {plantedBomb, renderBomb} from './replay_bomb.mjs';
 let utilityEffects=null, bombMarker=null;
 const activeRouteFlashes=new Map();
@@ -454,7 +454,9 @@ async function loadUtility(loaded,version){
         drawReplayEffects();
     }catch(error){
         if(version!==loadVersion||round!==loaded)return;
+        console.warn('Could not load replay utility',error);
         const panel=$('#replay-utility');
-        panel.hidden=true;panel.replaceChildren();
+        panel.hidden=false;
+        panel.textContent='Không tải được dữ liệu utility.';
     }
 }
