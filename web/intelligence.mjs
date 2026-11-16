@@ -1,7 +1,8 @@
 import {createRosterPicker} from './roster_picker.mjs?v=2';
 import {enableWheelZoom,enableDragPan} from './wheel_zoom.mjs?v=2';
 import {replayUtility, utilityControls, renderUtility} from './replay_utility.mjs?v=tick-lifetime-3';
-let utilityEffects=null;
+import {plantedBomb, renderBomb} from './replay_bomb.mjs';
+let utilityEffects=null, bombMarker=null;
 const activeRouteFlashes=new Map();
 let nextFlashId=0;
 const presentationRouteDuration=1300;
@@ -45,7 +46,7 @@ function replayTeams(row){
 function matchId(row){return String(row.match_id||row.demo_id);}
 function clearReplaySelection(){
  ++loadVersion;clearInterval(timer);timer=null;round=null;activeProof=null;highlight.clear();
- $('#play').textContent='▶ Phát';utilityEffects=null;utilityControls(null,null);renderUtility(null);
+ $('#play').textContent='▶ Phát';utilityEffects=null;utilityControls(null,null);renderUtility(null);bombMarker=null;renderBomb(null);
  clearCurrent('Không có round cho lựa chọn này.');
  $('#status').textContent='Không có trận phù hợp.';
 }
@@ -99,8 +100,8 @@ function setupReplayTeams(){
  $('#replay-team').onchange=rounds;
  $('#replay-match').onchange=rounds;
 }
-async function loadRoundImpl(){const version=++loadVersion;resetPatternView();clearInterval(timer);timer=null;$('#play').textContent='▶ Phát';round=null;personalData=null;utilityEffects=null;utilityControls(null,null);renderUtility(null);clearCurrent('Đang đọc round và tính dự đoán từng giây…');$('#status').textContent='Đang tải dữ liệu thật của round…';const file=$('#round').value;const loaded=await get(file.startsWith('api/')?file:'intelligence/'+file);const geometry=await get('data/'+loaded.metadata.map+'_geometry.json');if(version!==loadVersion)return;round=loaded;loadUtility(loaded,version);$('#prediction-model').disabled=!round.prediction_models;applyPredictionModel(false);regionNames=Object.fromEntries(Object.entries(geometry.points||{}).map(([key,p])=>[key,p.name]));actionEvents=replayActions(round);const initial=round.frames[0]?.players||[];playerNames=Object.fromEntries(initial.map(p=>[p.player_id,p.name]));$('#pattern-player').innerHTML='<option value="all">Cả 10 người</option>'+initial.map(p=>`<option value="${esc(p.player_id)}">${esc(p.side+' · '+p.name)}</option>`).join('');replayPlayerPicker.refresh();$('#personal-status').textContent='Đang đọc hồ sơ player…';loadPersonal(initial,version);const slots=new Map(['CT','T'].flatMap(side=>initial.filter(p=>p.side===side)).map((p,i)=>[p.player_id,i]));for(const frame of round.frames)frame.players.sort((a,b)=>(slots.get(a.player_id)??99)-(slots.get(b.player_id)??99));meta=geometry.world_to_radar;$('#background').setAttribute('href','assets/'+round.metadata.map+'.png');$('#time').max=Math.ceil((round.metadata.end_tick-round.metadata.start_tick)/round.metadata.tick_rate);$('#time').value=round.frames[0]?.requested_seconds||0;$('#seek-second').max=$('#time').max;if(pendingReplayLink&&round.metadata.round_id===replayLink.get('round_id')){const second=Number(replayLink.get('second'));if(Number.isFinite(second))$('#time').value=Math.max(0,Math.min(Number($('#time').max),second));pendingReplayLink=false;}setReplaySecond(+$('#time').value);highlight.clear();activeProof=null;clearRoute();$('#status').textContent=`${round.metadata.map} · ${round.metadata.ct_team||'CT'} (CT) vs ${round.metadata.t_team||'T'} (T)${round.metadata.game==='CS2'?' · '+round.metadata.event+' · '+(round.metadata.match_date?round.metadata.match_date.slice(0,10):'Ngày chưa xác định'):''}`;render()}
-// The map replays observed player frames each second. Utility uses the same
+async function loadRoundImpl(){const version=++loadVersion;resetPatternView();clearInterval(timer);timer=null;$('#play').textContent='▶ Phát';round=null;personalData=null;utilityEffects=null;utilityControls(null,null);renderUtility(null);bombMarker=null;renderBomb(null);clearCurrent('Đang đọc round và tính dự đoán từng giây…');$('#status').textContent='Đang tải dữ liệu thật của round…';const file=$('#round').value;const loaded=await get(file.startsWith('api/')?file:'intelligence/'+file);const geometry=await get('data/'+loaded.metadata.map+'_geometry.json');if(version!==loadVersion)return;round=loaded;bombMarker=plantedBomb(round);loadUtility(loaded,version);$('#prediction-model').disabled=!round.prediction_models;applyPredictionModel(false);regionNames=Object.fromEntries(Object.entries(geometry.points||{}).map(([key,p])=>[key,p.name]));actionEvents=replayActions(round);const initial=round.frames[0]?.players||[];playerNames=Object.fromEntries(initial.map(p=>[p.player_id,p.name]));$('#pattern-player').innerHTML='<option value="all">Cả 10 người</option>'+initial.map(p=>`<option value="${esc(p.player_id)}">${esc(p.side+' · '+p.name)}</option>`).join('');replayPlayerPicker.refresh();$('#personal-status').textContent='Đang đọc hồ sơ player…';loadPersonal(initial,version);const slots=new Map(['CT','T'].flatMap(side=>initial.filter(p=>p.side===side)).map((p,i)=>[p.player_id,i]));for(const frame of round.frames)frame.players.sort((a,b)=>(slots.get(a.player_id)??99)-(slots.get(b.player_id)??99));meta=geometry.world_to_radar;$('#background').setAttribute('href','assets/'+round.metadata.map+'.png');$('#time').max=Math.ceil((round.metadata.end_tick-round.metadata.start_tick)/round.metadata.tick_rate);$('#time').value=round.frames[0]?.requested_seconds||0;$('#seek-second').max=$('#time').max;if(pendingReplayLink&&round.metadata.round_id===replayLink.get('round_id')){const second=Number(replayLink.get('second'));if(Number.isFinite(second))$('#time').value=Math.max(0,Math.min(Number($('#time').max),second));pendingReplayLink=false;}setReplaySecond(+$('#time').value);highlight.clear();activeProof=null;clearRoute();$('#status').textContent=`${round.metadata.map} · ${round.metadata.ct_team||'CT'} (CT) vs ${round.metadata.t_team||'T'} (T)${round.metadata.game==='CS2'?' · '+round.metadata.event+' · '+(round.metadata.match_date?round.metadata.match_date.slice(0,10):'Ngày chưa xác định'):''}`;render()}
+// The map replays observed player frames each second. Effects use the same
 // playhead at fractional seconds so its recorded tick boundaries stay intact.
 let replaySecond=0, replayClockStart=0, replayClockSecond=0;
 function setReplaySecond(seconds){
@@ -109,8 +110,10 @@ function setReplaySecond(seconds){
  replayClockStart=performance.now();
  $('#time').value=Math.floor(seconds);
 }
-function drawReplayUtility(){
- if(round)renderUtility(utilityEffects,round.metadata,meta,replaySecond);
+function drawReplayEffects(){
+ if(!round)return;
+ renderUtility(utilityEffects,round.metadata,meta,replaySecond);
+ renderBomb(bombMarker,round.metadata,meta,replaySecond);
 }
 function advanceReplay(speed){
  if(!round)return;
@@ -122,10 +125,10 @@ function advanceReplay(speed){
   $('#time').value=current;
   if(!activeProof)highlight.clear();
   render(previous);
- }else drawReplayUtility();
+ }else drawReplayEffects();
  if(replaySecond>=limit&&timer){clearInterval(timer);timer=null;$('#play').textContent='\u25b6 Phát';}
 }
-function render(previousSecond=null){if(!round)return;const requested=+$('#time').value;drawReplayUtility();$('#seek-second').value=requested;$('#clock').textContent=requested+' giây';if(round.terminal&&requested>=round.terminal.seconds){renderTerminal(previousSecond);return;}const fr=round.frames.findLast(f=>f.requested_seconds<=requested);if(!fr||requested-fr.elapsed_seconds>.75){clearCurrent('Không có frame hợp lệ trong 0,75 giây trước thời điểm đã chọn.');return;}validateProof(fr.tick);renderRoster(fr);drawProbabilityTimeline(fr.tick,requested);
+function render(previousSecond=null){if(!round)return;const requested=+$('#time').value;drawReplayEffects();$('#seek-second').value=requested;$('#clock').textContent=requested+' giây';if(round.terminal&&requested>=round.terminal.seconds){renderTerminal(previousSecond);return;}const fr=round.frames.findLast(f=>f.requested_seconds<=requested);if(!fr||requested-fr.elapsed_seconds>.75){clearCurrent('Không có frame hợp lệ trong 0,75 giây trước thời điểm đã chọn.');return;}validateProof(fr.tick);renderRoster(fr);drawProbabilityTimeline(fr.tick,requested);
 const pred=round.inference_mode?round.predictions.find(p=>p.tick===fr.tick):round.predictions.filter(p=>p.tick<=fr.tick).at(-1);if(!pred){$('#probbar').style.opacity='.15';$('#probbar').style.width='50%';$('#ctprob').textContent='CT —';$('#tprob').textContent='T —';$('#prediction-note').textContent='Không có dự đoán hợp lệ cho frame đang xem.';setPatternCards('');clearRouteFlashes();clearRoute();return}$('#probbar').style.opacity='1';$('#tprob').textContent='T '+formatProbability(pred.p_t_win);$('#ctprob').textContent='CT '+formatProbability(1-pred.p_t_win);$('#probbar').style.width=(100*(1-pred.p_t_win))+'%';$('#prediction-note').textContent=`Giây ${requested} · ${Number.isFinite(fr.bomb_context?.bomb_seconds_remaining)?`Bom ${fr.bomb_context.bomb_site||''} · còn ${fr.bomb_context.bomb_seconds_remaining.toFixed(1)}s`:`Đồng hồ ${fr.clock_time||'—'}`}${round.prediction_models?' · '+($('#prediction-model').value==='pattern'?'LR có pattern':$('#prediction-model').value==='baseline'?'LR baseline':round.prediction_models.active==='A_state'?'LR baseline':round.prediction_models.active==='D_state_site_compact'?'LR + phối hợp site':'LR có pattern'):''}`;const visibleMatches=customMining?.map===round.metadata.map?customMatches(fr.tick):[];setPatternCards(patternCards(visibleMatches,fr.tick));
 bindMoveProof(visibleMatches,fr);updateRouteFlashes(fr.tick);flashNewRoutes(visibleMatches,fr.tick,previousSecond);}
 
@@ -449,8 +452,8 @@ async function loadUtility(loaded,version){
             setReplaySecond(seconds);
             clearRouteFlashes();
             render();
-        },drawReplayUtility);
-        drawReplayUtility();
+        },drawReplayEffects);
+        drawReplayEffects();
     }catch(error){
         if(version!==loadVersion||round!==loaded)return;
         const panel=$('#replay-utility');
